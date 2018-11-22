@@ -1,0 +1,44 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{Chapter that explains neutron interaction, tagging and also presents the detectors}
+\subsection{Sources}
+Actinide/Be
+I used PuBe (which atomic numbers?)
+\subsection{Neutron Interactions}
+
+\subsection{Scintillation light and the detectors}
+Scintillators are mateirals which produce light when radiation passes through. When choosing a scintillator material one needs to consider timing resolution, recovery time, pulse shape discrimination ability, sensitivity to different particles.
+
+Neutrons are detected when they scatter and knock out a protons, which then ionize the scintillator material. High Z/N ratio in the material is important for neutron detection effeciency.
+
+Gammas on the other hand can interact through compton scattering (which may knock an electron free or leave it in an excited state), pair production and the photoelectric effect\cite{adams1995hitchhiker}. 
+
+The detectors used for the experiments presented in this report are an NE213 liquid scintilator detector and a YAP crystal scintillator detector.
+
+-YAP: The Yap detectors are composed of a Cerium doped Yttrium Aluminium Perovskite crystal monunted on a photomultiplier tube.
+They are only used to detect gammas in order for timestamps to be extracted for each signal. Thus there is no need for pulse shape discrimination capabilities. The typical yap pulse decays within 50-200 ns, which means that the detector can handle count rates in the low MHz range.
+
+-NE213: The NE213 detector is sensitive to both gammas and neutrons. 
+-gamma interaction
+-neutron interaction
+-psd
+-timestamp
+
+\subsection{Neutron Tagging}
+When working with charged particles the energy can for example be calculated from the way in which in which a particles trajectury is bend in a magnetic field. This approach obviously wont work on neutrons, but for fast neutrons the energy can be found by correlating neutrons with gamma photons, which are produced nearly simultaeously. the detection of the neutron gives the end time of its movement from radioactive source to detector, and the gamma ray is used to calculate the start time, and since fast neutrons, E $\approx$ 1-20 MeV, move at classical speeds, we can use classical mechanics to calculate their energy. 
+Using a beryllium based source such as Plutonium beryllium we get both neutrons and gammas. The first reaction is as follows: $$^{238}Pu\rightarrow^{234}U+\alpha+\gamma_1$$
+
+The alpha particle can then interact with the beryllium producing both a neutron and another gamma in the following series of events: $$[\alpha+^{9}Be\rightarrow^{12}C^{*}+n],\qquad \longrightarrow \qquad [^{12}C^ {*}\rightarrow^{12}C+\gamma_2]$$
+
+The events all occur on a very short timescale, compared to the time it takes the particles to reach the detectors, so the pairs $\gamma_1-\gamma_2$ and $n-\gamma_1$ can be considered to be produced simultaneuously. %what about n innelastically scattering producing another gamma?
+
+The lab setup is large compared to the source so we assume the particles to come from a single point.
+
+FIGURE: Schematic drawing of Aquarium setup.
+
+\subsection{limitations of precision in neutron tagging}
+Detector resolution, size of source and detector (particles can hit detectors even when travelling at a slight angle), sampling rate if using digitizer.
+
+
+
+\end{document}

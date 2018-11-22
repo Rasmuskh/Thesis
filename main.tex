@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Thesis}
+\author{Rasmus Kjær Høier}
+\date{September 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\usepackage{subfiles}
+
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+-Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
+-Advantages of digital techniques
+-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
+\end{abstract}
+\newpage
+
+\section{Introduction}
+\subfile{Theory.tex}
+\subfile{AnalogSetup.tex}
+\subfile{AnalogResults.tex}
+\subfile{DigitalSetup.tex}
+\subfile{DigitalResults.tex}
+\subfile{CompareResults.tex}
+
+
+
+\section{Conclusion}
+
+\section{Outlook}
+
+
+
+
+%``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

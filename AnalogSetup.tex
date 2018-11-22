@@ -1,0 +1,19 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\section{Analog setup}
+Signals in the NE213 detector are copied in a fan in fan out module. Two of these signals will be used to acquire longgate and shortgate integrals of the pulses. %Show scope traces
+The third signal from the FIFO module is sent into a constant fraction discriminator, which starts a 50 ns square wave pulse when the cfd threshold is surpassed. %show scope trace.
+
+This logic signal is then sent to a latch which switches state. For the next 10 $\mu$s, until the latch resets, no signals can pass through the latch. This way only one event is processed at a time. The downside to this is that a certain fraction of events a lost. scalers placed on either side of the latch make it possible to calculate this fraction for a given data set.
+
+The signal is then copied again and reshaped. A 60 ns and a 500 ns square wave is used to define the qdc integration window for two copies of the analog NE213 signal mentioned above. A 150 ns square wave is used to define the integration window for the yap qdc, and another square wave triggers the start of a time of flight tdc.
+
+The stop signal comes from the yap. The yap signals are sent into a linear fifo module, with one outgoing signal sent to a qdc, which triggers on the above mentioned NE213 signal. %yap qdc scope trace.
+The other outgoing signal is sent to a cfd where a square pulse of 50 ns is produced. this pulse is then delayed by 300 ns and will act as the stop signal if a start signal is received from the NE213. %show tdc spectrum here?
+
+
+\subsection{Schematic overview}
+\subsection{QDC}
+\subsection{CFD}
+\subsection{TDC}
+\end{document}
