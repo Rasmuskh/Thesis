@@ -12,18 +12,25 @@
 \contentsline {subsection}{\numberline {3.4}TDC}{5}
 \contentsline {section}{\numberline {4}Analog results}{5}
 \contentsline {subsection}{\numberline {4.1}YAP QDC spectrum}{5}
-\contentsline {subsection}{\numberline {4.2}NE213 QDC spectrum}{5}
-\contentsline {subsection}{\numberline {4.3}ToF spectrum}{5}
-\contentsline {subsection}{\numberline {4.4}Pulse shape discrimination}{5}
-\contentsline {subsubsection}{\numberline {4.4.1}Charge comparison method}{5}
-\contentsline {subsection}{\numberline {4.5}Pulse shape v ToF}{5}
-\contentsline {section}{\numberline {5}Digital setup}{5}
-\contentsline {section}{\numberline {6}Digital Results}{6}
-\contentsline {subsection}{\numberline {6.1}-digitizer description + digitizer output description}{6}
-\contentsline {subsection}{\numberline {6.2}-integrating waveforms: QDC spectra}{6}
-\contentsline {subsection}{\numberline {6.3}PSD}{6}
-\contentsline {subsection}{\numberline {6.4}-timestamping: cfd: ToF}{6}
-\contentsline {subsection}{\numberline {6.5}Pulse shape v ToF}{10}
-\contentsline {subsection}{\numberline {6.6}Comparisson between digital and analog results}{10}
-\contentsline {section}{\numberline {7}Conclusion}{10}
-\contentsline {section}{\numberline {8}Outlook}{10}
+\contentsline {subsection}{\numberline {4.2}NE213 QDC spectrum}{6}
+\contentsline {subsection}{\numberline {4.3}ToF spectrum}{6}
+\contentsline {subsection}{\numberline {4.4}Pulse shape discrimination}{6}
+\contentsline {subsubsection}{\numberline {4.4.1}Charge comparison method}{6}
+\contentsline {subsection}{\numberline {4.5}Pulse shape v ToF}{6}
+\contentsline {subsection}{\numberline {4.6}PSD filtered QDC spectra}{7}
+\contentsline {subsection}{\numberline {4.7}PSD filtered Time of flight spectrum}{9}
+\contentsline {section}{\numberline {5}Digital setup}{9}
+\contentsline {subsection}{\numberline {5.1}Digitizer specifications and configuration}{9}
+\contentsline {subsection}{\numberline {5.2}Data collection and processing}{9}
+\contentsline {subsubsection}{\numberline {5.2.1}discriminating}{10}
+\contentsline {subsubsection}{\numberline {5.2.2}Timestamping}{10}
+\contentsline {section}{\numberline {6}Digital Results}{12}
+\contentsline {subsection}{\numberline {6.1}QDC spectra}{12}
+\contentsline {subsection}{\numberline {6.2}Time of flight spectrum}{13}
+\contentsline {subsection}{\numberline {6.3}Pulse shape discrimination}{14}
+\contentsline {subsection}{\numberline {6.4}Pulse shape v ToF}{14}
+\contentsline {subsection}{\numberline {6.5}PSD filtered QDC spectra}{15}
+\contentsline {subsection}{\numberline {6.6}PSD filtered Time of flight spectrum}{16}
+\contentsline {subsection}{\numberline {6.7}Comparisson between digital and analog results}{16}
+\contentsline {section}{\numberline {7}Conclusion}{16}
+\contentsline {section}{\numberline {8}Outlook}{16}
