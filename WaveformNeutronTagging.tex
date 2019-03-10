@@ -1,19 +1,32 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\section{Digital setup}
+\section{Waveform Neutron Tagging}
 -technology has improved and prizes lowered. ToF with digitized signals opens new possibilities. Advantage is we have more information to work with (expand). disadvantage takes up storage space, but bulk of data can be discarded when desired features are extracted.
 \subsection{Digitizer specifications and configuration}
 model, sampling rate, channels, thresholds, windowlength, polarity, baseline
 \subsection{Data collection and processing}
-caenlib, wavedump, txtfile --> dataframe. thresholds, throwing away junk.
-\subsubsection{discriminating}
-Threshold min (and max/overflow).
+caenlib, wavedump, txtfile to dataframe. thresholds, throwing away junk.
+Show examples of pulses that get thrown away! Threshold min (and max overflow). early/late cfdtriggers.
+Show example of datastructure.
+
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=1\textwidth]{DigitalSetup/badevents.pdf}
+        \caption{Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.}
+    \label{fig:badevents} 
+\end{figure}
 
 \subsubsection{Timestamping}
 The detector signals are led through a patch panel and into an attenuator in order to lower the signal amplitudes. From there they are fed directly into the digitizer. The digitizer will trigger on all enabled channel when the threshold on one channel is surpassed, so a lot of the events will be empty and some will consists of partially contained events. The digitizer used for this project was a a model vx1751 from CAEN, and controlled through the software WaveDumpis. The format of the data is:
-
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=\textwidth]{DigitalSetup/goodevents.pdf}
+        \caption{A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.}
+    \label{fig:badevents} 
+\end{figure}
 \{number of samples per window, digitizer model id, Channel number, Event Number, mask, trigger timestamp, DC offset (DAC), samples\}
+
 
 %channel mask: decimal representation of the channelmask sent to the digitizer. For an eigth channel digitizer an eigth bit array is sent, with each index setting a channel on or off. $5\rightarrow 00000101\rightarrow$ channel 0 and 1 enabled.
 

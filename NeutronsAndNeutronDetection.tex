@@ -1,17 +1,17 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
-\section{Chapter that explains neutron interaction, tagging and also presents the detectors}
-\subsection{Sources}
+\section{Neutrons and Neutron Detection}
+\subsection{Sources of Free Neutrons}
 Actinide/Be
 I used PuBe (which atomic numbers?)
-\subsection{Neutron Interactions}
+\subsection{Neutron Matter Interactions}
 
-\subsection{Scintillation light and the detectors}
-Scintillators are mateirals which produce light when radiation passes through. When choosing a scintillator material one needs to consider timing resolution, recovery time, pulse shape discrimination ability, sensitivity to different particles.
+\subsection{Detecting Neutrons and Gammas with Scintillation detectors}
+Scintillators are materials which produce light when radiation passes through. When choosing a scintillator material one needs to consider timing resolution, recovery time, pulse shape discrimination ability, sensitivity to different particles.
 
 Neutrons are detected when they scatter and knock out a protons, which then ionize the scintillator material. High Z/N ratio in the material is important for neutron detection effeciency.
 
-Gammas on the other hand can interact through compton scattering (which may knock an electron free or leave it in an excited state), pair production and the photoelectric effect\cite{adams1995hitchhiker}. 
+Gammas on the other hand can interact through compton scattering (which may knock an electron free or leave it in an excited state), pair production and the photoelectric effect.
 
 The detectors used for the experiments presented in this report are an NE213 liquid scintilator detector and a YAP crystal scintillator detector.
 
@@ -23,6 +23,8 @@ They are only used to detect gammas in order for timestamps to be extracted for 
 -neutron interaction
 -psd
 -timestamp
+
+\subsection{Pulse shape discrimination}
 
 \subsection{Neutron Tagging}
 When working with charged particles the energy can for example be calculated from the way in which in which a particles trajectury is bend in a magnetic field. This approach obviously wont work on neutrons, but for fast neutrons the energy can be found by correlating neutrons with gamma photons, which are produced nearly simultaeously. the detection of the neutron gives the end time of its movement from radioactive source to detector, and the gamma ray is used to calculate the start time, and since fast neutrons, E $\approx$ 1-20 MeV, move at classical speeds, we can use classical mechanics to calculate their energy. 
@@ -36,8 +38,6 @@ The lab setup is large compared to the source so we assume the particles to come
 
 FIGURE: Schematic drawing of Aquarium setup.
 
-\subsection{limitations of precision in neutron tagging}
-Detector resolution, size of source and detector (particles can hit detectors even when travelling at a slight angle), sampling rate if using digitizer.
 
 
 
