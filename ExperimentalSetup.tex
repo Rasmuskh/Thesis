@@ -2,13 +2,75 @@
 \begin{document}
 
 \section{Exprimental Setup}
+\begin{figure}[ht]
+	\begin{subfigure}[b]{0.4\textwidth}
+	    \centering
+    	    \includegraphics[width=\textwidth, angle =-90]{AnalogSetup/aquadaq.jpg}
+        	\caption{The Aquadaq setups electronics are located in a single rack, together with the powesupply powering the detectors.}
+	    \label{fig:aquadaq_image} 
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\textwidth}
+    	\centering
+        	\includegraphics[width=\textwidth]{DigitalSetup/digitizer.jpg}
+        	\caption{The CAEN V1751 digitizer draws the detector signals directly from the active splitter and sends the processed signals to a desktop machine via optical link.}
+    	\label{fig:aquadaq_image} 
+    \end{subfigure}
+\end{figure}
 
-\subsection{The Source Testing Facility}
+\subsection{Sources}
+Neutron source: PuBe, gamma source $^{60}Co$, reaction chain and activity and halflife.
+
+
+
+\subsection{NE213 detector}
+\subsection{YAP detector}
+Scintillators: NE213 and YAPS, also the PMTs
+%\subsection{The two Setups}
+%Show pictures of each one.
+%Neutron tagging is done by time-correlating the detection of signals in the detectors. The NE213 detector is sensitive to both neutrons and gammas, whereas the YAPS are to a good approximation only sensitive to gammas. If a hit in the NE213 coincides (within some tolerance) with a hit in a YAP, then we have one count for our Time of flight spectrum. Some of these counts will be due to random coincidences, but the majority will be due to either $\gamma\gamma$ and n$\gamma$ pairs.
+
+%The signals from the YAP detector and the NE213 are copied by an active splitter and sent to each of the DAQ systems.
+%In the Aquadaq setup the NE213 acts as a start signal for the TDC, and the YAP signals are delayed so that they can act as stop signals. In the digitizer setup the signals are fed in directly and digitized on an event by event basis
+
+
 \subsection{The Aquarium}
-\subsection{The Detectors}
-NE213 and YAPS
-\subsection{The two Setups}
-Show pictures of each one.
-How much to explain here?
+The aquarium is located in an interlocked section of the Source Testing Facility at the department of physics in Lund. It is a large waterfiled container with 4 ports on the sides, which can be closed with plastic plugs. 
+%dimensions!!!
+At the top it has 4 small ports for the YAP detectors and one for a radioactive source. In this image we she NE213 detector located in front of one of the ports.
+
+
+\begin{figure}[ht]
+	\centering
+    	\includegraphics[width=0.45\textwidth]{AnalogSetup/aquarium.jpg}
+        \caption{Image of the aquarium and the NE213 detector located in front of one of the ports.}
+	    \label{fig:aquarium} 
+\end{figure}
+\newpage
+
+\subsection{signal processing}
+\subsubsection{Analog setup}
+Signals in the NE213 detector are copied in a fan in fan out module. Two of these signals will be used to acquire longgate and shortgate integrals of the pulses. The third signal from the FIFO module is sent into a constant fraction discriminator, which starts a 50 ns square wave pulse when the cfd threshold is surpassed. 
+%show scope trace of cfd.
+
+This logic signal is then sent to a latch which switches state. For the next 10 $\mu$s, until the latch resets, no signals can pass through the latch. This way only one event is processed at a time. The downside to this is that a certain fraction of events are lost. scalers placed on either side of the latch make it possible to calculate this fraction for a given data set.
+
+The signal is then copied again and reshaped. A 60 ns and a 500 ns square wave is used to define the qdc integration window for the copies of the analog NE213 signal mentioned above. A 150 ns square wave is used to define the integration window for the yap qdc, and another square wave triggers the start of a time of flight tdc.
+
+The stop signal comes from the yap. The yap signals are sent into a linear fifo module, with one outgoing signal sent to a qdc, which triggers on the above mentioned NE213 signal. %yap qdc scope trace.
+The other outgoing signal is sent to a cfd where a square pulse of 50 ns is produced. this pulse is then delayed by 300 ns and will act as the stop signal if a start signal is received from the NE213. %show tdc spectrum here?
+
+\begin{figure}[ht]
+	\centering
+    	\includegraphics[width=0.45\textwidth]{AnalogSetup/Tcal.pdf}
+        \caption{The TDC was time calibrated by delaying the trigger signal.}
+	    \label{fig:digitizer_image} 
+\end{figure}
+\newpage
+\subsubsection{Digital setup}
+Signals are fed in to the digitizer directly from the active splitter, and if a chosen trigger is surpassed on one channel, then the digitizer writes all channels to disk along with some additional information such as channel number, event number and timestamp. 
+The output of a run is a textfile, which is processed offline. 
+
+\newpage
+
 
 \end{document}

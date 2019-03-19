@@ -4,12 +4,16 @@
 \title{Thesis}
 \author{Rasmus Kjær Høier}
 \date{September 2018}
+\usepackage[a4paper,margin=1.2in]{geometry}
 
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{subcaption}
 
 \usepackage{subfiles}
+\usepackage[nottoc]{tocbibind}%get references in table of contents
+
+
 
 
 
@@ -22,25 +26,32 @@
 \begin{abstract}
 -Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
 -Advantages of digital techniques
--Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
+-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{Leo}
 \end{abstract}
 \newpage
 
 \section{Introduction}
+\newpage
 \subfile{NeutronsAndNeutronDetection.tex}%concepts
+\newpage
 \subfile{ExperimentalSetup.tex}%Equipment
+\newpage
 \subfile{NeutronTagging.tex}%Implementation
+\newpage
 \subfile{WaveformNeutronTagging.tex}%Implementation
+\newpage
 \subfile{Results.tex}%Implementation
+\subfile{BenchMarking.tex}%Implementation
+
+
 \section{Discussion}%Reflection
 \section{Summary and Outlook}%Reflection
 
 
 
-
-
 %``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+\newpage
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{references}
 \end{document}

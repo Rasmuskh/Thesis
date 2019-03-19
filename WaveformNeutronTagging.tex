@@ -1,8 +1,8 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\section{Waveform Neutron Tagging}
--technology has improved and prizes lowered. ToF with digitized signals opens new possibilities. Advantage is we have more information to work with (expand). disadvantage takes up storage space, but bulk of data can be discarded when desired features are extracted.
+\section{Digitized Waveform Neutron Tagging}
+Sampling rate, clock
 \subsection{Digitizer specifications and configuration}
 model, sampling rate, channels, thresholds, windowlength, polarity, baseline
 \subsection{Data collection and processing}
@@ -44,5 +44,16 @@ By using a constant fraction discrimination (cfd) algorithm the five pulses have
 
 Both the leading edge and the cfd algorithm align all the pulses within one nanosecond of each other. Thus by adding the time value acquired by either of these algorithms we get the precision we need in order to perform time of flight measurements.
 %INSERT PLOTS
+\subsection{Time of flight algorithms}
+Multi hit and single hit TDC approaches yield the same results. For future thermal neutron tagging experiments this will not be the case.
+\subsection{Pulse shape discriminating}
+\subsection{Neural Network pulse shape discrimination}
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=\textwidth]{DigitalSetup/CNN_training.pdf}
+        \caption{The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.}
+    \label{fig:CNN_training} 
+\end{figure}
+
 
 \end{document}
