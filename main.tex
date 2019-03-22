@@ -1,20 +1,23 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+%bibliography stuff
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage[nottoc]{tocbibind}%get references in table of contents
+%figure related stuff
+\usepackage{graphicx}
+\usepackage{subcaption}
+%document management
+\usepackage{subfiles}
+%document layout
+\usepackage[a4paper,margin=1in]{geometry}
+%links in pdf
+\usepackage{hyperref}
+
 
 \title{Thesis}
 \author{Rasmus Kjær Høier}
 \date{September 2018}
-\usepackage[a4paper,margin=1.2in]{geometry}
-
-%\usepackage{natbib}
-\usepackage{graphicx}
-\usepackage{subcaption}
-
-\usepackage{subfiles}
-\usepackage[nottoc]{tocbibind}%get references in table of contents
-
-
-
 
 
 \begin{document}
@@ -26,32 +29,24 @@
 \begin{abstract}
 -Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
 -Advantages of digital techniques
--Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{Leo}
+-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{latexcompanion}\cite{Leo}
 \end{abstract}
 \newpage
 
 \section{Introduction}
-\newpage
+\clearpage
 \subfile{NeutronsAndNeutronDetection.tex}%concepts
-\newpage
+\clearpage
 \subfile{ExperimentalSetup.tex}%Equipment
-\newpage
+\clearpage
 \subfile{NeutronTagging.tex}%Implementation
-\newpage
+\clearpage
 \subfile{WaveformNeutronTagging.tex}%Implementation
-\newpage
+\clearpage
 \subfile{Results.tex}%Implementation
 \subfile{BenchMarking.tex}%Implementation
-
-
 \section{Discussion}%Reflection
 \section{Summary and Outlook}%Reflection
-
-
-
-%``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
-\newpage
-
-\bibliographystyle{unsrt}
+\clearpage
 \bibliography{references}
 \end{document}

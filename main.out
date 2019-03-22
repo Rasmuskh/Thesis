@@ -1,0 +1,40 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Neutrons and Neutron Detection}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Neutron Matter Interactions}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Sources of Free Neutrons}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Detecting Neutrons and Gammas with Scintillation detectors}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Pulse shape discrimination}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Neutron Tagging}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Exprimental Setup}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Sources}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{NE213 detector}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{YAP detector}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{The Aquarium}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.5}{signal processing}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Analog setup}{subsection.3.5}% 14
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Digital setup}{subsection.3.5}% 15
+\BOOKMARK [1][-]{section.4}{Neutron Tagging with the analog setup}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{NE213 QDC spectrum}{section.4}% 17
+\BOOKMARK [3][-]{subsubsection.4.1.1}{YAP QDC spectrum}{subsection.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Pulse shape discrimination}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Charge comparison method}{subsection.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.3}{Time of Flight spectrum}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Pulse shape and ToF}{subsection.4.3}% 22
+\BOOKMARK [1][-]{section.5}{Digitized Waveform Neutron Tagging}{}% 23
+\BOOKMARK [2][-]{subsection.5.1}{Digitizer specifications and configuration}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.2}{Data collection and processing}{section.5}% 25
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Timestamping}{subsection.5.2}% 26
+\BOOKMARK [2][-]{subsection.5.3}{Time of flight algorithms}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Pulse shape discriminating}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.5}{Neural Network pulse shape discrimination}{section.5}% 29
+\BOOKMARK [1][-]{section.6}{Results and Performance Comparisson}{}% 30
+\BOOKMARK [2][-]{subsection.6.1}{Energy Calibrated QDC spectrum}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.2}{Pulse shape discrimination}{section.6}% 32
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Charge comparisson method}{subsection.6.2}% 33
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Convolutional neural network based discrimination}{subsection.6.2}% 34
+\BOOKMARK [2][-]{subsection.6.3}{Time of flight spectrum}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.4}{Bench Marking}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.5}{Benchmarks}{section.6}% 37
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 38
+\BOOKMARK [1][-]{section.8}{Summary and Outlook}{}% 39
+\BOOKMARK [1][-]{section*.21}{Bibliography}{}% 40

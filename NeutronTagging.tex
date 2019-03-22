@@ -7,38 +7,36 @@
 The energy registered in the longgate QDC is shown in fig \ref{fig:qdc_a}. The 2.23 MeV Compton edges are visible near bin 1200 and the 4.4 MeV Compton edge is visible around bin 2900. Using the Knox method a linear fit has been made to the data.
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{AnalogResults/Ecall.pdf}
+        \includegraphics[width=0.65\textwidth]{AnalogResults/Ecall.pdf}
         \caption{The pedestal along with the 2.23 and 4.44 MeV Compton edges have here been used to perform an energy calibration.}
     \label{fig:qdc_a}
 \end{figure}
 
-\newpage
 \subsubsection{YAP QDC spectrum}
 Write about scattered gammas that are both stop and start signals. Geometry dependent. Analog setup only records when there is a ToF coincidence, so scattered gammas end up dominating the yap qdc spectrum, which leads to the yap closest to the NE213 always having the largest gamma peak in the ToF spectrum. 
 
-\newpage
 \subsection{Pulse shape discrimination}
 \subsubsection{Charge comparison method}
 Since neutrons and gammas interact differently in the NE213 detector their signal has different shape and duration. This makes it possible to discriminate between neutrons and gammas.
-\begin{figure}
+\begin{figure}[h]
     \centering
-        \includegraphics[width=\textwidth]{AnalogResults/psd.pdf}
+        \includegraphics[width=0.7\textwidth]{AnalogResults/psd.pdf}
         \caption{Since a larger fraction of the neutrons energy deposition is located in the tail of their signals the upper band consists mainly of neutrons. The 2.23 and 4.44 MeV gamma edges can clearly be seen in the gamma band below.}
         \label{fig:hex_a}
 \end{figure}
-\newpage
+
 \subsection{Time of Flight spectrum}
 \begin{figure}[ht]
     \centering
-        \includegraphics[width=\textwidth]{AnalogResults/tof.pdf}
+        \includegraphics[width=0.7\textwidth]{AnalogResults/tof.pdf}
         \caption{The time of flight spectrum.}
     \label{fig:A_TOF}
 \end{figure}
 
 \subsubsection{Pulse shape and ToF}
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
-        \includegraphics[width=\textwidth]{AnalogResults/tof_psd.pdf}
+        \includegraphics[width=0.7\textwidth]{AnalogResults/tof_psd.pdf}
         \caption{Plotting the tail/total ratio against the time of flight shows that what we are separating with this parameter is indeed neutrons and gammas. There is however some overlap.}
     \label{fig:tof_ps_a} 
 \end{figure}
