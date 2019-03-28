@@ -1,27 +1,28 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 %bibliography stuff
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{unsrtnat}
 \usepackage[nottoc]{tocbibind}%get references in table of contents
 %figure related stuff
-\usepackage{graphicx}
+\usepackage{graphicx, caption}
 \usepackage{subcaption}
-%document management
-\usepackage{subfiles}
 %document layout
 \usepackage[a4paper,margin=1in]{geometry}
 %links in pdf
 \usepackage{hyperref}
+%document management
+\usepackage{subfiles}
+%linespacing
+\usepackage{setspace}
+\onehalfspacing
 
-
-\title{Thesis}
+\title{Neutron Identification and Tagging Using Digitized Waveforms}
 \author{Rasmus Kjær Høier}
-\date{September 2018}
+\date{May 2019}
 
 
 \begin{document}
-
 \maketitle
 
 \tableofcontents
@@ -29,7 +30,7 @@
 \begin{abstract}
 -Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
 -Advantages of digital techniques
--Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{latexcompanion}\cite{Leo}
+-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{Leo}
 \end{abstract}
 \newpage
 
@@ -39,12 +40,13 @@
 \clearpage
 \subfile{ExperimentalSetup.tex}%Equipment
 \clearpage
+\subfile{signalProcessing.tex}%Equipment
+\clearpage
 \subfile{NeutronTagging.tex}%Implementation
 \clearpage
 \subfile{WaveformNeutronTagging.tex}%Implementation
 \clearpage
 \subfile{Results.tex}%Implementation
-\subfile{BenchMarking.tex}%Implementation
 \section{Discussion}%Reflection
 \section{Summary and Outlook}%Reflection
 \clearpage

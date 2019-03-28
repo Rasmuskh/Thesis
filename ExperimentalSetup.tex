@@ -3,23 +3,26 @@
 
 \section{Exprimental Setup}
 \begin{figure}[ht]
-	\begin{subfigure}[b]{0.39\textwidth}
+	\begin{subfigure}[b]{0.38\textwidth}
 	    \centering
+			\captionsetup{width=.80\linewidth}	
     	    \includegraphics[width=\textwidth, angle =90]{AnalogSetup/aquadaq.jpg}
-        	\caption{The Aquadaq setups electronics are located in a single rack, together with the powesupply powering the detectors.}
+        	\caption{Photo of the rack containing the analog setups electronics, as well as the powesupply (blue box) powering the detectors.}
 	    \label{fig:aquadaq_image} 
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.30\textwidth}
 	    \centering
+	    	\captionsetup{width=1\linewidth}	
     	    \includegraphics[width=\textwidth, angle=180]{AnalogSetup/aquadaq_zoom.jpg}
         	\caption{Closeup of part of the analog setup. A pen is located on top for scale.}
 	    \label{fig:aquadaq_zoom_image} 
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\textwidth}
     	\centering
+			\captionsetup{width=.6\linewidth}	
         	\includegraphics[width=\textwidth, angle =90]{DigitalSetup/digitizer.jpg}
         	\caption{The 8 channel VX1751 digitizer placed next to a pen for scale.}
-    	\label{fig:aquadaq_image} 
+    	\label{fig:digitizer_image} 
     \end{subfigure}
 \end{figure}
 
@@ -28,8 +31,14 @@ Neutron source: PuBe, gamma source $^{60}Co$, reaction chain and activity and ha
 
 
 
-\subsection{NE213 detector}
-\subsection{YAP detector}
+\subsection{NE213 Detector}
+\begin{figure}[ht]
+	\centering
+    	\includegraphics{DigitalSetup/pulse_types.pdf}
+        \caption{Typical shapes of neutron and gamma pulses.}
+	    \label{fig:pulse_types} 
+\end{figure}
+\subsection{YAP Detector}
 Scintillators: NE213 and YAPS, also the PMTs
 %\subsection{The two Setups}
 %Show pictures of each one.
@@ -47,14 +56,13 @@ At the top it has 4 small ports for the YAP detectors and one for a radioactive 
 
 \begin{figure}[ht]
 	\centering
-    	\includegraphics[width=0.45\textwidth]{AnalogSetup/aquarium.jpg}
+    	\includegraphics[width=0.7\textwidth]{AnalogSetup/aquarium.jpg}
         \caption{Image of the aquarium and the NE213 detector located in front of one of the ports.}
 	    \label{fig:aquarium} 
 \end{figure}
 \newpage
 
-\subsection{signal processing}
-\subsubsection{Analog setup}
+\subsection{Analog Electronics}
 Signals in the NE213 detector are copied in a fan in fan out module. Two of these signals will be used to acquire longgate and shortgate integrals of the pulses. The third signal from the FIFO module is sent into a constant fraction discriminator, which starts a 50 ns square wave pulse when the cfd threshold is surpassed. 
 %show scope trace of cfd.
 
@@ -67,16 +75,9 @@ The other outgoing signal is sent to a cfd where a square pulse of 50 ns is prod
 
 \begin{figure}[ht]
 	\centering
-    	\includegraphics[width=0.45\textwidth]{AnalogSetup/Tcal.pdf}
-        \caption{The TDC was time calibrated by delaying the trigger signal.}
-	    \label{fig:digitizer_image} 
+    	\includegraphics{AnalogSetup/Tcal.pdf}
+        \caption{Top: Histogram of the raw TDC spectrum. Each peak represents a different delay. Bottom: A linear fit applied to the TDC and delay value.}
+	    \label{fig:Tcal} 
 \end{figure}
-\newpage
-\subsubsection{Digital setup}
-Signals are fed in to the digitizer directly from the active splitter, and if a chosen trigger is surpassed on one channel, then the digitizer writes all channels to disk along with some additional information such as channel number, event number and timestamp. 
-The output of a run is a textfile, which is processed offline. 
-
-\newpage
-
 
 \end{document}

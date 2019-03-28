@@ -1,15 +1,9 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Goossens et~al.(1993)Goossens, Mittelbach, and
-  Samarin]{latexcompanion}
-Michel Goossens, Frank Mittelbach, and Alexander Samarin.
-\newblock \emph{The \LaTeX\ Companion}.
-\newblock Addison-Wesley, Reading, Massachusetts, 1993.
 
 \bibitem[Leo(1987)]{Leo}
 W.~R. Leo.
@@ -17,5 +11,22 @@ W.~R. Leo.
   to Approach}.
 \newblock 1987.
 \newblock ISBN 9783540572800.
+
+\bibitem[CAEN(2017)]{CAEN}
+CAEN.
+\newblock \emph{User Manual, UM3350 V1751/VX1751, 4/8 Channels 10bit 2/1 GS/s
+  Digitizer}.
+\newblock CAEN, 2017.
+
+\bibitem[Pini et~al.()Pini, Tate, and Rovini]{Spectrum}
+A.~Pini, G.~Tate, and O.~Rovini.
+\newblock An introduction to modular waveform digitizers.
+\newblock URL
+  \url{https://spectrum-instrumentation.com/sites/default/files/download/an_waveformdigitizers_introduction.pdf}.
+
+\bibitem[CAEN(2018)]{WaveDump}
+CAEN.
+\newblock Wavedump, 2018.
+\newblock version 3.8.1.
 
 \end{thebibliography}

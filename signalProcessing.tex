@@ -1,0 +1,106 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\section{Digital signal processing}
+\subsection{Digitizer Specifications and Configuration}
+Using a digitizer offers the freedom to carry out the processing on an event by event basis offline, making it possible to process the same dataset in multiple ways. On the downside discretizing a continuous signal means that you are limited by the sampling rate, resolution and bandwidth of the digitizer.
+
+%Restructure: perhaps into:
+%1sampling rate
+%2Bandwidth
+%3Dynamic range, Resolution (and baselineoffset)
+The digitizer used in this work is an 8 channel CAEN VX1751 digital waveform digitizer. It has a sampling rate of 1 GS/s in standard mode, but can also be operated in Double edge sampling mode, which disables 4  cannels but increases the sampling rate to 2 GS/s\cite[p.9]{CAEN}. The data presented in this thesis was acquired in standard mode. This means that we get one data point per nanosecond when digitizing signals. Given a set of samples there will always be an infinite number of pulses that fit. This is called aliassing. However, if the sampling rate is at least twice as big as the highest frequency component of your signal then aliassing is avoided. This is known as the Nyquist Theorem. Ideally though, you will want even higher sampling rate in order to give a nice representation of the shape of pulses\cite{Spectrum}. %Elaborate
+
+In order to reproduce signals with a high fidelity it is not enough to have a high sampling rate. The resolution and bandwidth also need to be considered. The VX1751 digitizer has a 1 V dynamic range, which means that the difference between maximum and minimum voltage is 1 V. How this range is used is controlled through the choice of signal polarity and baseline offset. The resolution of the digitizer is 10 bit, so the 1 V dynamic range is cut in 1024 pieces each of size 0.978 mV\cite{CAEN}. 
+
+The VX1751 has a bandwidth of 500 MHz. The bandwidth is important because it determines the frequency range of signals that can be read without significant attenuation. If the frequency of a signal is too high, then the amplitude recorded by the digitizer will be lower than the actual signals amplitude. The Bandwidth $B$ is related to the rise time $T_{rise}$ through the following formula\cite[p.354]{Leo}
+\begin{equation}
+\label{eq:bandwidth}
+B=0.35/T_{rise}
+\end{equation}
+Equation \ref{eq:bandwidth} tells us that an analog signal with a 1 ns risetime would need a 350 MHz bandwidth digitizer in order for the digitized signal to only be attenuated to 70\% of the analog signals amplitude. The typical rise time of the signals studied in this work is around 5-15 ns. So Bandwidth is not a major restriction.
+
+The digitizer is controlled via CAEN's opensource software WaveDump\cite{WaveDump}. WaveDump configures the digitizer according to a text file supplied by the user. The number of datapoints per trigger is defined globally for all enabled channels. 
+For each enabled channel the signal polarity, trigger threshold and baseline offset needs to be defined. The trigger threshold is the minimum amplitude relative to the baseline that a signal must have in order for an event to be recorded. It is of note that the digitizer always triggers on all channels simultaneously. Since WaveDump writes all events to disc the filesize will grow quickly when multiple channels are enabled. 
+
+The baseline offset is given in percent and determines where in the dynamic range of the digitizer the baseline is placed. A baseline offset of 0\% will cause the entire range to be used for pulses of the selected polarity. This means that undershoot will not be seen. Therefore it is best to use a small baseline offset.
+
+In the data presented in this thesis the NE213 detector was connected to channel 0 and a YAP detector connected to channel 1, and assigned negative polarity. A threshold of 48.9 mV (50 ADC) was applied to the NE213 and a threshold of 9.78 mV (10 ADC) was applied to the YAP channel. A baseline offset of 10\% was applied to the YAP channel and an offset of 40\% was accidentally applied to the NE213 channel. This meant that high amplitude pulses were cut, which as will be shown in a later chapter affected the energy calibration.
+
+
+
+\subsection{Timestamping and Time of Flight Algorithms}
+In order to get a good time of flight spectrum we need to have a precise timestamp for each pulse from the detectors. A general timestamp is provided by the digitizer for each event, but each event is 1204 ns long, and the pulse rise does not land in the exact same bin on each acquisition. For this reason a software based constant fraction discriminator was implemented. This algorithm looks at the first 40 ns before the peak amplitude and finds the first sampling point to rise above  a certain fraction of the peak amplitude (In this work 30\% was used). Using linear interpolation between this point and the previous point a better timestamp is generated in picoseconds. In figure \ref{fig:cfd_trig} 4 pulses from the NE213 detector have been plotted centered around their cfd trigger points. Although this timestamp is in picoseconds the resolution is limited by the determination of the pulse amplitude, which in turn is limited by the sampling rate resolution and bandwidth. 
+
+Two different algorithms were developed for doing time of flight correlations; a multi-hit and a single-hit algorithm. The multi hit algorithm allows for each NE213 event to be Correlated with any gamma event within a chosen time window of itself. The timedifference is then binned in a histogram. 
+The single hit algorithm makes use of column based operations on the dataframes and calculates time differences between neighbouring rows. Time differences are only kept for NE213 events and only if the neighbour was a YAP event. This approach is effective as long as you know that you are only interested in events one sampling window (1204 ns) or less away. This is true when tagging fast neutrons at the Aquarium since both neutron and gamma peak fit in a 100 ns window. 
+
+The multi hit and the single hit algorithms yielded the same results in the region 0-500 ns for the data presented in this thesis. However, for future thermal neutron tagging experiments this will not be the case, since the time of flight will be greater than the acquisition window.
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=\textwidth]{DigitalSetup/goodevents.pdf}
+        \caption{A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.}
+    \label{fig:cfd_trig} 
+\end{figure}
+
+\subsection{Data Processing}
+Since WaveDump triggers on all enabled channels it is neccesary to throw away all acquisitions. This is done by first determining and subtracting a baseline by averaging over the first 20 ns of each pulse. Following that the chosen threshold is reinforced. 
+
+Certain events are removed because they are too problematic. For example 2.69\% of all events (not counting events below trigger threshold) the baseline determination fails as shown in \ref{fig:badevents} (A). This happens when the standard deviation over the baseline determination window is above 2 mV. 
+A subset of the times the baseline determination fails will be due to a pulse rising inside the baseline determination window as shown in fig \ref{fig:badevents} (B). This can be recognized from the location of the CFD trigger and happens happens 0.0053\% of the time. Events are also removed if they occur too late in the acquisition window. Figure \ref{fig:badevents} (C) shows a situation where the cfd trigger occurs inside the longgate integration window, which will have an adverse effect on the QDC spectrum and pulse shape discrimination. This occers in 1.27\% of the events.
+
+Occasionally, 0.00079\% of the events, events are filtered out because a peak is preceded by a smaller peak causing the CFD algorithm to trigger inside the smaller pulse. Eaxamples of this is shown in\ref{fig:badevents} (D).
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=1\textwidth]{DigitalSetup/badevents.pdf}
+        \caption{Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.}
+    \label{fig:badevents} 
+\end{figure}
+
+\subsection{Pulse Shape Discrimination}
+\subsection{convolutional Neural Network Based Pulse Shape Analysis}
+The biggest advantage a digitizer offers is that we don't just extract a few parameters from the pulses, but actually record the entire pulses. With the entire digitized waveform at our disposal we can approach pulse shape discrimination in ways that are not feasible with analog electrnics. Neural networks are known for being able to approximate any function provided they receive sufficient data to train on and a sufficiently complex architecture. In particular convolutional neural networks are an interesting option when dealing with visual data. By visual data I mean data where the input tensor where elements are locally related. This is the case with digitized waveforms, where each element is a discrete aproximation to a continuous signal.
+
+differences multilayer perceptron and convolutional neural network
+
+\subsubsection{Backpropagation}
+Backpropagation consists in applying the network to labelled data and calculate the error and use the chain rule to find partial derivatives of the error with respect to each weigth in order update it. This is normally done in batches of 10-50 patterns.
+
+Error function: binary cross entropy
+update rule: 
+
+\subsubsection{Network Architecture}
+Layer (type)                 Output Shape              number of parameters   
+\newline =================================================================
+\newline conv1d (Conv1D)            (None, 98, 28)            224       
+\newline dropout (Dropout)          (None, 98, 28)            0         
+\newline maxpooling1d (MaxPooling1 (None, 49, 28)            0         
+\newline conv1d (Conv1D)            (None, 15, 28)            5516      
+\newline dropout (Dropout)          (None, 15, 28)            0         
+\newline maxpooling1d (MaxPooling1 (None, 7, 28)             0         
+\newline flatten (Flatten)          (None, 196)               0         
+\newline preds (Dense)                (None, 1)                 197       
+\newline =================================================================
+\newline Total params: 5,937
+\newline Trainable params: 5,937
+\newline Non-trainable params: 0
+
+\subsubsection{Training and Overtraining}
+Training dataset: Using data from time of flight peaks.
+\newline test dataset
+\newline validation set
+\newline Application
+
+\label{sec:cnn}
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=\textwidth]{DigitalSetup/CNN_training.pdf}
+        \caption{The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.}
+    \label{fig:CNN_training} 
+\end{figure}
+
+
+
+
+
+\end{document}

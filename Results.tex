@@ -2,102 +2,80 @@
 \begin{document}
 
 \section{Results and Performance Comparisson}
-\subsection{Energy Calibrated QDC spectrum}
-The raw pulses are integrated over 500 ns starting 10 ns before the peak of the pulse. This yields the uncalibrated QDC spectrum. In order to calibrate the spectrum to electron equivalent energy the compton edges of the PuBe source as well as a $^{60}Co$ source were used. The energy calibration was performed with the Knox method as was the case for the analog setup. The 2.23 and 4.44 $MeV_{ee}$ compton edges are marked in green and red respectively in the top plot in fig \ref{fig:D_QDC}. The $^{60}Co$ source has compton edges at 1.17 and 1.33 $MeV_{ee}$, but they can not be distinguished. Instead they are treated as a single peak located at their midpoint at 1.25 $MeV_{ee}$. 
+to do:.............
+\newline
+-$\frac{Livetime}{runtime}$
+\newline -explain differences in QDC and ToF spectra
+\newline- FoM comparisson
 
-As fig \ref{fig:D_QDC} shows points fit neatly on a stright line. The fit parameters are used to produce tghe calibrated energy spectrum shown below.
-
-The surprising peak near 12 $MeV_{ee}$ is due to events thatwere cut off by the range of the digitizer. These are likely cosmic muons.
+\subsection{Comparisson of Energy Deposition and Time of Flight Spectra}
 \begin{figure}[h]
     \centering
-        \includegraphics[width=0.65\textwidth]{DigitalResults/Ecall.pdf}
-        \caption{The 1.17 + 1.25 MeV edge of the $^60$ source and the 2.23 and 4.44 MeV Compton edges of the PuBe source have here been used to perform an energy calibration. Due to the event by event based baseline determination it is assumed that bin 0 corresponds to 0 $MeV_{ee}$}
-    \label{fig:D_QDC}
+        \includegraphics[width=\textwidth]{CompareResults/comp.pdf}
+        \caption{The digital energy spectrum.}
+    \label{fig:AD_comp}
 \end{figure}
 
-
-
-\subsection{Pulse shape discrimination}
-\subsubsection{Charge comparisson method}
-The pulses were also integrated over a 60 ns window in order to compare the fraction of deposited energy in the pulses tail to the total deposited energy. The result is shown in fig \ref{fig:psd_d}. As with the analog setup longgate and shortgate offsets can be used to control the degree to which the bands curve. Here a longgate offset of 3.5 QDC bins and a shortgate offset of 0.23 bins were used to linearize the seperation between neutron and gamma bands. Below 1.5 $MeV_{ee}$ the bands start starts to mix considerably.
-
-The 1.23 $MeV_{ee}$ and 4.44 $MeV_{ee}$ compton edges are clearly distinguishable in the lower band. The neutrons have a continuous energy distribtion and as such we don't see any sharp peaks in their band. 
-
-\begin{figure}[ht!]
-    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/psd.pdf}
-        \caption{Pulse shape discrimination spectrum produced with the charge comparisson method.}
-        \label{fig:psd_d}
-\end{figure}
-
-\subsubsection{Convolutional neural network based discrimination}
-The convolutional neural network described in \ref{chap:cnn} was applied to the data presented in this chapter. Since the activation function of the output node is the logistic function the value is bounded between zero and 1. The resulting pulse shape discrimination spectrum is shown in fig \ref{fig:cnn_E} as a function of deposited energy. Like for the charge comparisson method the upper distribution is neutrons and the lower distribution consists of gammas, and again the 2.23 and 4.44 $MeV_{ee}$ are clearly visible in the gamma band. Furthermore most of the low energy pulses have been identified as gammas.
-
-Both the charge comparisson PSD parameter and the CNN PSD parameter have been used to generate fig \ref{fig:cc_cnn}. On the x-axis we have tail/total and on the y axis we have the CNN prediction. The projections along either axis gives the two histograms. Both methods produce a neutron and a gamma distribution, but the charge comparisson method has significantly more overlap between the two.
-
-\begin{figure}[ht!]
-    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/CNN_E.pdf}
-        \caption{Pulse shape discrimination spectrum produced with a convolutional neural network.}
-    \label{fig:cnn_E} 
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/tailTotal_vs_cnnPred.pdf}
-        \caption{Heatmap of tail/total ratio and CNN prediction. The histograms show the projections along either axis.}
-    \label{fig:cc_cnn} 
-\end{figure}
-
-\clearpage
-\subsection{Time of flight spectrum}
-The time of flight spectrum acquired in 1 hour of data taking is shown in fig \ref{fig:D_TOF}. The gamma peak is centered at 3.3 ns and the neutron distribution stretches from around 35 to 65 ns. The gamma peak is not entirely narrow as one might expect seeing as they all travel at the speed of light. As for the analog setup part of the reason is that each photon may have a longer or shorter flightpath depending on its point of production in the source and the point at which it interacts in the detector. How far they travel in the detector mdium will also vary. There is also some uncertainty due to the active splitter as well as the digitization. On top of that the timestamp of each event is limited by the sampling rate of the digitizer. Although the cfd trigger algorithm interpolates between neighbouring points it still relies on the peak amplitude, whose precision is limited by the digitizers sampling rate.
-\begin{figure}[ht!]
-begin{figure}
-    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/tof.pdf}
-        \caption{The time of flight spectrum of the PuBe source produced by the digital setup.}
-    \label{fig:D_TOF} 
-\end{figure}
-
-Plotting pulse shape discrimination parameters against time of flight can be used to confirm that we are indeed seperating gamma and neutrons with the PSD algorithms. This is shown in figure \ref{fig:tof_cc_tof_cnn}. In fig \ref{fig:tof_digi_cc} we see the narrow gamma distribution and the wider neutron distribution. It is apparent that the two distributons overlap. In fig \ref{fig:tof_digi_cc} the distribution are better separated, but it still appears that gammas and neutrons overlap slightly near prediction value 0.5.
-\begin{figure}
-    \centering
-    \begin{subfigure}[ht]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{DigitalResults/tof_psd.pdf}
-        \caption{}
-        \label{fig:tof_digi_cc}
+\begin{figure}[ht]
+	\begin{subfigure}[b]{\textwidth}
+	    \centering
+    	    \includegraphics[width=\textwidth]{CompareResults/FOM_analog.pdf}
+        	\caption{Analog setup}
+	    \label{fig:fom_analog} 
+	\end{subfigure}
+	\begin{subfigure}[b]{\textwidth}
+    	\centering
+        	\includegraphics[width=\textwidth]{CompareResults/FOM_digital.pdf}
+        	\caption{Digital setup}
+    	\label{fig:fom_digital} 
     \end{subfigure}
-	\begin{subfigure}[ht]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{DigitalResults/ToF_CNN_hex.pdf}
-        \caption{}
-        \label{fig:tof_digi_cnn}
-    \end{subfigure}
-    \caption{heatmaps of of pulseshape discrimination parameters as functions of time of flight plotted with logarithmic z-axis.}
-    \label{fig:tof_cc_tof_cnn}
+    \caption{The blue histograms shows the pulse shape parameter. The green curve is this same histogram after being smoothed by a gaussian kernel, to allow for identification of extreme values. The red and green curves are fits to the gamma and neutron distributions respectively. The inserts show the pulse shape parameter as a function of energy, for full size version see fig \ref{fig:psd_a} and \ref{fig:psd_d}}
 \end{figure}
 
-A perfect PSD algorithm (assuming only neutrons and gammas interact in the detector) would be able to filter the time of flight spectrum into a pure neutron spectrum and a pure gamma spectrum. fig \ref{fig:tof_filt_cc} shows the resulting time of flight spectrum when a cut is made at tail/total = 0.17. The neutron distibution is not flat at the gamma peak and the gamma distribution is not flat at the neutron distrubution, so there is clearly some misclassification happening. As was seen in \ref{fig:psd_d} This is mostly due to the neutron and gamma bands overlapping significantly at deposited energies below 2 $MeV_{ee}$.
+\subsection{Pulse Shape Discrimination and Figures of Merit}
 
-In fig \ref{fig:tof_digi_filt_cnn} we see a similar behaviour although the rate of misclassification is much lower. As seen in fig \ref{fig:cnn_E} the neutron and gamma distrubution appear to be most poorly separated between 0.5 and 1 $MeV_{ee}$.
+\begin{figure}[ht]
+	\begin{subfigure}[b]{\textwidth}
+	    \centering
+    	\includegraphics[width=\textwidth]{CompareResults/PSD_comp.pdf}
+        \caption{}
+	    \label{fig:psd_fom_trend} 
+	\end{subfigure}
+	\begin{subfigure}[b]{\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{CompareResults/PSD_cut.pdf}
+        \caption{}
+    	\label{fig:psd_cut_trend} 
+    \end{subfigure}
+    \caption{(a) Pulse shape discrimination figure of merit plotted as a function 	of minimum deposited energy. (b) Ideal pulse shape cut as a function of minimum deposited energy.}
+\end{figure}
 
 \begin{figure}
     \centering
     \begin{subfigure}[bh]{\textwidth}
    	    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/ToF_filt_CC.pdf}
+        \includegraphics{DigitalResults/ToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at tail/total=0.17.}
         \label{fig:tof_filt_cc}
     \end{subfigure}
 	\begin{subfigure}[bh]{\textwidth}
 	    \centering
-        \includegraphics[width=0.7\textwidth]{DigitalResults/ToF_filt_CNN.pdf}
+        \includegraphics{DigitalResults/CNNToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at CNN prediction = 0.5.}
         \label{fig:tof_digi_filt_cnn}
     \end{subfigure}
-    \caption{}
+	\begin{subfigure}[bh]{\textwidth}
+   	   	\centering
+	    \includegraphics{AnalogResults/ToF_filt.pdf}
+        \label{fig:A_tof_filt_cc}
+    	\caption{Time of flight spectrum filtered by a linear cut at tail/total = 0.27.}
+    	\label{fig:tof_cc_cnn}
+    	\end{subfigure}
+	\caption{}
     \label{fig:tof_cc_cnn}
 \end{figure}
+
+
 
 
 
