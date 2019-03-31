@@ -22,21 +22,23 @@
 \citation{CAEN}
 \citation{Leo}
 \citation{WaveDump}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Digital signal processing}{1}{section.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Digitizer Specifications and Configuration}{1}{subsection.1.1}}
-\newlabel{eq:bandwidth}{{1}{1}{Digitizer Specifications and Configuration}{equation.1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Timestamping and Time of Flight Algorithms}{2}{subsection.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.\relax }}{3}{figure.caption.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Digital signal processing}{i}{section.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Digitizer Specifications and Configuration}{i}{subsection.1.1}}
+\newlabel{eq:bandwidth}{{1}{i}{Digitizer Specifications and Configuration}{equation.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Timestamping and Time of Flight Algorithms}{ii}{subsection.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Data Processing}{ii}{subsection.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.\relax }}{iii}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:cfd_trig}{{1}{3}{A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.\relax }{figure.caption.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Data Processing}{3}{subsection.1.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.\relax }}{4}{figure.caption.2}}
-\newlabel{fig:badevents}{{2}{4}{Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.\relax }{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Pulse Shape Discrimination}{5}{subsection.1.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}convolutional Neural Network Based Pulse Shape Analysis}{5}{subsection.1.5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.5.1}Backpropagation}{5}{subsubsection.1.5.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.5.2}Network Architecture}{5}{subsubsection.1.5.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.5.3}Training and Overtraining}{6}{subsubsection.1.5.3}}
-\newlabel{sec:cnn}{{1.5.3}{6}{Training and Overtraining}{subsubsection.1.5.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.\relax }}{6}{figure.caption.3}}
-\newlabel{fig:CNN_training}{{3}{6}{The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.\relax }{figure.caption.3}{}}
+\newlabel{fig:cfd_trig}{{1}{iii}{A cfd algorithm is used to generate precise timestamp. Here a cfd trigger of 30\% is used.\relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Pulse Shape Discrimination}{iii}{subsection.1.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}convolutional Neural Network Based Pulse Shape Analysis}{iii}{subsubsection.1.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.\relax }}{iv}{figure.caption.2}}
+\newlabel{fig:badevents}{{2}{iv}{Since The NE213 detector is used for pulseshape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the cfd algorithm to find a slope of the wrong sign.\relax }{figure.caption.2}{}}
+\citation{Goodfellow-et-al-2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Digitized pulse height spectrum from the NE213 detector. Events reaching the limit of the dynamic range are highlighted in green.\relax }}{v}{figure.caption.3}}
+\newlabel{fig:cutoffevents}{{3}{v}{Digitized pulse height spectrum from the NE213 detector. Events reaching the limit of the dynamic range are highlighted in green.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}Arcitecture and Training}{v}{subsubsection.1.4.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}Training}{vi}{subsubsection.1.4.3}}
+\newlabel{sec:cnn}{{1.4.3}{vii}{Training}{subsubsection.1.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.\relax }}{vii}{figure.caption.4}}
+\newlabel{fig:CNN_training}{{4}{vii}{The validation and training accuracy plotted as a function of training iteration. The validation accuracy stops growing around iteration 230. Beyond iteration 400 we can see that the validation accuracy is slowly decreasing although the training accuracy is increasing. This is overtraining.\relax }{figure.caption.4}{}}

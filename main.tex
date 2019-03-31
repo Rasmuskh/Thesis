@@ -15,25 +15,31 @@
 \usepackage{subfiles}
 %linespacing
 \usepackage{setspace}
-\onehalfspacing
+\singlespacing
 
-\title{Neutron Identification and Tagging Using Digitized Waveforms}
+\title{Tagging and Identification of Neutrons with Digitized Waveforms}
 \author{Rasmus Kjær Høier}
 \date{May 2019}
-
+\pagenumbering{roman}
 
 \begin{document}
 \maketitle
 
+\newpage
+\setcounter{tocdepth}{2}
 \tableofcontents
 
+\newpage
 \begin{abstract}
 -Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
 -Advantages of digital techniques
 -Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{Leo}
 \end{abstract}
-\newpage
 
+\newpage
+\onehalfspacing
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{Introduction}
 \clearpage
 \subfile{NeutronsAndNeutronDetection.tex}%concepts
@@ -47,7 +53,9 @@
 \subfile{WaveformNeutronTagging.tex}%Implementation
 \clearpage
 \subfile{Results.tex}%Implementation
+\clearpage
 \section{Discussion}%Reflection
+\clearpage
 \section{Summary and Outlook}%Reflection
 \clearpage
 \bibliography{references}

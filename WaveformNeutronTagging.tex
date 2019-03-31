@@ -3,7 +3,7 @@
 
 \section{Digitized Waveform Neutron Tagging}
 
-\subsection{Energy Calibrated QDC spectrum}
+\subsection{Energy Calibrated NE213 QDC Spectrum}
 The raw pulses are integrated over 500 ns starting 10 ns before the peak of the pulse. This yields the uncalibrated QDC spectrum. In order to calibrate the spectrum to electron equivalent energy the compton edges of the PuBe source as well as a $^{60}Co$ source were used. The energy calibration was performed with the Knox method as was the case for the analog setup. The 2.23 and 4.44 $MeV_{ee}$ compton edges are marked in green and red respectively in the top plot in fig \ref{fig:D_QDC}. The $^{60}Co$ source has compton edges at 1.17 and 1.33 $MeV_{ee}$, but they can not be distinguished. Instead they are treated as a single peak located at their midpoint at 1.25 $MeV_{ee}$. 
 
 As fig \ref{fig:D_QDC} shows points fit neatly on a stright line. The fit parameters are used to produce tghe calibrated energy spectrum shown below.
@@ -72,6 +72,20 @@ Plotting pulse shape discrimination parameters against time of flight can be use
 
 A perfect PSD algorithm (assuming only neutrons and gammas interact in the detector) would be able to filter the time of flight spectrum into a pure neutron spectrum and a pure gamma spectrum. fig \ref{fig:tof_filt_cc} shows the resulting time of flight spectrum when a cut is made at tail/total = 0.141. The neutron distibution is not flat at the gamma peak and the gamma distribution is not flat at the neutron distrubution, so there is clearly some misclassification happening. As was seen in \ref{fig:psd_d} This is mostly due to the neutron and gamma bands overlapping significantly at deposited energies below 2 $MeV_{ee}$.
 
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/tof_E.pdf}
+        \caption{Time of flight plotted against energy deposition.}
+    \label{fig:tof_E_d} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/tof_Edep_Eneutron.pdf}
+        \caption{Neutron energy as a function of deposited energy in the NE213 detector.}
+    \label{fig:tof_Edep_Eneutron_d} 
+\end{figure}
 
 
 

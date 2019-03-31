@@ -1,7 +1,7 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\section{Results and Performance Comparisson}
+\section{Results and Performance Comparisson}\label{sec:results}
 to do:.............
 \newline
 -$\frac{Livetime}{runtime}$
@@ -29,7 +29,7 @@ to do:.............
         	\caption{Digital setup}
     	\label{fig:fom_digital} 
     \end{subfigure}
-    \caption{The blue histograms shows the pulse shape parameter. The green curve is this same histogram after being smoothed by a gaussian kernel, to allow for identification of extreme values. The red and green curves are fits to the gamma and neutron distributions respectively. The inserts show the pulse shape parameter as a function of energy, for full size version see fig \ref{fig:psd_a} and \ref{fig:psd_d}}
+    \caption{The blue histograms shows the pulse shape parameter. The green curve is this same histogram after being smoothed by a gaussian kernel, to allow for identification of extreme values. The red and green curves are fits to the gamma and neutron distributions respectively. The inserts show the pulse shape parameter as a function of energy, for full size version see fig \ref{fig:psd_a} and \ref{fig:psd_d}. }
 \end{figure}
 
 \subsection{Pulse Shape Discrimination and Figures of Merit}
@@ -53,24 +53,25 @@ to do:.............
 \begin{figure}
     \centering
     \begin{subfigure}[bh]{\textwidth}
+   	   	\centering
+	    \includegraphics{AnalogResults/ToF_filt.pdf}
+        \label{fig:ToF_filt_A}
+    	\caption{Time of flight spectrum filtered by a linear cut at tail/total = 0.27.}
+    	\label{fig:tof_cc_cnn}
+   	\end{subfigure}
+    \begin{subfigure}[bh]{\textwidth}
    	    \centering
         \includegraphics{DigitalResults/ToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at tail/total=0.17.}
-        \label{fig:tof_filt_cc}
+        \label{fig:ToF_filt_D}
     \end{subfigure}
 	\begin{subfigure}[bh]{\textwidth}
 	    \centering
         \includegraphics{DigitalResults/CNNToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at CNN prediction = 0.5.}
-        \label{fig:tof_digi_filt_cnn}
+        \label{fig:ToF_filt_D_CNN}
     \end{subfigure}
-	\begin{subfigure}[bh]{\textwidth}
-   	   	\centering
-	    \includegraphics{AnalogResults/ToF_filt.pdf}
-        \label{fig:A_tof_filt_cc}
-    	\caption{Time of flight spectrum filtered by a linear cut at tail/total = 0.27.}
-    	\label{fig:tof_cc_cnn}
-    	\end{subfigure}
+	
 	\caption{}
     \label{fig:tof_cc_cnn}
 \end{figure}

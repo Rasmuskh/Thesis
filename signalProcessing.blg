@@ -7,9 +7,10 @@ Warning--I didn't find a database entry for "CAEN"
 Warning--I didn't find a database entry for "Spectrum"
 Warning--I didn't find a database entry for "Leo"
 Warning--I didn't find a database entry for "WaveDump"
+Warning--I didn't find a database entry for "Goodfellow-et-al-2016"
 You've used 0 entries,
             2481 wiz_defined-function locations,
-            558 strings with 4482 characters,
+            560 strings with 4524 characters,
 and the built_in function-call counts, 34 in all, are:
 = -- 0
 > -- 0

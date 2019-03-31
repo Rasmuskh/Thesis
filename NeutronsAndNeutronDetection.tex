@@ -27,6 +27,12 @@ They are only used to detect gammas in order for timestamps to be extracted for 
 -timestamp
 
 \subsection{Pulse Shape Discrimination}
+\begin{figure}[ht]
+    \centering
+        \includegraphics{Theory/psd_sketch.pdf}
+        \caption{Sketch of a Pulse shape discrimination heatmap. The y-axis denotes charge located in the tail and the x-axis denotes the deposited energy.}
+    \label{fig:psd_sketch} 
+\end{figure}
 
 \subsection{Neutron Tagging}
 When working with charged particles the energy can for example be calculated from the way in which in which a particles trajectury is bend in a magnetic field. This approach obviously wont work on neutrons, but for fast neutrons the energy can be found by correlating neutrons with gamma photons, which are produced nearly simultaeously. the detection of the neutron gives the end time of its movement from radioactive source to detector, and the gamma ray is used to calculate the start time, and since fast neutrons, E $\approx$ 1-20 MeV, move at classical speeds, we can use classical mechanics to calculate their energy. 
@@ -37,8 +43,13 @@ The alpha particle can then interact with the beryllium producing both a neutron
 The events all occur on a very short timescale, compared to the time it takes the particles to reach the detectors, so the pairs $\gamma_1-\gamma_2$ and $n-\gamma_1$ can be considered to be produced simultaneuously. %what about n innelastically scattering producing another gamma?
 
 The lab setup is large compared to the source so we assume the particles to come from a single point.
+\begin{figure}[ht]
+    \centering
+        \includegraphics{Theory/tof_sketch.pdf}
+        \caption{Sketch of a time of flight spectrum. The arrows indicate neutron and gamma peaks.}
+    \label{fig:tof_sketch} 
+\end{figure}
 
-FIGURE: Schematic drawing of Aquarium setup.
 
 
 
