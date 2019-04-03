@@ -19,16 +19,12 @@ During one hour of measurements 4.3 million events were recorded by the analog s
 	$(E_{e})_{max}(MeV_{ee})$ & 0    & 2.00  & 4.20 \\
 	\hline
 	\end{tabular}
-	\label{tab:knox}
    	\captionsetup{width=0.435\linewidth}
 	\caption{Table of ADC values and the corresponding energies. See text for details.}
+	\label{tab:knox}
 \end{table}
 
 The uncalibrated QDC spectrum is shown in fig \ref{fig:qdc_a} top panel. The narrow peak located to the far left is the pedestal. It is produced when a YAP trigger gives a start signal causing the QDC module to integrate only the baseline. The bump immediately to the right of it is produced when this YAP trigger actually coincides with something. This may be the case when the gamma interacting in the YAP was produced together with a neutron or another gamma ray or when it scatters from the YAP and into NE213 detector.
-
-The 2.23 and the 4.4 MeV Compton edges have been highlighted in green and red. Using the Knox method a set of points corelating the energy deposition in ADC channels to $MeV_{ee}$. The points are also shown in table \ref{tab:knox}. Using these points a linear fit was madeand plotted in in fig \ref{fig:qdc_a} middle panel. The fit does not pass through the points so nicely, but does nearly pass through zero.
-
-using this fit the QDC spectrum was converted to $MeV_{ee}$. The calibrated energy spectrum is shown in the bottom panel of fig \ref{fig:qdc_a}.
 \begin{figure}[ht!]
     \centering
         \includegraphics{AnalogResults/Ecall.pdf}
@@ -36,6 +32,10 @@ using this fit the QDC spectrum was converted to $MeV_{ee}$. The calibrated ener
     \label{fig:qdc_a}
 \end{figure}
 \clearpage
+The 2.23 and the 4.4 MeV Compton edges have been highlighted in green and red. Using the Knox method a set of points corelating the energy deposition in ADC channels to $MeV_{ee}$. The points are also shown in table \ref{tab:knox}. Using these points a linear fit was madeand plotted in in fig \ref{fig:qdc_a} middle panel. The fit does not pass through the points exactly, but does nearly pass through zero.
+
+using this fit the QDC spectrum was converted to $MeV_{ee}$. The calibrated energy spectrum is shown in the bottom panel of fig \ref{fig:qdc_a}.
+
 \subsection{Pulse Shape Discrimination}
 Since neutrons and gammas interact differently in the NE213 detector their signal have different shape and duration. This makes it possible to discriminate between neutrons and gammas. The pulses were integrated over 500 ns and 60 ns and a constant 120 QDC channels was added to the shortgate QDC values, in order to linearize the pulse shape as a function of deposited energy. This corresponds to shifting the baseline of the signals during shortgate integration. No constant was added to the longgate QDC values. The pedestal events were not of interest for pulse shape discrimination,  so only events above 0.8 $MeV_{ee}$ deposited energy were used. As can be seen from fig \ref{fig:qdc_a} there is some overlap between pedestal events and the PuBe energy spectrum. This will be addressed when we look at the time of flight.
 
@@ -53,11 +53,11 @@ The linearization made it possible to draw a straight line through the spectrum,
 
 
 \subsection{Time of Flight spectrum}
-By correlating signals in the NE213 detector with those in the YAP we can tag neutrons and gammas in order to construct a time of flight spectrum. For practical reasons NE213 signals are used as start signals for the TDC while the gamma signals are delayed and used as stop signals. Thus the raw time of flight spectrum will contain a neutron peak to the left of a gamma peak. In fig \ref{fig:tof_a} this has been accounted for by switching the sign, converting from TDC channels to nanoseconds using the time calibration factor found in chapter \ref{sec:exp_setup}, and shifting the gamma peak to time $t=10cm/c$ (the approximate time it takes light to reach the YAP detector). 
+By correlating signals in the NE213 detector with those in the YAP we can tag neutrons and gammas in order to construct a time of flight spectrum. For practical reasons NE213 signals are used as start signals for the TDC while the gamma signals are delayed and used as stop signals. Thus the raw time of flight spectrum will contain a neutron peak to the left of a gamma peak. In fig \ref{fig:tof_a} this has been accounted for by switching the sign, converting from TDC channels to nanoseconds using the time calibration factor found in chapter \ref{sec:exp_setup}, and shifting the gamma peak to time $t=1.055m/c$ (the approximate time it takes light to reach the NE213 detector). 
 
 Since all the gammas travel at the speed of light one might expect a much narrower gamma peak. The are a number of reasons why this is not the case. First of all the gamma source and the detectors all have some size, so there are multiple paths light can take from source to detector. Secondly interactions are stochastic, so each gamma will travel some distance into a detector before interacting, which is particularly relevant for the much larger NE213 detector. The distance travelled through cables and the various electronic components, will also cause some attenuation, which may lead to differences in risetime of low and high amplitude pulses. This will in turn make the constant fraction discriminator less effective causing some loss in the time resolution. Furthermore, the final  digitization by the TDCs may cause some loss of resolution.
 
-Since the distance from source to detector is known we can convert the neutron time of flight into Energy. The insert in fig \ref{fig:A_TOF} shows the energy of particles located in the neutron peak, with higher flight times maps to lower energies. The interval used is highlighted by the red dotted lines.
+Since the distance from source to detector is known we can convert the neutron time of flight into Energy. The insert in fig \ref{fig:tof_a} shows the energy of particles located in the neutron peak, with higher flight times maps to lower energies. The interval used is highlighted by the red dotted lines.
 \begin{figure}[ht]
     \centering
         \includegraphics{AnalogResults/tof.pdf}
@@ -76,7 +76,7 @@ Another interesting feature is that there is large amount of gammas at higher en
     \label{fig:tof_ps_a} 
 \end{figure}
 
-We can gain some more information on the effect of the injected pedestal events by looking at \ref{fig:tof_E}. Above 0.8 $MeV{ee}$ We have a gamma and a neutron destribution as marked by the arrows. As expected gamma time of flight is independent of energy deposition. It is also clear that the pedestal events mostly land at the gamma time of flight. This is to be expected since these signals are acting as both start and stop signals. It is also clear that the cut at 0.8 $MeV{ee}$ will not be able to remove all of the pedestal. Unlike the gamma flash the neutron distribution show some correlation between time of flight and energy deposition. It seems that the faster neutrons are able to deposit more energy than the slower ones.
+We can gain some more information on the effect of the injected pedestal events by looking at \ref{fig:tof_E_a}. Above 0.8 $MeV{ee}$ We have a gamma and a neutron destribution as marked by the arrows. As expected gamma time of flight is independent of energy deposition. It is also clear that the pedestal events mostly land at the gamma time of flight. This is to be expected since these signals are acting as both start and stop signals. It is also clear that the cut at 0.8 $MeV{ee}$ will not be able to remove all of the pedestal. Unlike the gamma flash the neutron distribution show some correlation between time of flight and energy deposition. It seems that the faster neutrons are able to deposit more energy than the slower ones.
 
 In fig \ref{fig:tof_Edep_Eneutron_a} the deposited energy is shown as a function of neutron kinetic energy as ffound from the time of flight spectrum. It can be seen that high energy deposition implies high neutron energy. However, the converse is not necessarily true as neutrons may scatter out of the detector before depositing their maximum energy. It is interesting that the energy the detector sees in $MeV_{ee}$ appears to be only half of the neutrons kinetic energy in  $MeV$.
 

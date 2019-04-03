@@ -2,6 +2,7 @@
 \begin{document}
 
 \section{Exprimental Setup}\label{sec:exp_setup}
+
 \begin{figure}[ht]
 	\begin{subfigure}[b]{0.38\textwidth}
 	    \centering
@@ -32,12 +33,7 @@ Neutron source: PuBe, gamma source $^{60}Co$, reaction chain and activity and ha
 
 
 \subsection{NE213 Detector}
-\begin{figure}[ht]
-	\centering
-    	\includegraphics{DigitalSetup/pulse_types.pdf}
-        \caption{Typical shapes of neutron and gamma pulses.}
-	    \label{fig:pulse_types} 
-\end{figure}
+
 \subsection{YAP Detector}
 Scintillators: NE213 and YAPS, also the PMTs
 %\subsection{The two Setups}
@@ -63,16 +59,16 @@ At the top it has 4 small ports for the YAP detectors and one for a radioactive 
 \newpage
 
 \subsection{Analog Electronics}
-Signals in the NE213 detector are copied in a fan in fan out module. Two of these signals will be used to acquire longgate and shortgate integrals of the pulses. The third signal from the FIFO module is sent into a constant fraction discriminator, which starts a 50 ns square wave pulse when the cfd threshold is surpassed. 
+Signals in the NE213 detector are copied in a fan in fan out module. Two of these signals will be used to acquire longgate and shortgate integrals of the pulses. The third signal from the FIFO module is sent into a constant fraction discriminator, which starts a \SI{50}{\nano\second} square wave pulse when the cfd threshold is surpassed. 
 %show scope trace of cfd.
 
-This logic signal is then sent to a latch which switches state. For the next 10 $\mu$s, until the latch resets, no signals can pass through the latch. This way only one event is processed at a time. The downside to this is that a certain fraction of events are lost. scalers placed on either side of the latch make it possible to calculate this fraction for a given data set.
+This logic signal is then sent to a latch which switches state. For the next \SI{10}{\micro\second}, until the latch resets, no signals can pass through the latch. This way only one event is processed at a time. The downside to this is that a certain fraction of events are lost. scalers placed on either side of the latch make it possible to calculate this fraction for a given data set.
 
-The signal is then copied again and reshaped. A 60 ns and a 500 ns square wave is used to define the qdc integration window for the copies of the analog NE213 signal mentioned above. A 150 ns square wave is used to define the integration window for the yap qdc, and another square wave triggers the start of a time of flight tdc.
+The signal is then copied again and reshaped. A \SI{60}{\nano\second} and a \SI{500}{\nano\second} ns square wave is used to define the qdc integration window for the copies of the analog NE213 signal mentioned above. A \SI{150}{\nano\second} ns square wave is used to define the integration window for the yap qdc, and another square wave triggers the start of a time of flight tdc.
 
 The stop signal comes from the yap. The yap signals are sent into a linear fifo module, with one outgoing signal sent to a qdc, which triggers on the above mentioned NE213 signal. %yap qdc scope trace.
-The other outgoing signal is sent to a cfd where a square pulse of 50 ns is produced. this pulse is then delayed by 300 ns and will act as the stop signal if a start signal is received from the NE213. %show tdc spectrum here?
-
+The other outgoing signal is sent to a cfd where a square pulse of \SI{50}{\nano\second} is produced. this pulse is then delayed by \SI{300}{\nano\second} and will act as the stop signal if a start signal is received from the NE213. %show tdc spectrum here?
+\subsection{Time calibration}
 \begin{figure}[ht]
 	\centering
     	\includegraphics{AnalogSetup/Tcal.pdf}
@@ -80,4 +76,18 @@ The other outgoing signal is sent to a cfd where a square pulse of 50 ns is prod
 	    \label{fig:Tcal} 
 \end{figure}
 
+\subsection{Energy Calibration}
+\begin{figure}[ht!]
+    \centering
+        \includegraphics{AnalogResults/Ecall.pdf}
+        \caption{Top: The raw QDC spectrum. Middle: The callibration fit produced with the Knox method. Bottom: The energy calibrated QDC spectrum.}
+    \label{fig:qdc_a}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/Ecall.pdf}
+        \caption{The 1.17 + 1.25 MeV edge of the $^60$ source and the 2.23 and 4.44 MeV Compton edges of the PuBe source have here been used to perform an energy calibration. Due to the event by event based baseline determination it is assumed that bin 0 corresponds to 0 $MeV_{ee}$}
+    \label{fig:D_QDC}
+\end{figure}
 \end{document}
