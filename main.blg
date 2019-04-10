@@ -3,49 +3,59 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: references.bib
+I was expecting a `,' or a `}'---line 38 of file references.bib
+ : 
+ : @manual{CAEN,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 101 of file references.bib
+ : @book{Sjogren
+ :              ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in Leo
 Warning--empty journal in Spectrum
 Warning--empty year in Spectrum
 Warning--empty year in Spectrum
-You've used 5 entries,
+Warning--empty journal in Griffiths
+You've used 12 entries,
             2481 wiz_defined-function locations,
-            579 strings with 5085 characters,
-and the built_in function-call counts, 1469 in all, are:
-= -- 116
-> -- 63
-< -- 3
-+ -- 28
-- -- 18
-* -- 90
-:= -- 247
-add.period$ -- 18
-call.type$ -- 5
-change.case$ -- 7
-chr.to.int$ -- 5
-cite$ -- 9
-duplicate$ -- 86
-empty$ -- 142
-format.name$ -- 23
-if$ -- 302
+            627 strings with 6646 characters,
+and the built_in function-call counts, 4364 in all, are:
+= -- 321
+> -- 276
+< -- 8
++ -- 108
+- -- 84
+* -- 323
+:= -- 740
+add.period$ -- 42
+call.type$ -- 12
+change.case$ -- 19
+chr.to.int$ -- 12
+cite$ -- 17
+duplicate$ -- 222
+empty$ -- 378
+format.name$ -- 96
+if$ -- 901
 int.to.chr$ -- 1
-int.to.str$ -- 6
-missing$ -- 5
-newline$ -- 36
-num.names$ -- 15
-pop$ -- 56
+int.to.str$ -- 13
+missing$ -- 11
+newline$ -- 74
+num.names$ -- 38
+pop$ -- 121
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 12
 quote$ -- 0
-skip$ -- 48
+skip$ -- 135
 stack$ -- 0
-substring$ -- 10
-swap$ -- 10
-text.length$ -- 0
+substring$ -- 91
+swap$ -- 35
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 29
-warning$ -- 4
-while$ -- 10
+type$ -- 75
+warning$ -- 5
+while$ -- 29
 width$ -- 0
-write$ -- 71
-(There were 4 warnings)
+write$ -- 163
+(There were 2 error messages)

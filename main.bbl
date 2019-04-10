@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,40 @@ W.~R. Leo.
   to Approach}.
 \newblock 1987.
 \newblock ISBN 9783540572800.
+
+\bibitem[Scherzinger et~al.(2017)Scherzinger, Al~Jebali, Annand, Fissum,
+  Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and
+  Rofors]{Scherzinger:2017}
+Julius Scherzinger, Ramsey Al~Jebali, John Annand, Kevin Fissum, Richard
+  Hall-Wilton, Sharareh Koufigar, Nicholai Mauritzson, Francesco Messi, Hanno
+  Perrey, and Emil Rofors.
+\newblock {A comparison of untagged gamma-ray and tagged-neutron yields from
+  $^{241}$AmBe and $^{238}$PuBe sources}.
+\newblock \emph{Appl. Radiat. Isot.}, 127:\penalty0 98--102, 2017.
+\newblock \doi{10.1016/j.apradiso.2017.05.014}.
+
+\bibitem[Scherzinger et~al.(2015)Scherzinger, Annand, Davatz, Fissum, Gendotti,
+  Hall-Wilton, Håkansson, Jebali, Kanaki, Lundin, Nilsson, Rosborge, and
+  Svensson]{Scherzinger:2015}
+J.~Scherzinger, J.R.M. Annand, G.~Davatz, K.G. Fissum, U.~Gendotti,
+  R.~Hall-Wilton, E.~Håkansson, R.~Jebali, K.~Kanaki, M.~Lundin, B.~Nilsson,
+  A.~Rosborge, and H.~Svensson.
+\newblock Tagging fast neutrons from an 241am/9be source.
+\newblock \emph{Applied Radiation and Isotopes}, 98:\penalty0 74 -- 79, 2015.
+\newblock ISSN 0969-8043.
+\newblock \doi{https://doi.org/10.1016/j.apradiso.2015.01.003}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0969804315000044}.
+
+\bibitem[National Nuclear Data~Center(2008)]{Nudat}
+Brookhaven National~Laboratory National Nuclear Data~Center.
+\newblock Nudat (nuclear structure and decay data), March 18, 2008 2008.
+
+\bibitem[Sjögren(2010)]{sjogren}
+Johan Sjögren.
+\newblock \emph{Construction and initial testing of a neutron detector
+  prototype}.
+\newblock Lund University, 2010.
 
 \bibitem[CAEN(2017)]{CAEN}
 CAEN.
@@ -30,11 +64,30 @@ CAEN.
 \newblock URL \url{https://www.caen.it/products/caen-wavedump/}.
 \newblock version 3.8.1.
 
+\bibitem[{Dask Development Team}(2016)]{Dask}
+{Dask Development Team}.
+\newblock \emph{Dask: Library for dynamic task scheduling}, 2016.
+\newblock URL \url{https://dask.org}.
+
+\bibitem[McKinney(2010)]{Pandas}
+Wes McKinney.
+\newblock Data structures for statistical computing in python.
+\newblock In St\'efan van~der Walt and Jarrod Millman, editors,
+  \emph{Proceedings of the 9th Python in Science Conference}, pages 51 -- 56,
+  2010.
+
 \bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and
   Courville]{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock \emph{Deep Learning}.
 \newblock MIT Press, 2016.
 \newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[Griffiths et~al.(2018)Griffiths, Kleinegesse, Saunders, Taylor, and
+  Vacheret]{Griffiths}
+J.~Griffiths, S.~Kleinegesse, D.~Saunders, R.~Taylor, and A.~Vacheret.
+\newblock {Pulse Shape Discrimination and Exploration of Scintillation Signals
+  Using Convolutional Neural Networks}.
+\newblock 2018.
 
 \end{thebibliography}

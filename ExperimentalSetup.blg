@@ -2,11 +2,23 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ExperimentalSetup.aux
 The style file: unsrtnat.bst
-I found no \citation commands---while reading file ExperimentalSetup.aux
 I found no \bibdata command---while reading file ExperimentalSetup.aux
+Warning--I didn't find a database entry for "Scherzinger:2017"
+Warning--I didn't find a database entry for "Scherzinger:2015"
+Warning--I didn't find a database entry for "Nudat"
+Warning--I didn't find a database entry for "sjogren"
+Warning--I didn't find a database entry for "Leo"
+Warning--I didn't find a database entry for "CAEN"
+Warning--I didn't find a database entry for "Spectrum"
+Warning--I didn't find a database entry for "WaveDump"
+Warning--I didn't find a database entry for "Dask"
+Warning--I didn't find a database entry for "Pandas"
+Warning--I didn't find a database entry for "Goodfellow-et-al-2016"
+Warning--I didn't find a database entry for "Griffiths"
+Warning--I didn't find a database entry for "Nilsson"
 You've used 0 entries,
             2481 wiz_defined-function locations,
-            550 strings with 4438 characters,
+            575 strings with 4659 characters,
 and the built_in function-call counts, 34 in all, are:
 = -- 0
 > -- 0
@@ -45,4 +57,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 7
-(There were 2 error messages)
+(There was 1 error message)

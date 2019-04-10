@@ -7,10 +7,12 @@
 %figure related stuff
 \usepackage{graphicx, caption}
 \usepackage{subcaption}
+%mathmode non italic text using \text
+\usepackage{amsmath}
 %document layout
 \usepackage[a4paper,margin=1in]{geometry}
 %links in pdf
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 %document management
 \usepackage{subfiles}
 %linespacing
@@ -18,8 +20,14 @@
 \singlespacing
 %SI units
 \usepackage{siunitx}
+\DeclareSIUnit{\sample}{S} %get sample unit
+%greekletters in text
+\usepackage{textgreek}
+%degree symbol
+\usepackage{gensymb}
 
-\title{Tagging and Identifying Neutrons Using Digitized Waveforms}
+
+\title{Tagging and Identification of Neutrons with Digitized Waveforms}
 \author{Rasmus Kjær Høier}
 \date{May 2019}
 \pagenumbering{roman}
@@ -28,7 +36,7 @@
 \maketitle
 
 \newpage
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 \newpage
@@ -42,18 +50,13 @@
 \onehalfspacing
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\section{Introduction}
-\clearpage
 \subfile{NeutronsAndNeutronDetection.tex}%concepts
 \clearpage
 \subfile{ExperimentalSetup.tex}%Equipment
 \clearpage
-\subfile{signalProcessing.tex}%Equipment
-\clearpage
+\section{Results}%Reflection
 \subfile{NeutronTagging.tex}%Implementation
-\clearpage
 \subfile{WaveformNeutronTagging.tex}%Implementation
-\clearpage
 \subfile{Results.tex}%Implementation
 \clearpage
 \section{Discussion}%Reflection

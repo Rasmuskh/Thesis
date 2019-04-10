@@ -1,20 +1,35 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\section{Results and Performance Comparisson}\label{sec:results}
-to do:.............
-\newline
--$\frac{Livetime}{runtime}$
-\newline -explain differences in QDC and ToF spectra
-\newline- FoM comparisson
+\subsection{Results and Performance Comparisson}\label{sec:results}
+\subsubsection{Comparisson of Energy Deposition and Time of Flight Spectra}
 
-\subsection{Comparisson of Energy Deposition and Time of Flight Spectra}
+The analog and the digital setup were run with different thresholds, so to properly compare them the correct threshold needs to be found. Since the two setups have different cable lengths to the detectors they are not attenuated to the same extent. Figure \ref{fig:AD_comp} top panel shows the energy and time of flight spectra. It is clear from the energy spectrum that the digital setup has a lower threshold applied. This can also be seen from the time of flight spectrum where the digital spectrum has more slow neutrons.
 \begin{figure}[h]
     \centering
         \includegraphics[width=\textwidth]{CompareResults/comp.pdf}
         \caption{The digital energy spectrum.}
     \label{fig:AD_comp}
 \end{figure}
+
+
+The bottom panel shows the same thing after a number of adjustments have been applied. The threshold on the digital setup has been increased to match the analog setup and the counts in the analog spectrum have been increased in order to account for deadtime (56\% deadtime). Furthermore, the data acquisition software WaveDump does not offer a way to calculate deadtime, so instead the digital data has been scaled to match the analog. By carrying out these changes the two energy spectra look more alike, although the 4.44 $\text{MeV}_\text{ee}$ Compton edges look quite different. This may be because some of the high energy gamma rays were outside of the dynamic range of the digitizer. following the change in threshold it is apparent that the two setups cover nearly the same range of neutron times of flight. However, the digital setup records higher counts after the livetime adjustment. This is likely due to the YAP threshold being lower in the digital setup.
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{CompareResults/QDC_ratio.pdf}
+        \caption{Ratio of the digital and analog QDC spectra-}
+    \label{fig:qdc_ratio}
+\end{figure}
+
+Figure \ref{fig:qdc_ratio} shows the ratio between the digital and analog Energy spectra after rescaling and aligning thresholds. For most of the range the ratio is close to one, but near the 4.44 $\text{MeV}_\text{ee}$ Compton edge it appears some of the digitized pulses have been pushed to lower energies. 
+
+\subsubsection{Pulse Shape Discrimination and Figures of Merit}
+By fitting gaussian functions to the neutron and gamma distribution shown in \ref{fig:fom_analog} and \ref{fig:fom_digital} one can express the quality of separation between the two distribution as a figure of merit, FoM, defined in terms of the centers, C, of the gaussians and their full width half maximum.
+
+\begin{equation}
+FoM = \frac{C_n - C_\gamma}{FWHM_n + FWHM_\gamma}
+\end{equation}
 
 \begin{figure}[ht]
 	\begin{subfigure}[b]{\textwidth}
@@ -29,11 +44,10 @@ to do:.............
         	\caption{Digital setup}
     	\label{fig:fom_digital} 
     \end{subfigure}
-    \caption{The blue histograms shows the pulse shape parameter. The green curve is this same histogram after being smoothed by a gaussian kernel, to allow for identification of extreme values. The red and green curves are fits to the gamma and neutron distributions respectively. The inserts show the pulse shape parameter as a function of energy, for full size version see fig \ref{fig:psd_a} and \ref{fig:psd_d}. }
+    \caption{The blue histograms shows the pulse shape parameter. The green curve is this same histogram after being smoothed by a gaussian kernel, to allow for identification of extreme values. The red and green curves are fits to the gamma ray and neutron distributions respectively. The inserts show the pulse shape parameter as a function of energy, for full size version see fig \ref{fig:psd_a} and \ref{fig:psd_d}. }
 \end{figure}
 
-\subsection{Pulse Shape Discrimination and Figures of Merit}
-
+The figure of merit is highly energy dependent. It can be seen from \ref{fig:psd_fom_trend} that the digital setup performs better at all energy thresholds. The ideal placement of the pulse shape discrimination cut also varies with energy, but as is shown in figure \ref{fig:psd_cut_trend} the linearizations of the pulse shape parameters have minimized these variations.
 \begin{figure}[ht]
 	\begin{subfigure}[b]{\textwidth}
 	    \centering
@@ -47,7 +61,7 @@ to do:.............
         \caption{}
     	\label{fig:psd_cut_trend} 
     \end{subfigure}
-    \caption{(a) Pulse shape discrimination figure of merit plotted as a function 	of minimum deposited energy. (b) Ideal pulse shape cut as a function of minimum deposited energy.}
+    \caption{(a) Pulse shape discrimination figure of merit plotted as a function of minimum deposited energy. (b) Ideal pulse shape cut as a function of minimum deposited energy.}
 \end{figure}
 
 \begin{figure}

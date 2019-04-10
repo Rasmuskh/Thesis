@@ -1,30 +1,30 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 \section{Neutrons and Neutron Detection}
+\subsection{Introduction}
 
 \subsection{Neutron Matter Interactions}
+The neutron is composed of an up and two down quarks and has no net electric charge. It does however have a small magnetic moment due to the charged quarks it is constituted by. 
+
+Like all particles the neutron is affected by the gravitational force. However, this effect is negligible in most experimental situations.
+
+Although the neutron has no charge its constituent quarks may interact via the electromagnet force. The fact that it has a magnetic moment also means that it can be scattered by magnetic fields.
+
+As a fermion the neutron can also interact via the weak force.
+
+The strong force is responsible for binding quarks together to form neutrons and protons, but the residual strong force is responsible for binding nucleons together. The residual strong force is also responsible for the scattering of nucleons.
+
+
 
 \subsection{Sources of Free Neutrons}
+Spallation sources
+Reactors
+Radioactive sources
 Actinide/Be
-I used PuBe (which atomic numbers?)
 
-\subsection{Detecting Neutrons and Gammas with Scintillation Detectors}
-Scintillators are materials which produce light when radiation passes through. When choosing a scintillator material one needs to consider timing resolution, recovery time, pulse shape discrimination ability, sensitivity to different particles.
-
-Neutrons are detected when they scatter and knock out a protons, which then ionize the scintillator material. High Z/N ratio in the material is important for neutron detection effeciency.
-
-Gammas on the other hand can interact through compton scattering (which may knock an electron free or leave it in an excited state), pair production and the photoelectric effect.
-
-The detectors used for the experiments presented in this report are an NE213 liquid scintilator detector and a YAP crystal scintillator detector.
-
--YAP: The Yap detectors are composed of a Cerium doped Yttrium Aluminium Perovskite crystal monunted on a photomultiplier tube.
-They are only used to detect gammas in order for timestamps to be extracted for each signal. Thus there is no need for pulse shape discrimination capabilities. The typical yap pulse decays within 50-200 ns, which means that the detector can handle count rates in the low MHz range.
-
--NE213: The NE213 detector is sensitive to both gammas and neutrons. 
--gamma interaction
--neutron interaction
--psd
--timestamp
+\subsection{Detecting Neutrons and Gamma Rays with Scintillation Detectors}
+\textbf{Photo Multiplier Tube}\newline
+The signals produced by the neutrons and gamma rays in the scintillators are not in themselves strong enough, so a photomultiplier tube is used to increase the total produced charge. Incident light produces electrons via the photo electric effect at the photo cathode, and these electrons are then accelerated towards an anode by a series of dynodes. Each time an electron reaches a dynode an electron avalanche occurs. The advantage of a PMT is that it makes it possible to amplify small signals by orders of magnitude, and because the amplification is linear information about the original signal strength and timing is preserved.
 
 \subsection{Pulse Shape Discrimination}
 \begin{figure}[ht]
@@ -40,9 +40,13 @@ They are only used to detect gammas in order for timestamps to be extracted for 
     \label{fig:psd_sketch} 
 \end{figure}
 
-\subsection{Neutron Tagging}
-When working with charged particles the energy can for example be calculated from the way in which in which a particles trajectury is bend in a magnetic field. This approach obviously wont work on neutrons, but for fast neutrons the energy can be found by correlating neutrons with gamma photons, which are produced nearly simultaeously. the detection of the neutron gives the end time of its movement from radioactive source to detector, and the gamma ray is used to calculate the start time, and since fast neutrons, E $\approx$ 1-20 MeV, move at classical speeds, we can use classical mechanics to calculate their energy. 
-Using a beryllium based source such as Plutonium beryllium we get both neutrons and gammas. The first reaction is as follows: $$^{238}Pu\rightarrow^{234}U+\alpha+\gamma_1$$
+\subsection{Neutron Time of Flight and Tagging}
+Time of flight as a way to determine energy. can be done with for example a chopper.
+Alternative: Tag neutrons.
+
+Neutron tagging
+When working with charged particles the energy can for example be calculated from the way in which in which a particles trajectory is bend in a magnetic field. This approach obviously wont work on neutrons, but for fast neutrons the energy can be found by correlating neutrons with gamma photons, which are produced nearly simultaeously. the detection of the neutron gives the end time of its movement from radioactive source to detector, and the gamma ray is used to calculate the start time, and since fast neutrons, E $\approx$ 1-20 MeV, move at classical speeds, we can use classical mechanics to calculate their energy. 
+Using a beryllium based source such as Plutonium beryllium we get both neutrons and gammas. The first reaction is as follows: $$^{239}Pu\rightarrow^{234}U+\alpha+\gamma_1$$
 
 The alpha particle can then interact with the beryllium producing both a neutron and another gamma in the following series of events: $$[\alpha+^{9}Be\rightarrow^{12}C^{*}+n],\qquad \longrightarrow \qquad [^{12}C^ {*}\rightarrow^{12}C+\gamma_2]$$
 
