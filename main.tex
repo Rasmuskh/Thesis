@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 %bibliography stuff
 \usepackage[square,numbers]{natbib}
@@ -25,36 +25,42 @@
 \usepackage{textgreek}
 %degree symbol
 \usepackage{gensymb}
+\onehalfspacing
 
 
-\title{Tagging and Identification of Neutrons with Digitized Waveforms}
+\title{Tagging and Identification of Neutrons Using Digitized Waveforms}
 \author{Rasmus Kjær Høier}
 \date{May 2019}
-\pagenumbering{roman}
 
 \begin{document}
+\pagenumbering{roman}
+
 \maketitle
 
 \newpage
+\begin{abstract}
+%-Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
+%-Advantages of digital techniques
+%-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
+\end{abstract}
+\newpage
 \setcounter{tocdepth}{3}
 \tableofcontents
+\listoffigures
+\listoftables
+
+
 
 \newpage
-\begin{abstract}
--Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
--Advantages of digital techniques
--Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).\cite{Leo}
-\end{abstract}
-
-\newpage
-\onehalfspacing
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\chapter{Introduction}
 \subfile{NeutronsAndNeutronDetection.tex}%concepts
 \clearpage
+\chapter{Method}
 \subfile{ExperimentalSetup.tex}%Equipment
 \clearpage
-\section{Results}%Reflection
+\chapter{Results}
 \subfile{NeutronTagging.tex}%Implementation
 \subfile{WaveformNeutronTagging.tex}%Implementation
 \subfile{Results.tex}%Implementation

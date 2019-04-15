@@ -1,15 +1,13 @@
-\BOOKMARK [1][-]{section.1}{Methods}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Experimental Setup}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Radiation Source}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{Fast Neutron and Gamma Ray Detectors}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{The Aquarium}{subsection.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.2}{Analog Signal Processing}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.3}{Time calibration of the analog setup}{section.1}% 7
-\BOOKMARK [2][-]{subsection.1.4}{Digital signal processing}{section.1}% 8
-\BOOKMARK [3][-]{subsubsection.1.4.1}{Digitizer Specifications and Configuration}{subsection.1.4}% 9
-\BOOKMARK [3][-]{subsubsection.1.4.2}{Timestamping}{subsection.1.4}% 10
-\BOOKMARK [3][-]{subsubsection.1.4.3}{Data Processing}{subsection.1.4}% 11
-\BOOKMARK [2][-]{subsection.1.5}{The Data Sets}{section.1}% 12
-\BOOKMARK [3][-]{subsubsection.1.5.1}{Charge Comparisson PSD}{subsection.1.5}% 13
-\BOOKMARK [3][-]{subsubsection.1.5.2}{Neural Network Based Pulse Shape Analysis}{subsection.1.5}% 14
-\BOOKMARK [2][-]{subsection.1.6}{Energy Calibration}{section.1}% 15
+\BOOKMARK [1][-]{section.0.1}{Experimental Setup}{}% 1
+\BOOKMARK [2][-]{subsection.0.1.1}{Radiation Source}{section.0.1}% 2
+\BOOKMARK [2][-]{subsection.0.1.2}{Fast Neutron and Gamma Ray Detectors}{section.0.1}% 3
+\BOOKMARK [2][-]{subsection.0.1.3}{The Aquarium}{section.0.1}% 4
+\BOOKMARK [1][-]{section.0.2}{Analog Signal Processing}{}% 5
+\BOOKMARK [1][-]{section.0.3}{Time calibration of the analog setup}{}% 6
+\BOOKMARK [1][-]{section.0.4}{Digital signal processing}{}% 7
+\BOOKMARK [2][-]{subsection.0.4.1}{Digitizer Specifications and Configuration}{section.0.4}% 8
+\BOOKMARK [2][-]{subsection.0.4.2}{Timestamping}{section.0.4}% 9
+\BOOKMARK [2][-]{subsection.0.4.3}{Data Processing}{section.0.4}% 10
+\BOOKMARK [2][-]{subsection.0.4.4}{Charge Comparisson PSD}{section.0.4}% 11
+\BOOKMARK [2][-]{subsection.0.4.5}{Neural Network Based Pulse Shape Analysis}{section.0.4}% 12
+\BOOKMARK [1][-]{section.0.5}{Energy Calibration}{}% 13

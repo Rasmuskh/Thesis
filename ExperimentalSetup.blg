@@ -7,6 +7,7 @@ Warning--I didn't find a database entry for "Scherzinger:2017"
 Warning--I didn't find a database entry for "Scherzinger:2015"
 Warning--I didn't find a database entry for "Nudat"
 Warning--I didn't find a database entry for "sjogren"
+Warning--I didn't find a database entry for "rofors"
 Warning--I didn't find a database entry for "Leo"
 Warning--I didn't find a database entry for "CAEN"
 Warning--I didn't find a database entry for "Spectrum"
@@ -14,11 +15,12 @@ Warning--I didn't find a database entry for "WaveDump"
 Warning--I didn't find a database entry for "Dask"
 Warning--I didn't find a database entry for "Pandas"
 Warning--I didn't find a database entry for "Goodfellow-et-al-2016"
+Warning--I didn't find a database entry for "keras"
 Warning--I didn't find a database entry for "Griffiths"
 Warning--I didn't find a database entry for "Nilsson"
 You've used 0 entries,
             2481 wiz_defined-function locations,
-            575 strings with 4659 characters,
+            577 strings with 4670 characters,
 and the built_in function-call counts, 34 in all, are:
 = -- 0
 > -- 0

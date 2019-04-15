@@ -1,9 +1,21 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Sherwood et~al.(1954)Sherwood, Stephenson, and Bernstein]{Sherwood}
+J.~E. Sherwood, T.~E. Stephenson, and Seymour Bernstein.
+\newblock Stern-gerlach experiment on polarized neutrons.
+\newblock \emph{Phys. Rev.}, 96:\penalty0 1546--1548, Dec 1954.
+\newblock \doi{10.1103/PhysRev.96.1546}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.96.1546}.
+
+\bibitem[Krane(1988)]{Krane}
+K.~S. Krane.
+\newblock \emph{{INTRODUCTORY NUCLEAR PHYSICS}}.
+\newblock 1988.
 
 \bibitem[Leo(1987)]{Leo}
 W.~R. Leo.
@@ -11,6 +23,12 @@ W.~R. Leo.
   to Approach}.
 \newblock 1987.
 \newblock ISBN 9783540572800.
+
+\bibitem[Mauritzsson(2017)]{Mauritzsson}
+Nicholai Mauritzsson.
+\newblock Design, construction and characterization of a portable fast-neutron
+  detector, 2017.
+\newblock Student Paper.
 
 \bibitem[Scherzinger et~al.(2017)Scherzinger, Al~Jebali, Annand, Fissum,
   Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and
@@ -45,6 +63,11 @@ Johan Sjögren.
 \newblock \emph{Construction and initial testing of a neutron detector
   prototype}.
 \newblock Lund University, 2010.
+
+\bibitem[Rofors(2016)]{rofors}
+Emil Rofors.
+\newblock Fast photoneutron detection, 2016.
+\newblock Student Paper.
 
 \bibitem[CAEN(2017)]{CAEN}
 CAEN.
@@ -83,11 +106,22 @@ Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 \newblock MIT Press, 2016.
 \newblock \url{http://www.deeplearningbook.org}.
 
+\bibitem[Chollet et~al.(2015)]{keras}
+Fran\c{c}ois Chollet et~al.
+\newblock Keras.
+\newblock \url{https://keras.io}, 2015.
+
 \bibitem[Griffiths et~al.(2018)Griffiths, Kleinegesse, Saunders, Taylor, and
   Vacheret]{Griffiths}
 J.~Griffiths, S.~Kleinegesse, D.~Saunders, R.~Taylor, and A.~Vacheret.
 \newblock {Pulse Shape Discrimination and Exploration of Scintillation Signals
   Using Convolutional Neural Networks}.
 \newblock 2018.
+
+\bibitem[Nilsson(2003)]{Nilsson}
+Björn Nilsson.
+\newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
+  Reaction in the Giant Resonance Region}.
+\newblock Lund University, 2003.
 
 \end{thebibliography}
