@@ -1,6 +1,170 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
+\chapter{Results}
+
+\section{The Data Sets}
+The data presented in this chapter was collected during one hour of parallel measurements at the analog and the digital setup. The applied thresholds are shown in table \ref{tab:settings}. The YAP threshold was set at 9.8\si{\milli\volt} during acquisition, but having such a low threshold was found to decrease the signal to noise ratio in the time of flight spectrum, so a higher threshold of 24.4\si{\milli\volt} was applied.
+\begin{table}[bh]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Setup   & YAP threshold(mV) & NE213 threshold(mV) & NE213 events ($\text{10}^\text{6}$) & Livetime \\ \hline
+Analog  & 25.0              & 94.6                & 4.3      & 44\%             \\ \hline
+Digital & 9.8/24.4	        & 48.8                & 2.2      & -             \\ \hline
+\end{tabular}
+\caption{Threshold values and number of NE213 events.}
+\label{tab:settings}
+\end{table}
+\section{The Analog Setup}
+\subsection{Pulse Shape Discrimination}
+Neutrons and gamma rays were discriminated through the pulse shape parameter: 
+\begin{equation}
+PS=1-\frac{QDC_{sg}}{QDC_{lg}}
+\end{equation}
+Where QDC$_\text{lg}$ is the QDC value of the pulse integral over 500 ns and QDC$_\text{sg}$ is the value of the 60 ns integral. The baseline offset will constitute a larger fraction of deposited charge for smaller pulses than for larger pulses, so by adding a constant term to either the longgate or shortgate integration it is possible to change way PS varies as a function of energy. a constant 120 QDC channels was added to the shortgate QDC values, in order to linearize the pulse shape as a function of deposited energy. No constant was added to the longgate QDC values. 
+
+Furthermore, events below 0.8 MeV are mostly the result of the pedestal injection, and consequently they are not of interest for pulse shape discrimination and have been removed. As can be seen from figure \ref{fig:qdc_a} there is some overlap between the injected YAP trigger distribution and the actual PuBe energy spectrum. This will be addressed when we look at the time of flight.
+
+PS is shown as a function of deposited energy in figure \ref{fig:psd_a}. The upper band is made up of pulses for which the tail contained a large fraction of the total charge. This is the neutron band. Conversely The lower band is made up of gamma rays for which most of the energy is carried in the body of the pulse. That this is indeed true will be confirmed by the time of flight information.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{AnalogResults/psd.pdf}
+        \caption{Heatmap of the fraction of total integrated charge as a function of energy. The dashed white line indicates the discrimination cut (tail/total = 0.259).}
+        \label{fig:psd_a}
+\end{figure}
+In the analog setup a threshold of 94.6\si{\milli\volt} is applied. Since neutrons have a larger fraction of charge in the tail a 100 mV amplitude neutron signal can be expected to deposit more energy in the detector than a gamma ray pulse of equal amplitude. This gives rise to the curved energy threshold we see in the figure. It is also notable that the neutron band seems to be one single distribution, whereas the gamma band has two clear peaks. This is because the neutrons are produced with a more continuous distribution of energies whereas the gamma rays are produced with specific energies in the deexcitation of nuclei.
+
+The linearization made it possible to draw a straight line through the spectrum, which separates neutrons from gammas. The procedure by which this cut was determined will be presented in parallel for the digital and the analog setup in chapter \ref{sec:results}. For now we just note that PS=0.259, shown as a dashed line in figure \ref{fig:psd_a}, was found to provide the best separation. Seeing how the neutron and gamma distributions seem to overlap at low energies this cut will likely cause some misclassification. Studying the time of flight can help us to get an idea of the extent of this misclassification.
+
+
+\subsection{Time of Flight spectrum}
+By correlating signals in the NE213 detector with those in the YAP we can tag neutrons and gammas in order to construct a time of flight spectrum. For practical reasons NE213 signals are used as start signals for the TDC while the gamma signals are delayed and used as stop signals. Thus the raw time of flight spectrum will contain a neutron peak to the left of a gamma peak. In figure \ref{fig:tof_a} this has been accounted for by switching the sign, converting from TDC channels to nanoseconds using the time calibration factor found in chapter \ref{sec:timecal}, and shifting the gamma peak to time t = 1.055 m/c (the approximate time it takes light to reach the NE213 detector). The energies of particles in the neutron peak is shown in the insert in the figure.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{AnalogResults/tof.pdf}
+        \caption{The time calibrated time of flight spectrum. The x-axis denotes the time of flight from source to NE213 detector. The neutron and gamma peaks have been indicated with arrows and the upper right insert shows the energy distribution of events located in the neutron peak}
+    \label{fig:tof_a}
+\end{figure}
+
+Since all the gamma rays travel at the speed of light one might expect a much narrower gamma peak. The are a number of reasons why this is not the case. First of all the gamma source and the detectors all have some size, so there are multiple paths light can take from source to detector. Secondly interactions are stochastic, so each gamma ray will travel some distance into a detector before interacting, which is particularly relevant for the much larger NE213 detector. The distance travelled through cables and the various electronic components, will also cause some attenuation, which may lead to differences in risetime of low and high amplitude pulses. This will in turn make the constant fraction discriminator less effective causing some loss in the time resolution. Furthermore, the final  digitization by the TDCs may cause some loss of resolution.
+
+Since the distance from source to detector is known we can convert the neutron time of flight into Energy. The insert in figure \ref{fig:tof_a} shows the energy of particles located in the neutron peak, with higher flight times mapping to lower energies. The interval used is highlighted by the red dotted lines.
+
+
+The time of flight information can offer insight into the energy cut made to separate out the pedestal events as well as the pulse shape discrimination cut. Figure \ref{fig:tof_ps_a} shows pulse shape as a function of time of flight, with neutron and gamma distributions highlighted. It is clear that it is not possible to make a discrimination cut on the pulse shape parameter without significant misclassification. 
+
+Often the start and stop signal will be due to random coincidences. On small timescales of a few hundred nanoseconds these events are expected to form a flat background in the time of flight spectrum, as seen in figure \ref{fig:tof_a} beyond 60 ns. Since the events still represent either neutrons or gamma rays one would expect them to be separated into two bands in figure \ref{fig:tof_ps_a}. One above and one below the cut. However the distributions are not far enough from one another for this to be visible.
+
+Another interesting feature is that there is large amount of gammas at higher PS values. This is because not all the unwanted YAP trigger induced events were removed by the cut at 0.8 $\text{MeV}_\text{ee}$ and as these events use the same signal as start and stop, they will appear to be simultaneous. The reason why they appear to have such a high fraction of tail/total lies in the gate lengths. Since the charge integrals of these events are just integrals of what randomly happened to be in the detector at the time a YAP trigger occured, and since the longgate window is more than eight time as long as the shortgate window it is more likely that there is something to integrate in the tail part of the window.
+\begin{figure}[ht]
+    \centering
+        \includegraphics{AnalogResults/tof_psd.pdf}
+        \caption{Time of flight plotted against PS. The dashed white line indicates the discrimination cut at tail/total = 0.259. A logarithmic z-axis is used to highlight the distribution of background events. Pedestal events have been removed with a cut at 0.8 $\text{MeV}_\text{ee}$.}
+    \label{fig:tof_ps_a} 
+\end{figure}
+
+We can gain some more information on the effect of the injected pedestal events by looking at figure \ref{fig:tof_E_a}. Above 0.8 $\text{MeV}_\text{ee}$ We have a gamma and a neutron distribution as marked by the arrows. It is also clear that the events produced by triggering on YAP signals (less than 0.8 MeV) mostly land near the gamma ray time of flight. This is to be expected since these signals are acting as both start and stop signals. It is also clear that the cut at 0.8 $\text{MeV}_\text{ee}$ will not be able to remove all of these events. Unlike the gamma flash the neutron distribution show some correlation between time of flight and energy deposition. It seems that the faster neutrons are able to deposit more energy than the slower ones.
+
+In figure \ref{fig:tof_Edep_Eneutron_a} the deposited energy is shown as a function of neutron kinetic energy as found from the time of flight spectrum. It can be seen that high energy deposition implies high neutron energy. However, the converse is not necessarily true as neutrons may scatter out of the detector before depositing all their energy. It is interesting that the energy the detector sees in $\text{MeV}_\text{ee}$ appears to be only half of the neutrons kinetic energy in  $MeV$.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{AnalogResults/tof_E.pdf}
+        \caption{Time of flight plotted against energy deposition.}
+    \label{fig:tof_E_a} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{AnalogResults/tof_Edep_Eneutron.pdf}
+        \caption{Neutron energy as a function of deposited energy in the NE213 detector.}
+    \label{fig:tof_Edep_Eneutron_a} 
+\end{figure}
+
+
+
+\section{Digitized Waveform Neutron Tagging}
+
+\subsection{Charge Comparisson PSD}
+Just like with the analog setup the charge integrals were used to perform pulse shape discrimination. The resulting PSD heatmap is shown figure \ref{fig:psd_d}. Since a lower amplitude threshold was applied to the digital setup we find a lot of low energy gamma rays in the gamma band. The 2.23 $MeV_{ee}$ and 4.44 $MeV_{ee}$ compton edges are also clearly distinguishable. 
+
+As with the analog setup longgate and shortgate offsets can be used to linearize the seperation between the bands. Here each shortgate sample point has been offset by 4.79 mV while each longgate sample has been offset by 0.24 mV. At lower energies the bands intersect, but above 1.5 MeV they are clearly separated.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/psd.pdf}
+        \caption{Pulse shape discrimination spectrum produced with the charge comparisson method.}
+        \label{fig:psd_d}
+\end{figure}
+
+\subsection{Convolutional Neural Network PSD}
+The convolutional neural network described in \ref{sec:cnn} was applied to the digitized waveforms. Since the activation function of the output node is the logistic function the value is bounded between zero and one. The resulting pulse shape discrimination spectrum is shown in figure \ref{fig:cnn_E} as a function of deposited energy. Like for the charge comparisson method the upper distribution is neutrons and the lower distribution consists of gamma rays. The bands are better separated here than by the charge comparison method although there still is some slight overlap at low energies. Again the 2.23 and 4.44 $MeV_{ee}$ Compton edges are clearly visible in the gamma band. 
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/CNNpsd.pdf}
+        \caption{Pulse shape discrimination spectrum produced with a convolutional neural network.}
+    \label{fig:cnn_E} 
+\end{figure}
+
+\clearpage
+\subsection{Time of flight spectrum}
+The time of flight spectrum acquired in the 1 hour of data taking is shown in figure \ref{fig:tof_d}. The gamma and netron peaks are indicated with arrows. The gamma peak is not entirely narrow as one might expect seeing as they all travel at the speed of light. As for the analog setup part of the reason is that each photon may have a longer or shorter flightpath depending on its point of production in the source and the point at which it interacts in the detector. Furthermore, the time resolution is limited by is limited by the digitization process. The CFD algorithm looks for where the pulse crosses 30\% of maximum amplitude, but the determination of the maximum amplitude is limited by the resolution and sampling rate of the digitizer.
+
+The flight times in the neutron peak, marked with dotted red lines, has been used to generate the energy spectrum shown in the upper right insert of figure \ref{fig:tof_d}. The spectrum goes to lower energies than what we see for the analog setup in figure \ref{fig:tof_a}, this may be because the digital setup has a lower amplitude threshold than the analog setup, allowing slower neutrons to be recorded.
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/tof.pdf}
+        \caption{The time of flight spectrum of the PuBe source produced by the digital setup.}
+    \label{fig:tof_d} 
+\end{figure}
+
+In order to test the two pulse shape discrimination algorithms one can plot their pulse shape parameters against time of flight. This is shown in figure \ref{fig:tof_cc_tof_cnn}. Figure \ref{fig:tof_digi_cc} shows the narrow gamma distribution and the wider neutron distribution as separated by the charge comparisson method. It is apparent that the two distributons overlap somewhat in pulse shape. It is of note that the neutron and gamma background forms two slightly separated bands.  In figure \ref{fig:tof_digi_cnn} it can be seen that the CNN method provides a better separation, although it still appears that gamma and neutron distributions overlap slightly near prediction value 0.5. The distribution of random coincidence events clearly separate into a gamma ray band below the cut and a neutron band above it.
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[ht]{\textwidth}
+        \includegraphics{DigitalResults/tof_psd.pdf}
+        \caption{}
+        \label{fig:tof_digi_cc}
+    \end{subfigure}
+	\begin{subfigure}[ht]{\textwidth}
+        \includegraphics{DigitalResults/CNNtof_psd.pdf}
+        \caption{}
+        \label{fig:tof_digi_cnn}
+    \end{subfigure}
+    \caption{Heatmaps of of pulseshape discrimination parameters as functions of time of flight plotted with logarithmic z-axis.}
+    \label{fig:tof_cc_tof_cnn}
+\end{figure}
+
+The heatmap shown in figure \ref{fig:tof_E_d} shows energy deposition in the NE213 detector as a function of time of flight. This spectrum hints at why the gamma ray time of flight peak is not entirely narrow. It seems that low energy gamma rays are a bit more spread out regarding time of flight. This could mean that gamma rays traveling at an angle (and thus travelling a slightly longer path) have a higher probability of hitting the detector closer to the edge and get scattered before depositing all of their energy. It could also indicate that the CFD algorithm has a harder time timestamping low charge pulses.
+
+The neutron distribution clearly shows a relation between time of flight and deposited energy. In figure \ref{fig:tof_Edep_Eneutron_d} this relation is highlighted. There appears to be a roughly linear relation between maximum deposited energy and neutron kinetic energy (which determines time of flight). However, as for the analog setup a neutron may deposit all or only part of its energy, so for a given deposited energy we can only conclude the minimum amount of energy the neutron must have had.
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/tof_E.pdf}
+        \caption{Time of flight plotted against energy deposition.}
+    \label{fig:tof_E_d} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics{DigitalResults/tof_Edep_Eneutron.pdf}
+        \caption{Neutron energy as a function of deposited energy in the NE213 detector.}
+    \label{fig:tof_Edep_Eneutron_d} 
+\end{figure}
+
+
+
+
+
+
+
 \section{Results and Performance Comparisson}\label{sec:results}
 \subsection{Energy Deposition}
 
