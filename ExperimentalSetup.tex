@@ -34,17 +34,21 @@ Both DAQS share the same physical setup of detectors, shielding and radiation so
     \caption[Photograps of the analog DAQ setup and the digitizer.]{}
 \end{figure}
 
-\subsection{Radiation Source}
+\subsection{Radiation Sources}
 Two radiation sources were used in this work $^\text{239}\text{Pu}^\text{9}\text{Be}$ and $^\text{60}\text{Co}$, for tagging fast neutrons and energy calibration respectively. The fast neutron source is based on the alpha berylium reaction described in the previous chapter.
-$$\text{\textalpha}+^\text{9}\text{Be}\rightarrow^\text{12}\text{C+n}$$
+$$\text{\textalpha}+^\text{9}\text{Be}\rightarrow^\text{12}\text{C*+n}$$
 Via this reaction the fast neutron source produces approximately $\text{2.99}\cdot\text{10}^\text{6}$ neutrons per second\cite{Scherzinger:2017}. Often the carbon nucleus will be left in its first excited state which deexcites via emission of a \SI{4.438}{\mega\eV} gamma ray. This is the case for 58\% of the reactions\cite{Scherzinger:2015}\footnote{This has been established using an $^\text{241}$Am/$^\text{9}$Be source, but since $^\text{241}$Am produces alpha particles in an energy range similar to $^\text{239}$Pu it can be expected to hold for the PuBe source as well. The weighted mean energies of the alpha particles produces in the decay of $^\text{241}$Am and $^\text{241}$Pu respectively are: \SI{5.4786}{\mega\eV} MeV and \SI{5.4891}{\mega\eV}\cite{Scherzinger:2017}}.
 
 $$^{12}C^ {*}\rightarrow^{12}C+\gamma_2$$
 We then have the gamma produced in the decay of the plutonium nucleus, the neutron produced by the alpha particle hitting the Berylium nucleus and the gamma ray produced in the decay of the carbon nucleus, all of which happens within a very short time frame. 
 
 The neutrons will come at a continuous range of energies depending on the Q value of the reaction:
-$$Q = (m_\alpha + K_\alpha + m_{Be}) - (m_{C} + m_n)$$
-The Q value thus depends on the initial energy of the alpha particle and whether the carbon nucleus is in its ground state or first or second excited state. The time of flight measurements described in the previous chapter then concists in detecting either the two gamma rays or the neutron and one of the gamma rays.
+$$Q = (m_\alpha + K_\alpha + m_{Be}) - (m_{C} + m_n) = K_\alpha + 5.7 MeV$$
+The Q value thus depends on the initial energy of the alpha particle and whether the carbon nucleus is in its ground state or first or second excited state. 
+
+If the alpha had an energy of \SI{5.5}{\MeV} there is then up to \SI{11.2}{\MeV} available for the neutron. If the carbon is in its first excited state then \SI{4.4}{\MeV} goes to the carbons excitation energy (later emitted as a gamma ray), and the neutron can at most obtain \SI{6.8}{\MeV}. 
+
+The time of flight measurements described in the previous chapter then concists in detecting either the two gamma rays or the neutron and one of the gamma rays.
 
 The $^\text{60}\text{Co}$ decays to $^\text{60}\text{Ni}$ via beta decay. This leaves the Nickel nucleus in an excited state which then deexcites, releasing gamma reays of 1.17 and 1.33 MeV gamma rays\cite{Nudat}.
 
@@ -99,7 +103,7 @@ When the pulses first arrive at the analog setup they are sent through a thresho
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.7\textwidth]{AnalogSetup/discriminator_emil.pdf}
-        \caption[Threshold discriminators and time walk]{Illustration of time walk caused by leaing edge triggering\cite{rofors}.}
+        \caption[Threshold discriminators and time walk]{Illustration of time walk caused by leaing edge triggering. Figure from Ref. \cite{rofors}.}
     \label{fig:discriminator}
 \end{figure}
 After the threshold discriminator the YAP and NE213 pulses are copied once again by a FIFO module. One copy will be used for charge integration while another is used to produce timestamps for time of flight determination. The timestamps are acquired with a CFD. The motivation for using this device is that simply triggering on the leading edge will lead to time walk for similarly shaped pulses of varying amplitudes. This is demonstrated in figure \ref{fig:discriminator}. By instead triggering on the point where a pulse reaches a certain fraction of its peak amplitude time walk can be nearly eliminated\citep[pg.327]{Leo}.
@@ -110,12 +114,15 @@ In practice this is achieved by copying the pulse, inverting and attenuating one
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.9\textwidth]{AnalogSetup/cfd_emil.pdf}
-        \caption[CFD trigger principle]{Illustration of the principle of an analog CFD\cite{rofors}.}
+        \caption[CFD trigger principle]{Illustration of the principle of an analog CFD Figure from Ref. \cite{rofors}.}
     \label{fig:cfd}
 \end{figure}
 
-Figure \ref{fig:setup} shows that the NE213 logic pulses from the CFD are sent to a trigger. The trigger then closes a latch, blocking additional signals from passing and sends logic pulses to the TDC and QDC modules. The logic pulse send to the TDC acts as a start signal and the latch remains closed until a stop signal has been received. The stop signal is provided by YAP signals, which have been delayed in order to reach the TDC after the NE213. Intuitively it might seem more straightforward to simply use YAP signals as start and NE213 as stop signal, without bothering with delaying signals. The reason this approach is not taken is that you will get a higher fraction true time coincidences if you spent the systems livetime triggering on the detector covering the smallest solid angle (ignoring differences in detector efficiency), since the propability of the detected particles partner hitting the other detector is maximized this way. This point can be expressed in terms of Bayes theorem in the following manner:
-$$P(NE213|YAP) = P(YAP|NE213) \frac{P(NE213)}{P(YAP)} < P(YAP|NE213)$$ 
+Figure \ref{fig:setup} shows that the NE213 logic pulses from the CFD are sent to a trigger. The trigger then closes a latch, blocking additional signals from passing and sends logic pulses to the TDC and QDC modules. The logic pulse send to the TDC acts as a start signal and the latch remains closed until a stop signal has been received. The stop signal is provided by YAP signals, which have been delayed in order to reach the TDC after the NE213. Intuitively it might seem more straightforward to simply use YAP signals as start and NE213 as stop signal, without bothering with delaying signals. The reason this approach is not taken is that you will get a higher fraction true time coincidences if you spent the systems livetime triggering on the detector covering the smallest solid angle (ignoring differences in detector efficiency). This can be understood in terms of the conditional probability P(A,B) of detecting one of the particles in detector A given the other one has been detected in detector B and the marginal probabilities  P(A) and P(B) (probability of the detectors detecting anything whatsoever). Bayes theorem states:
+
+$$P(A,B) = P(B,A) \frac{P(A)}{P(B)}$$ 
+
+The conditional probabilities are proportional to the solid angle covered by the solid angles covered by the detectors, so in order to maximize the propability of detecting the parter of the particle, which was seen in P(A,B) the ratio P(A)/P(B) should be maximized. This means detector B should cover a larger solid angle than detector A.
 
 The trigger also generates a longgate (500 ns) and a shortgate (60 ns) logic pulses which are sent to the QDC modules. The QDC module then integrates the analog NE213 pulses for the duration of the logic pulses. This provides a measure of the energy deposited in the detector by the pulse on two different timescales. As shown in figure \ref{fig:CNN_training} the QDC and TDC sends their output via optical link to a computer, where it is written to the harddrive.
 
@@ -232,8 +239,8 @@ The approach taken here has been to take advantage of the extra information give
 
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{DigitalSetup/CNN_training.pdf}
-        \caption[Training and validation accuracy of the CNN]{The validation and training accuracy plotted as a function of training iteration. both curves have been smoothened using an averaging filter in order to make trends more visible.}
+        \includegraphics[width=0.8\textwidth]{DigitalSetup/CNN_training.pdf}
+        \caption[Training and validation accuracy of the CNN]{The validation and training accuracy plotted as a function of training iteration. both curves have been smoothened using an averaging filter in order to make trends more apparent.}
     \label{fig:CNN_training} 
 \end{figure}
 

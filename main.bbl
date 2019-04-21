@@ -1,16 +1,13 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Sherwood et~al.(1954)Sherwood, Stephenson, and Bernstein]{Sherwood}
-J.~E. Sherwood, T.~E. Stephenson, and Seymour Bernstein.
-\newblock Stern-gerlach experiment on polarized neutrons.
-\newblock \emph{Phys. Rev.}, 96:\penalty0 1546--1548, Dec 1954.
-\newblock \doi{10.1103/PhysRev.96.1546}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.96.1546}.
+\bibitem[National Nuclear Data~Center(2008)]{Nudat}
+Brookhaven National~Laboratory National Nuclear Data~Center.
+\newblock Nudat (nuclear structure and decay data), March 18, 2008 2008.
 
 \bibitem[Krane(1988)]{Krane}
 K.~S. Krane.
@@ -23,6 +20,13 @@ W.~R. Leo.
   to Approach}.
 \newblock 1987.
 \newblock ISBN 9783540572800.
+
+\bibitem[Tavernier(2010)]{Tavernier}
+S.~Tavernier.
+\newblock \emph{Experimental Techniques in Nuclear and Particle Physics}.
+\newblock Springer Berlin Heidelberg, 2010.
+\newblock ISBN 9783642008290.
+\newblock URL \url{https://books.google.se/books?id=C1GT\_\_RkewUC}.
 
 \bibitem[Mauritzsson(2017)]{Mauritzsson}
 Nicholai Mauritzsson.
@@ -53,10 +57,6 @@ J.~Scherzinger, J.R.M. Annand, G.~Davatz, K.G. Fissum, U.~Gendotti,
 \newblock \doi{https://doi.org/10.1016/j.apradiso.2015.01.003}.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0969804315000044}.
-
-\bibitem[National Nuclear Data~Center(2008)]{Nudat}
-Brookhaven National~Laboratory National Nuclear Data~Center.
-\newblock Nudat (nuclear structure and decay data), March 18, 2008 2008.
 
 \bibitem[Sjögren(2010)]{sjogren}
 Johan Sjögren.
@@ -123,5 +123,10 @@ Björn Nilsson.
 \newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
   Reaction in the Giant Resonance Region}.
 \newblock Lund University, 2003.
+
+\bibitem[Scherzinger(2016)]{ScherzingerPhd}
+Julius Scherzinger.
+\newblock \emph{Neutron Irradiation Techniques}.
+\newblock PhD thesis, Lund University, 2016.
 
 \end{thebibliography}

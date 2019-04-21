@@ -26,14 +26,14 @@
 %degree symbol
 \usepackage{gensymb}
 \onehalfspacing
-
+%appendix
+\usepackage[toc,page]{appendix}
 
 \title{Tagging and Identification of Neutrons Using Digitized Waveforms}
 \author{Rasmus Kjær Høier}
 \date{May 2019}
 
 \begin{document}
-\pagenumbering{roman}
 
 \maketitle
 
@@ -63,10 +63,9 @@
 %CHAPTER3 RESULTS
 \subfile{Results.tex}%Implementation
 \clearpage
-\section{Discussion}%Reflection
-CNN can be improved by moving detector further from aquarium
+\subfile{summary.tex}%Equipment
 \clearpage
-\section{Summary and Outlook}%Reflection
+\subfile{appendix.tex}
 \clearpage
 \bibliography{references}
 \end{document}

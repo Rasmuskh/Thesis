@@ -1,0 +1,25 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\chapter{Summary}
+
+\section{Overview}
+\section{Conclusion}
+Although the two setups were run in parallel using the same detectors the results differed in a number of ways. In particular in terms of livetime, PSD capabilities, and timing.
+
+Although using digitizers for neutron tagging and PSD seems like a very promising way forward it can not be concluded that one setup is definitively better than the others. The analog setup has previously performed better with a smaller NE213 detector. In his 2016 PhD thesis Julius Scherzinger got a figure of merit of 1.03, applying a cut at \SI{0.58}{\MeV}\cite{ScherzingerPhd}. but lack of maintenance possibly combined with use in teaching has left the setup in a suboptimal state. Further fine tuning of the analog setup with the current larger NE213 detector in mind would likely improve the perfomance. The difficulty of maintaining the analog setup is however a significant drawback of this DAQ system.
+
+Likewise the performance of the digital setup can be improved. The low count rates would be avoided by configuring the digitizer to transfer events in blocks rather than one at a time. This would likely lead to higher livetime for the digital setup than the analog setup.
+Likewise applying a smaller baseline offset would make better use of the digitizers limited dynamic range, which would lead to a better determination of the \SI{4.44}{\MeV} compton edge.
+
+In terms of Pulse shape discrimination, then the Digital setup showed significantly better results. It is likely that the charge comparisson method can get further tuned to approach the current performance of the CNN. However training the network on a cleaner dataset would also improve CNN performance. This can be done either by using shielding to obtain separate gamma ray and neutrons or simply by running the acquisition for longer time and moving the NE213 detector further away in order to decrease the number of random coincidences and train on the events contained in the gamma ray and neutron peaks. 
+
+\section{Outlook}
+In February 2019 the digitizer along with the algorithms developed for this thesis was used to test a Stilbene crystal scintilator detector.
+
+
+Over the coming months I will participate in a new measurement campaign together with my supervisor Hanno Perrey and colleagues from Glasgow University. The goal of this will be to document different PSD algorithms and scintillators.
+
+
+
+\end{document}

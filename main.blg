@@ -9,45 +9,45 @@ Warning--empty journal in Spectrum
 Warning--empty year in Spectrum
 Warning--empty year in Spectrum
 Warning--empty journal in Griffiths
-You've used 18 entries,
+You've used 19 entries,
             2481 wiz_defined-function locations,
-            662 strings with 7357 characters,
-and the built_in function-call counts, 6131 in all, are:
-= -- 471
-> -- 340
-< -- 13
+            664 strings with 7437 characters,
+and the built_in function-call counts, 6198 in all, are:
+= -- 476
+> -- 333
+< -- 15
 + -- 138
-- -- 102
-* -- 419
-:= -- 1017
-add.period$ -- 62
-call.type$ -- 18
+- -- 100
+* -- 403
+:= -- 1036
+add.period$ -- 65
+call.type$ -- 19
 change.case$ -- 29
-chr.to.int$ -- 18
-cite$ -- 24
-duplicate$ -- 321
-empty$ -- 567
-format.name$ -- 121
-if$ -- 1285
+chr.to.int$ -- 19
+cite$ -- 25
+duplicate$ -- 336
+empty$ -- 578
+format.name$ -- 120
+if$ -- 1299
 int.to.chr$ -- 1
-int.to.str$ -- 19
-missing$ -- 16
-newline$ -- 106
-num.names$ -- 56
-pop$ -- 189
+int.to.str$ -- 20
+missing$ -- 17
+newline$ -- 111
+num.names$ -- 59
+pop$ -- 200
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 19
 quote$ -- 0
-skip$ -- 198
+skip$ -- 209
 stack$ -- 0
-substring$ -- 134
-swap$ -- 48
+substring$ -- 105
+swap$ -- 49
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 111
+type$ -- 115
 warning$ -- 6
 while$ -- 43
 width$ -- 0
-write$ -- 239
+write$ -- 251
 (There were 6 warnings)
