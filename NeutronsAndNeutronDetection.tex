@@ -1,32 +1,26 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\chapter{Introduction}
-In the late sixties the NIM, Nuclear Instrument Module, standard was established. The NIM standard specifies certain parameters, such as dimensions and power voltage, which makes it possible to easily combine modules from different manufactorers, as well as to disassemble and recombine them to perform different tasks. This made it possible to easily construct experiments, without necessarily knowing all the details of each component. Simply knowing the operation it was to perform was sufficient.
+\chapter{Introduction}\label{ch:1}
+In the late sixties the NIM, Nuclear Instrument Module, standard was established. The NIM standard specifies certain parameters, such as dimensions and power voltage, which makes it possible to easily combine modules from different manufacturers, as well as to disassemble and recombine them to perform new experiments. This made it possible to easily construct experiments, without necessarily knowing all the details of each component. Simply knowing the operation it was to perform was sufficient.
 
-Today a similar step is being taken with the adoption of digital signal processing techniques in nuclear physics labs. This step has become possible due to a variety of factors. On one hand the storage prices of less than 0.5 SEK per gigabyte makes it feasible to store much more information than previously while increases in processing power has made processing vast datasets more practical. On the other hand the price and performance of digitization tools are important factors in making the endevour worthwhile.
+Today a similar step is being taken with the adoption of digital signal processing techniques in physics labs. This step has become possible due to a variety of factors. On one hand the storage prices of less than 0.5 SEK per gigabyte makes it feasible to store much more information than previously while increases in processing power has made processing vast datasets more practical. On the other hand the price and performance of digitizers, which sample pulses at GHz frequencies, are important factors in making the endeavor worthwhile.
 
-At the source testing facility in Lund researchers can carecterize detectors against known sources and even measuring the time of flight of neutrons. The time of flight setup is also used as a student lab and by collaborators. The tagging setup various NIMs, and many components have to be finely tuned for a particular detector, by changing delays, gate lengths and thresholds. 
+Currently a variety of detectors are under development for the European Spallation Source, and these detectors need to be characterized. The source testing facility in Lund offers researchers a place to carecterize their detectors against known sources and even measure time of flight of neutrons. 
 
-Whereas varying these parameters in hardware requires
-This thesis will examine the potential of using modern digitization techniques as a complement and alternative to the analog setup. 
+The time of flight setup is both used in teaching and in research. The tagging setup employs various NIMs, and many components have to be finely tuned for a particular detector setup, by changing delays, gate lengths and thresholds in order to optimize the performance. This is not a trivial task, and locating a faulty cable or NIM can be highly time consuming.
 
-digital pulse processing By building constructing a setup using digital pulse processing techniques 
+By using digitizers most of the finetuning can be done offline, which makes it possible to study the effects of various thresholds and gate lengths on the same data set. Digitizers also make it easier to scale up the number of detectors in the setup.
+In addition to this having access to the entire digitized waveforms makes it possible to employ advanced pulse shape discrimination techniques, which are not feasible in the analog domain.
 
- An important part of the STF is the neutron tagging setup, which allows users to generate a spectrum of neutron energies
-Time of flight setup
-students labs
-lots of cables
-digitizer
-
-Neutrons - transition
+This thesis will examine the potential of using modern digitization techniques as a complement and alternative to the established analog setup. This will be done by comparing the performance of the established analog electronics setup with that of a digitizer based setup.
 
 \section{Neutron Matter Interactions}\label{sec:neutronMatterInteractions}
 Neutrons are subatomic particles, which together with the proton make up the nuclei of the elements. With a mass of \SI{939.6}{\MeV\;} the neutron is \SI{1.293}{\MeV\;}heavier than the proton and 1839 times as heavy as the electron. Neutrons where first discovered by Chadwick in 1932, and has since come to play an important role as probes of matter, due to being massive uncharged particles.
 
-Neutrons are composed of one up and two down quarks, with zero net electric charge. Being uncharged neutrons are an extremely penetrating type of radiation, capable of moving through the electric fields of electrons and protons unaffected. In addition to this the large mass means that thermal neutrons have a wavelength on the order of a few Ångström. The combination of these two features makess neutrons useful tools for examining the structure of matter all the way down to an interatomic scale.
+Neutrons are composed of one up and two down quarks, with zero net electric charge. Being uncharged neutrons are an extremely penetrating type of radiation, capable of moving through the electric fields of electrons and protons unaffected. In addition to this the large mass means that thermal neutrons have a wavelength on the order of a few Ångström. The combination of these two features makes neutrons useful tools for examining the structure of matter all the way down to an interatomic scale.
 
-When not bound in a nucleus neutrons will decay into a proton via beta decay. This process has a half-life of 10.2 minutes \cite{Nudat} and an average lifetime. This means that free neutrons have to be produced at the location of the experiment.
+When not bound in a nucleus neutrons will decay into a proton via beta decay. This process has a half-life of 10.2 minutes \cite{Nudat}. This means that free neutrons have to be produced at the location of the experiment.
 
 In different energy ranges neutron interactions have different cross sections, for this reason neutrons are often classified according to their energy. The following classification is given by Krane\cite[444]{Krane}.
 
@@ -56,14 +50,21 @@ Neutrons for experimental use can be produced in different ways. Spallation neut
 
 On a smaller scale neutrons can be obtained from radioactive sources. Photonuclear sources produce neutrons in the reaction (\textgamma ,n) and actinide Berylium sources produce neutrons in the interaction $^\text{9}$Be(\textalpha,n)$^\text{12}$C, where the \textalpha\;is produced by the decay of the actinide X\cite[pg.8]{Leo}.
 \begin{equation}
-	^A_ZX\;\rightarrow\;^{A-4}_{Z-2}Y\;+\;\alpha\;+\;\gamma_1
+	\begin{split}
+		^\textrm{A}_\textrm{Z}\textrm{X}\;\rightarrow\;^{\textrm{A-4}}_{\textrm{Z-2}}\textrm{Y}^*\;+\;\alpha \\
+		^{\textrm{A-4}}_{\textrm{Z-2}}\textrm{Y}^*\;\rightarrow\;^{\textrm{A-4}}_{\textrm{Z-2}}\textrm{Y} + \gamma_1
 	\label{eq:actinide}
+	\end{split}
 \end{equation}
 
 \begin{equation}
-	\text{\textalpha}+^\text{9}\text{Be}\rightarrow^\text{12}\text{C*+n}
+	\begin{split}
+		\alpha+^\text{9}\text{Be}\rightarrow^\text{12}\text{C*}+n\\
+		^\text{12}\text{C*}\rightarrow^\text{12}\text{C} + \gamma_2
+	\label{eq:alphaBe}
+	\end{split}
 \end{equation}
-
+%^\text{12}\text{C*}\^\text{12}\text{C} + \gamma_2
 The Q-value for this process is is \SI{5.7}{MeV}, and can be initiated by alpha particles of any energy. The total available energy after the reaction is then \SI{5.7}{MeV} plus the kinetic energy of the alpha particle.
 
 \section{Detecting Neutrons and Gamma Rays with Scintillation Detectors}
@@ -74,7 +75,8 @@ The photoelectric effect is most pronounced for photons below \SI{0.1}{\MeV} ene
 
 In the case of fast neutrons the scintillation light is mainly produced by recoil nuclei which the neutron has scattered with, as described in section \ref{sec:neutronMatterInteractions}. In the case of elastic scattering the neutron energy will have decreased from E to E' according to the formula\cite[pg. 219]{Tavernier}:
 \begin{equation}
-	E' = 1 - \frac{4m_a m_n \cos^2{\theta}}{\left(m_A + m_n\right)^2}
+	E' = E\left(1 - \frac{4m_a m_n \cos^2{\theta}}{\left(m_A + m_n\right)^2}\right)
+	\label{eq:scat}
 \end{equation}
 Where m$_\text{n}$ and m$_\text{A}$ are the neutron and nucleus masses and theta is the angle between the recoiling nucleus and the initial path of the neutron. This interaction will cause the nucleus to recoil and cause ionization. In inelastic scattering the neutron scatters off a nucleus, which is left in an excited state from which it will decay emitting ionizing gamma rays.
 
@@ -102,18 +104,20 @@ The advantage of a PMT is that it makes it possible to amplify small signals by 
 \section{Neutron-Gamma Ray Discrimination}
 The scintillators metastable states have associated average decay times. Furthermore, the probability of a state being occupied depends on the species of the exciting radiation\cite[pg.171]{Krane}. For some scintillators the differences in decay time between states are large, which means the signals left by recoil nuclei and electrons will have different shapes. This makes it possible to discriminate between gamma rays and neutrons in the detector. Examples of typical signals produced by neutrons and gamma rays respectively are shown in figure \ref{fig:pulse_types}.
 
-The pulse shape can be parameterized in different ways, for example rise-time or frequency. Perhaps the most common method is the charge comparison method where pulses are integrated over two different timescales, longgate and shortgate. Figure \ref{fig:pulse_types} shows examples of two gates. The pulse shape is parameterized as:
+The pulse shape can be parameterized in different ways, for example through rise-time or frequency decomposition. Perhaps the most common method is the charge comparison method where pulses are integrated over two different timescales, longgate and shortgate. Figure \ref{fig:pulse_types} shows examples of two gates. The pulse shape is parameterized as:
+
 \begin{equation}
 	PS \; = \; 1-\frac{Q_{sg} + a}{Q_{lg} + b}
 	\label{eq:ps}
 \end{equation}
-The constants a and b are added to the charge integrals Q$_\text{sg}$ and Q$_\text{lg}$ in order to finetune the way the pulse shape parameter depends on energy. With the right choices of a and b the neutron and gamma distribution can be linearized, such that they can be separated by a single cut on the pulse shape parameter.
+
+The constants a and b are added to the charge integrals Q$_\text{sg}$ and Q$_\text{lg}$ in order to finetune the way the pulse shape parameter depends on energy. With the right choices of a and b the neutron and gamma distribution can be linearized, such that they can be separated by a single cut on the pulse shape parameter. This is illustrated in figure \ref{fig:psd_sketch}. Both a and b have negligible effect on highly energetic pulses, for which Q$_\textrm{lg}$ and Q$_\textrm{sg}$ are much larger than a and b. However for small pulses, which tend to be the hardest to discriminate, increasing a will decrease the PS parameter and conversely increasing b will decrease PS.
 
 If a scintillator has PSD capabilities, then the proton will have a more significant slow component, meaning that PS is greater for Protons/neutrons than for electrons/gamma rays. A typical way of visualizing the pusle shape as a function of energy is shown in figure \ref{fig:psd_sketch}. This produces an upper distribution of neutrons and a lower distribution of gamma rays. It will generally be harder to discriminate the two at lower energies.
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/psd_sketch_axes.pdf}
-        \caption[Pulse shape discrimination sketch]{Sketch of PS as a function of longgate integrated charge. On the left, the parameters a and b are both zero. on the right they have been tuned to facilitate a linear separation between neutrons (upper band) and gamma rays (lower band).}
+        \caption[Pulse shape discrimination sketch]{Sketch of PS as a function of longgate integrated charge. On the left, the parameters a and b are both zero. on the right they have been tuned to facilitate a linear separation between neutrons (upper band) and gamma rays (lower band). The cut is marked with the dashed red lined.}
     \label{fig:psd_sketch} 
 \end{figure}
 
@@ -138,7 +142,7 @@ The three resulting particles, \textgamma$_\text{1}$, \textgamma$_\text{2}$ and 
 
 After a large amount of measurements a spectrum like the one sketched in figure \ref{fig:tof_sketch} will start to appear. The peak to the wide peak to the righy is due to coincidences where a \textgamma\; was detected in the gamma ray detector and a neutron in the fast neutron detector. The wide distribution to the left corresponds to a \textgamma$_\text{1}$ and \textgamma$_\text{2}$.
 
-With a known distance, d, between fast neutron detector and source, the spectrum can be calibrated to a time of flight spectrum, by shifting the \textgamma - n peak to the expected gamma ray time of flight value. This operation also shifts the neutrons to their time of flight, t$_\text{n}$, values and consequently their speed and energy can be obtained from the classical expressions as $v=d/t_n$ and $E=\frac{1}{2}m_n v^2$. Figure \ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) and a regular neutron energy spectrum (red). The energy range reported by Scherzinger of approximately \SI{1-7}{MeV} corresponds to times of flight in the range of \SI{28.8-76.3
+With a known distance, d, between fast neutron detector and source, the spectrum can be calibrated to a time of flight spectrum, by shifting the \textgamma - n peak to the expected gamma ray time of flight value. This operation also shifts the neutrons to their time of flight, t$_\text{n}$, values and consequently their speed and energy can be obtained from the classical expressions as $v=d/t_n$ and $E=\frac{1}{2}m_n v^2$. Figure \ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) and a regular neutron energy spectrum (red). The energy range reported by Scherzinger of approximately 1-\SI{7}{MeV} corresponds to flight times in the range of 29-\SI{76}{\ns}
 
 \begin{figure}[t]
     \centering
@@ -147,5 +151,7 @@ With a known distance, d, between fast neutron detector and source, the spectrum
     \label{fig:scherzinger} 
 \end{figure}
 
+\section{Project goal}
+A digitizer based neutron tagging setup would make it easier to test new detectors at the STF, and would make it possible to employ multichannel pixelated detectors, which are incompatible with the established analog DAQ system. The goal of this thesis is to develop algorithm for offline tagging and pulseshape discrimination and to compare the results to those obtained from the analog setup. In doing so the classical charge comparisson method will be employed for pulse shape discrimination as well as a convolutional neural network based approach.
 
 \end{document}

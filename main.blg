@@ -5,49 +5,50 @@ The style file: unsrtnat.bst
 Database file #1: references.bib
 Warning--empty publisher in Krane
 Warning--empty publisher in Leo
+Warning--empty year in Eljen
 Warning--empty journal in Spectrum
 Warning--empty year in Spectrum
 Warning--empty year in Spectrum
 Warning--empty journal in Griffiths
-You've used 19 entries,
+You've used 22 entries,
             2481 wiz_defined-function locations,
-            664 strings with 7437 characters,
-and the built_in function-call counts, 6198 in all, are:
-= -- 476
-> -- 333
-< -- 15
-+ -- 138
-- -- 100
-* -- 403
-:= -- 1036
-add.period$ -- 65
-call.type$ -- 19
-change.case$ -- 29
-chr.to.int$ -- 19
-cite$ -- 25
-duplicate$ -- 336
-empty$ -- 578
-format.name$ -- 120
-if$ -- 1299
+            682 strings with 7899 characters,
+and the built_in function-call counts, 7088 in all, are:
+= -- 558
+> -- 362
+< -- 18
++ -- 152
+- -- 108
+* -- 451
+:= -- 1177
+add.period$ -- 76
+call.type$ -- 22
+change.case$ -- 34
+chr.to.int$ -- 22
+cite$ -- 29
+duplicate$ -- 385
+empty$ -- 668
+format.name$ -- 132
+if$ -- 1492
 int.to.chr$ -- 1
-int.to.str$ -- 20
-missing$ -- 17
-newline$ -- 111
-num.names$ -- 59
-pop$ -- 200
+int.to.str$ -- 23
+missing$ -- 18
+newline$ -- 128
+num.names$ -- 68
+pop$ -- 229
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 22
 quote$ -- 0
-skip$ -- 209
+skip$ -- 239
 stack$ -- 0
-substring$ -- 105
-swap$ -- 49
+substring$ -- 132
+swap$ -- 56
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 115
-warning$ -- 6
-while$ -- 43
+type$ -- 136
+warning$ -- 7
+while$ -- 50
 width$ -- 0
-write$ -- 251
-(There were 6 warnings)
+write$ -- 291
+(There were 7 warnings)

@@ -2,40 +2,43 @@
 \contentsline {chapter}{List of Tables}{5}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Neutron Matter Interactions}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Sources of Free Neutrons}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}Sources of Free Neutrons}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Detecting Neutrons and Gamma Rays with Scintillation Detectors}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Neutron-Gamma Ray Discrimination}{4}{section.1.4}
 \contentsline {section}{\numberline {1.5}Neutron Time of Flight and Tagging}{6}{section.1.5}
-\contentsline {chapter}{\numberline {2}Method}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}Experimental Setup}{8}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Radiation Sources}{8}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Fast Neutron and Gamma Ray Detectors}{10}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}The Aquarium}{10}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Analog Signal Processing}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}Time calibration of the analog setup}{13}{section.2.3}
-\contentsline {section}{\numberline {2.4}Digital signal processing}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Digitizer Specifications and Configuration}{14}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Timestamping}{16}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Data Processing}{16}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Charge Comparisson PSD}{17}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Neural Network Based Pulse Shape Analysis}{18}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}Energy Calibration}{22}{section.2.5}
-\contentsline {chapter}{\numberline {3}Results}{26}{chapter.3}
-\contentsline {section}{\numberline {3.1}The Data Sets}{26}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Analog Setup}{26}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{26}{subsection.3.2.1}
+\contentsline {section}{\numberline {1.6}Project goal}{8}{section.1.6}
+\contentsline {chapter}{\numberline {2}Method}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Experimental Setup}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Radiation Sources}{9}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Fast Neutron and Gamma Ray Detectors}{11}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}The Aquarium}{11}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Analog Signal Processing}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Discriminators}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Trigger logic}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Charge to digital converters}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Time to digital converter}{15}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Digital signal processing}{15}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Digitizer Specifications and Configuration}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Timestamping}{17}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Data Processing}{18}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Charge Comparisson PSD}{19}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Neural Network Based Pulse Shape Analysis}{19}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Energy Calibration}{24}{section.2.4}
+\contentsline {chapter}{\numberline {3}Results}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Data Sets}{27}{section.3.1}
+\contentsline {section}{\numberline {3.2}Analog Setup}{28}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{28}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{29}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Digital setup}{31}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{31}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{31}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{37}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{37}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{32}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{36}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{36}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Time of Flight Spectra}{38}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}PSD Performance}{38}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}PSD Performance}{39}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Summary}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Conclusion}{43}{section.4.2}
-\contentsline {section}{\numberline {4.3}Outlook}{44}{section.4.3}
-\contentsline {chapter}{Appendices}{45}{section*.42}
-\contentsline {chapter}{\numberline {A}Some Appendix}{46}{Appendix.1.A}
-\contentsline {chapter}{Bibliography}{47}{chapter*.44}
+\contentsline {section}{\numberline {4.1}Conclusion}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Outlook}{44}{section.4.2}
+\contentsline {chapter}{Appendices}{45}{section*.40}
+\contentsline {chapter}{\numberline {A}Appendix}{46}{Appendix.1.A}
+\contentsline {chapter}{Bibliography}{47}{chapter*.42}

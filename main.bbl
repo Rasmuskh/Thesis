@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -34,6 +34,11 @@ Nicholai Mauritzsson.
   detector, 2017.
 \newblock Student Paper.
 
+\bibitem[Scherzinger(2016)]{ScherzingerPhd}
+Julius Scherzinger.
+\newblock \emph{Neutron Irradiation Techniques}.
+\newblock PhD thesis, Lund University, 2016.
+
 \bibitem[Scherzinger et~al.(2017)Scherzinger, Al~Jebali, Annand, Fissum,
   Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and
   Rofors]{Scherzinger:2017}
@@ -58,6 +63,13 @@ J.~Scherzinger, J.R.M. Annand, G.~Davatz, K.G. Fissum, U.~Gendotti,
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0969804315000044}.
 
+\bibitem[Technology()]{Eljen}
+Eljen Technology.
+\newblock Neutron/gamma psd ej-301, ej-309.
+\newblock URL
+  \url{https://eljentechnology.com/products/liquid-scintillators/ej-301-ej-309}.
+\newblock Retrieved: April 23rd 2019.
+
 \bibitem[Sjögren(2010)]{sjogren}
 Johan Sjögren.
 \newblock \emph{Construction and initial testing of a neutron detector
@@ -68,6 +80,12 @@ Johan Sjögren.
 Emil Rofors.
 \newblock Fast photoneutron detection, 2016.
 \newblock Student Paper.
+
+\bibitem[CAEN(2012)]{CAENTDC}
+CAEN.
+\newblock \emph{Technical Information Manual, MOD. V775 series, MOD. V775 N
+  series}.
+\newblock CAEN, 2012.
 
 \bibitem[CAEN(2017)]{CAEN}
 CAEN.
@@ -124,9 +142,11 @@ Björn Nilsson.
   Reaction in the Giant Resonance Region}.
 \newblock Lund University, 2003.
 
-\bibitem[Scherzinger(2016)]{ScherzingerPhd}
-Julius Scherzinger.
-\newblock \emph{Neutron Irradiation Techniques}.
-\newblock PhD thesis, Lund University, 2016.
+\bibitem[Scherzinger et~al.(2016)]{Scherzinger:2016}
+J.~Scherzinger et~al.
+\newblock {The light-yield response of a NE-213 liquid-scintillator detector
+  measured using 2–6 MeV tagged neutrons}.
+\newblock \emph{Nucl. Instrum. Meth.}, A840:\penalty0 121--127, 2016.
+\newblock \doi{10.1016/j.nima.2016.10.011}.
 
 \end{thebibliography}
