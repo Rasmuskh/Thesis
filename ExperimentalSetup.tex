@@ -3,7 +3,7 @@
 
 \chapter{Method}
 \section{Experimental Setup}
-The data presented in this thesis were recorded at the Source Testing Facility at the Department of Physics, Lund University. Two different DAQ systems were used. The first setup employed NIM and VME modules to process signals, generate a trigger decision and finally digitize the timing and charge characteristics of the signals. The digitized data is transfered to a computer, where it is saved and plotted in real time. Since this setup does most of the data processing via analog electronics it will be referred to as the \textit{analog setup}. 
+The data presented in this thesis were recorded at the Source Testing Facility at the Department of Physics, Lund University. Two different DAQ systems were used. The first setup employed NIM and VME modules to process signals, generate a trigger decision and finally digitize the timing and charge characteristics of the signals. The digitized data is transferred to a computer, where it is saved and plotted in real time. Since this setup does most of the data processing via analog electronics it will be referred to as the \textit{analog setup}. 
 
 The second setup is based on a digitizer which records detector signals as digital waveforms for offline analysis. Since all of the processing of signals is performed digitally this setup will be referred to as the \textit{digital setup}. 
 Both experimental setups differ only in the DAQ system used and share the same physical setup of detectors, shielding and radiation source. By sending the detector signals through an active splitter both DAQs can even be run in parallel on the same input signals.
@@ -14,7 +14,7 @@ Both experimental setups differ only in the DAQ system used and share the same p
 	    \centering
 			\captionsetup{width=.80\linewidth}	
     	    \includegraphics[width=\textwidth, angle =90]{AnalogSetup/aquadaq.jpg}
-        	\caption[Photograph of analog DAQ electronics]{Photo of the rack containing the analog setups electronics, as well as the powersupply (blue box) powering the detectors.}
+        	\caption[Photograph of analog DAQ electronics]{Photo of the rack containing the analog setups electronics, as well as the power supply (blue box) powering the detectors.}
 	    \label{fig:aquadaq_image} 
 	\end{subfigure}
 	\begin{subfigure}[b]{0.24\textwidth}
@@ -35,14 +35,14 @@ Both experimental setups differ only in the DAQ system used and share the same p
 \end{figure}
 
 \subsection{Radiation Sources}
-Two radiation sources were used in this work $^\text{239}\text{Pu}^\text{9}\text{Be}$ and $^\text{60}\text{Co}$, for tagging fast neutrons and energy calibration respectively. The calibration source $^\text{60}\text{Co}$ decays to $^\text{60}\text{Ni}$ via beta decay. This leaves the Nickel nucleus in an excited state which then deexcites, releasing gamma reays of either 1.17 or 1.33 MeV\cite{Nudat}.
+Two radiation sources were used in this work $^\text{238}\text{Pu}^\text{9}\text{Be}$ and $^\text{60}\text{Co}$, for tagging fast neutrons and energy calibration respectively. The calibration source $^\text{60}\text{Co}$ decays to $^\text{60}\text{Ni}$ via beta decay. This leaves the Nickel nucleus in an excited state which then deexcites, releasing gamma reays of either 1.17 or 1.33 MeV\cite{Nudat}.
 
 
-The $^\textrm{239}$Pu decays to $^\textrm{235}$U via the reaction described in equation \ref{eq:actinide}, producing both an alpha particle and a photon. The photons will have energies in the range 0-\SI{1.1}{\MeV}\cite{Nudat} and the alpha particles weigthed mean energy is \SI{5.4891}{\mega\eV}\cite{Scherzinger:2017}. The fast neutrons are produced in the reaction given by equation \ref{eq:alphaBe} in the previous chapter.
+The $^\textrm{238}$Pu decays to $^\textrm{235}$U via the reaction described in equation \ref{eq:actinide}, producing both an alpha particle and a photon. The photons will have energies in the range 0-\SI{1.1}{\MeV}\cite{Nudat} and the alpha particles weigthed mean energy is \SI{5.4891}{\mega\eV}\cite{Scherzinger:2017}. The fast neutrons are produced in the reaction given by equation \ref{eq:alphaBe} in the previous chapter.
 
-Via these reactions the PuBe source produces approximately $\text{2.99}\cdot\text{10}^\text{6}$ neutrons per second\cite{Scherzinger:2017}. In 58\% of the reactions the carbon nucleus will be left in its first excited state which deexcites via emission of a \SI{4.438}{\mega\eV} gamma ray\cite{Scherzinger:2015}\footnote{This has been established using an $^\text{241}$Am/$^\text{9}$Be source, but since $^\text{241}$Am produces alpha particles in an energy range similar to $^\text{239}$Pu it can be expected to hold for the PuBe source as well. The weighted mean energies of the alpha particles produces in the decay of $^\text{241}$Am and $^\text{241}$Pu respectively are: \SI{5.4786}{\mega\eV} MeV and \SI{5.4891}{\mega\eV}\cite{Scherzinger:2017}}.
+Via these reactions the PuBe source produces approximately $\text{2.99}\cdot\text{10}^\text{6}$ neutrons per second\cite{Scherzinger:2017}. In 58\% of the reactions the carbon nucleus will be left in its first excited state which deexcites via emission of a \SI{4.438}{\mega\eV} gamma ray\cite{Scherzinger:2015}\footnote{This has been established using an $^\text{241}$Am/$^\text{9}$Be source, but since $^\text{241}$Am produces alpha particles in an energy range similar to $^\text{238}$Pu it can be expected to hold for the PuBe source as well. The weighted mean energies of the alpha particles produces in the decay of $^\text{241}$Am and $^\text{241}$Pu respectively are: \SI{5.4786}{\mega\eV} MeV and \SI{5.4891}{\mega\eV}\cite{Scherzinger:2017}}.
 
-There is then the X-ray/gamma ray produced in the deexcitation of the Uranium nucleus, the neutron produced by the alpha particle hitting the Berylium nucleus and the gamma ray produced in the decay of the carbon nucleus. All of these happen within a very short time frame. The photons originating from the deexcitation of Uranium will have energies between\SI{0}{\MeV} and \SI{1.1}{\MeV}, and the gamma ray originating from the deexcitation will most often have an energy of \SI{4.44}{MeV}.
+There is then the X-ray/gamma ray produced in the deexcitation of the Uranium nucleus, the neutron produced by the alpha particle hitting the Berylium nucleus and the gamma ray produced in the decay of the carbon nucleus. All of these happen within a very short time frame. The photons originating from the deexcitation of Uranium will have energies between \SI{0}{\MeV} and \SI{1.1}{\MeV}, and the gamma ray originating from the deexcitation will most often have an energy of \SI{4.44}{MeV}.
 
 The emitted neutrons have energies depending on the Q-value of the reaction:
 $$Q = (m_\alpha + K_\alpha + m_{Be}) - (m_{C} + m_n) = K_\alpha + 5.7 MeV$$
@@ -50,27 +50,27 @@ The Q value thus depends on the initial kinetic energy, K$_\alpha$, of the alpha
 
 If the alpha had an energy of \SI{5.5}{\MeV} there is then up to \SI{11.2}{\MeV} available for the neutron. If the carbon is in its first excited state then \SI{4.4}{\MeV} goes to the carbons excitation energy (later emitted as a gamma ray), and the neutron can at most obtain \SI{6.8}{\MeV}. 
 
-As the time of flight measurements described in the previous chapter depends on the accurate timing of \textgamma /n and \textgamma /\textgamma\; pairs it is essential to detect both particle species with accurate timing.
+
 
 \subsection{Fast Neutron and Gamma Ray Detectors}
-In this work two different detectors were used for detecting gamma rqys and neutrons from the sources. An NE213 detector was used to detect both gamma rays and neutrons while a YAP detector was used to detect gamma rays. 
+As the time of flight measurements described in the previous chapter depends on the accurate timing of \textgamma /n and \textgamma /\textgamma\; pairs it is essential to detect both particle species with accurate timing. In this work two different detectors were used for detecting gamma rays and neutrons from the sources. An NE213 detector was used to detect both gamma rays and neutrons while a YAP detector was used to detect gamma rays. 
 
-Since its introduction in the early 1960s the NE213 liquid organic scintillator has become a gold standard for fast neutron detection due to its excellent neutron/gamma ray discrimination capabilities and detection efficiency. The drawbacks of this medium is that it is toxic highly volatile with a flashpoint of 26$\text{\degree}$C. 
+Since its introduction in the early 1960s the NE213 liquid organic scintillator has become a gold standard for fast neutron detection due to its excellent neutron/gamma ray discrimination capabilities and detection efficiency. The drawbacks of this medium is that it is toxic and highly volatile with a flash point of 26$\text{\degree}$C. 
 
 The NE213 used here was produced by the now defunct Nuclear Enterprises, but is equivalent to EJ301, currently produced by Eljen Technology. The decay times of the first three components are \SI{3.16}{ns}, \SI{32.3}{ns} and \SI{270}{ns}\cite{Eljen}.
 
-The NE213 detector used here consists of a 122x122x179 \si{\mm}$^\text{3}$ volume of NE213, connected to a photomultiplier tube via a lightguide. This detector was constructed by Johan Sjögreen as part of his thesis work 2009-2010\cite{sjogren}.
+It is contained in a 122x122x179 \si{\mm}$^\text{3}$ volume, which is connected to a photomultiplier tube via a lightguide. This detector was constructed by Johan Sjögreen as part of his thesis work 2009-2010\cite{sjogren}.
 
-Near the source, four YAP detectors are placed. These are largely insensitive to neutrons and provide excellent timing of gamma rays. The Yap detectors are composed of a Cerium doped Yttrium Aluminum Perovskite crystal mounted on a photomultiplier tube. As the YAP detectors are located close to the source approximately \si{10\cm} they experience a significantly larger flux than the NE213 detector located more than a meter away. This makes time resolution and decay time critical factors in their performance. The metastable states of the YAP pulses have decay times of of around 27 ns, but individual high amplitude pulses may be several hundred nanoseconds long, which means that the detector can handle count rates in the low MHz range. To simplify the analysis and limit the data rates only one of the YAP detectors were used.
+Near the source, four YAP detectors are placed. These are largely insensitive to neutrons and provide excellent timing of gamma rays. The Yap detectors are composed of a Cerium doped Yttrium Aluminum Perovskite crystal mounted on a photomultiplier tube. As the YAP detectors are located close to the source approximately \si{10\cm} they experience a significantly higher flux than the NE213 detector located more than a meter away. This makes time resolution and decay time critical factors in their performance. The metastable states of the YAP pulses have decay times of of around 27 ns, but individual high amplitude pulses may be several hundred nanoseconds long, which means that the detector can handle count rates in the low MHz range. To simplify the analysis and limit the data rates only one YAP detector was used.
 
 \subsection{The Aquarium}
-The fast neutron source is located inside a tank of water, referred to as the \textit{Aquarium}, of dimension 140x140x140 \si{\cm}${}^\text{3}$, shown in figure \ref{fig:aquarium}. The aquarium has four experimental ports, intesecting at the central volume. The source and yap detectors are placed at the center of the aquarium. The cylinders and the central volume are airfilled. However, each of the ports can be closed with plastic plugs, to block out neutrons, when not in use.
+The fast neutron source is located inside a tank of water, referred to as the \textit{Aquarium}, of dimension 140x140x140 \si{\cm}${}^\text{3}$, shown in figure \ref{fig:aquarium}. The aquarium has four experimental ports, intersecting at the central volume. The source and yap detectors are placed at the center of the aquarium. The cylinders and the central volume are air-filled. However, each of the ports can be closed with plastic plugs, to block out neutrons, when not in use.
 
-By moderating fast neutrons as well as absorbing some of them via the reaction: $^{\text{1}}$H(n,\textgamma)$^{\text{2}}$D$^*$, the water both provides shielding from the radiation and gives rise to a distinguishable gamma energy peak of 2.23 MeV, produced in the deexcitation of the deuteron. This peak can also be used in the energy calibration.
+By moderating fast neutrons as well as absorbing some of them via the reaction: $^{\text{1}}$H(n,\textgamma)$^{\text{2}}$D$^*$, the water both provides shielding from the radiation and gives rise to a distinguishable gamma energy peak of 2.23 MeV, produced in the deexcitation of the deuteron. This peak can also be used for energy calibration.
 
 The PuBe source is located on the central vertical axis and can be in raised position at the same height as the ports or in a lowered parked position, where there is no direct line of sight through air from source and out of the ports.
 
-The four YAP detectors are located near the source, but are raised slightly, to allow a direct line of sight from source to the ports. The YAP detector used in this work is indicated with an arow in figure \ref{fig:aquarium_bird} with an arrow.
+The four YAP detectors are located near the source, but are raised slightly, to allow a direct line of sight from source to the ports. The YAP detector used in this work is indicated with an arrow in figure \ref{fig:aquarium_bird}.
 \begin{figure}[ht]
 	\center
 	\begin{subfigure}[b]{0.39\textwidth}
@@ -85,7 +85,7 @@ The four YAP detectors are located near the source, but are raised slightly, to 
         	\caption[Aquarium 2D, top view]{}
 	    \label{fig:aquarium_bird} 
 	\end{subfigure}
-	\caption[CAD drawing of the aqurium]{(a) Schematic of the aquarium and the NE213 detector located in front of one of the ports. Lines of flight from source and out of two of the ports are indicated with arrows. The source and the four YAP detectors are located in the tubes at the center of the aquarium. (b) Top view of the, source aquarium and the detectors.}
+	\caption[CAD drawing of the aquarium]{(a) Schematic of the aquarium and the NE213 detector located in front of one of the ports. Lines of flight from source and out of two of the ports are indicated with arrows. The source and the four YAP detectors are located in the tubes at the center of the aquarium. (b) Top view of the aquarium, source and the detectors.}
 	\label{fig:aquarium}
 \end{figure}
 \begin{figure}[h]
@@ -108,7 +108,7 @@ When the pulses first arrive at the analog setup they have to pass a threshold d
     \label{fig:discriminator}
 \end{figure}
 
-After the threshold discriminator the YAP and NE213 pulses have to pass through constant fraction discriminators (CFD). The CFDs are marked by the number 2 in figure \ref{fig:setup} The motivation for using this device is that simply triggering on the leading edge of pulses will lead to time walk for similarly shaped pulses of varying amplitudes. Timewalk means that pulses of the same shape but different amplitude will trigger at different times, as illustrated in figure \ref{fig:discriminator}, where the smaller pulse passes the threshold at a later time than the larger pulse. This time difference is what is refered to by timewalk. 
+After the threshold discriminator the YAP and NE213 pulses have to pass through constant fraction discriminators (CFD). The CFDs are marked by the number 2 in figure \ref{fig:setup} The motivation for using this device is that simply triggering on the leading edge of pulses will lead to time walk for similarly shaped pulses of varying amplitudes. Timewalk means that pulses of the same shape but different amplitude will trigger at different times, as illustrated in figure \ref{fig:discriminator}, where the smaller pulse passes the threshold at a later time than the larger pulse. This time difference is what is referred to by timewalk. 
 
 By instead triggering on the point where a pulse reaches a certain fraction of its peak amplitude time walk can be nearly eliminated\citep[pg.327]{Leo}. In practice this is achieved by dividing or copying the signal, inverting one copy and delaying the other one. The pulses are then added and the zero crossing of the summed signal corresponds to a certain fraction of the input pulse. In figure \ref{fig:cfd} this operation is demonstrated. Changing the amplitude of the incoming signal will have the same effect on both copies of the signal, and consequently the CFD trigger time is amplitude independent. The output of the constant fraction discriminator is a logic pulse representing the time of the CFD triggering.
 
@@ -129,16 +129,16 @@ The amount of time the Latch is closed is called deadtime, because the system is
 Although the setup contains both YAP and NE213 detectors only the NE213 is used to trigger acquisition. This is because the NE213 will trigger less often than the YAP, due to covering a smaller solid angle. This way the systems deadtime is minimized.
 
 \subsection{Charge to digital converters}
-The pulses that make it through the latch are used to generate 60 and 500 ns logic pulses, which act as integration windows or gates for the charge to digital converters (QDCs). In figure \ref{fig:setup} these modules are labelled with the number 4.
+The pulses that make it through the latch are used to generate 60 and 500 ns logic pulses, which act as integration windows or gates for the charge to digital converters (QDCs). In figure \ref{fig:setup} these modules are labeled with the number 4.
 
-Copies of the analog signals are also sent to the QDC modules, and each module carries out an integration for the duration of the gate. This provides a measure of the energy deposited in the detector by the pulse on two different timescales. As shown in figure \ref{fig:setup} the QDC modules send their output via optical link to a computer, where it is written to the harddrive.
+Copies of the analog signals are also sent to the QDC modules, and each module carries out an integration for the duration of the gate. This provides a measure of the energy deposited in the detector by the pulse on two different timescales. As shown in figure \ref{fig:setup} the QDC modules send their output via optical link to a computer, where it is written to the hard drive.
 
 
 
 \subsection{Time to digital converter}
-A logic signal is also sent from the latch to a time to digital converter (TDC). This module is labeled with the number 5 in figure \ref{fig:setup}. The TDC starts charging a capacitor with a constant current once the start signal is received, and stops again once the stop signal is received. The capacitor then discharges and the amplitude of the discharge pulse is proportional to the time between start and stop\cite{CAENTDC}. An analog to digital converter then digitizes the pulse and sends the resulting number to a computer via optical link.
+A logic signal is also sent from the latch to a time to digital converter (TDC). This module is labeled with the number 5 in figure \ref{fig:setup}. The TDC starts charging a capacitor with a constant current once the start signal is received, and stops again once the stop signal is received. The capacitor then discharges and the amplitude of the discharge pulse is proportional to the time between start and stop\cite{CAENTDC}. An analog to digital converter digitizes the pulse and sends the resulting number to a computer via optical link.
 
-The values provided by the TDC are given in units of TDC channels, so a calibration was necessary to convert them into nanoseconds. By using a copy of the yap signal to trigger the start of the TDC and another copy to trigger the stop a very sharp peak was produced in the TDC spectrum. This peak was then shifted by delaying the signal by known numbers of nanoseconds and the calibration fit shown in figure \ref{fig:Tcal} was generated. Since the location of $t=0$ is arbitrary the important result is the coefficient \SI{0.28}{\nano\second/channel}, which can be used to convert from TDC channels to nanoseconds.
+The raw values provided by the TDC are given in units of TDC channels, so a calibration was necessary in order to convert them into nanoseconds. By triggering the start of the TDC with the same signal used to stop the TDC a very sharp peak was produced. This peak was then shifted in known intervals by increasing cable length in order to produce the calibration fit shown in figure \ref{fig:Tcal}. Since the location of $t=0$ is arbitrary the important result is the coefficient \SI{0.28}{\nano\second/channel}, which can be used to convert from TDC channels to nanoseconds.
 \begin{figure}[ht]
 	\centering
     	\includegraphics[width=0.8\textwidth]{AnalogSetup/Tcal.pdf}
@@ -148,49 +148,54 @@ The values provided by the TDC are given in units of TDC channels, so a calibrat
 
 \section{Digital signal processing}
 \subsection{Digitizer Specifications and Configuration}
-A digitizer is a device which converts analog signals, of amplitude greater than a chosen threshold, to digital waveforms. This means that if a signal has high enough amplitude, the digitizer triggers and the continuous analog signal is approximated by a list of numbers, each representing a single sampling point, along with some additional information such as timestamp and channel number. By this definition a digitizer is not much different from a digital oscilloscope. The main difference being that the oscilloscope has a display and is optimized to be easy to move around and use for realtime diagnostics, while the digitizer is optimized for efficient high-rate data transmission to a computer where further analysis can be carried out, either offline or online.
+A digitizer is an electronic device which converts analog signals to digital waveforms. A continuous analog signal will be approximated by a list of numbers, each representing a single sampling point, along with some additional information such as a timestamp based on a global clock and channel number of the input signal. An acquisition is triggered when the amplitude of the input signal crosses a configurable threshold value.
+
+By this definition a digitizer is not much different from a digital oscilloscope. The main difference being that the oscilloscope has a display and is optimized to be easy to move around and use for realtime diagnostics, whereas the digitizer is optimized for efficient high-rate data transmission to a computer where further analysis can be carried out, either offline or online.
 
 The advantage of a digitizer over a traditional analog data acquisition system is that it allows the user to process a single data set in multiple ways in order to find ideal values for parameters, without having to change anything in the physical setup or acquiring new data. On the downside the quality of the discretization of a continuous signal is limited by the sampling rate, resolution and bandwidth of the digitizer as well as the data rate of the read-out system.
 
-The digitizer used in this work is an 8 channel CAEN VX1751 digital waveform digitizer. It has a sampling rate of \si{1\giga\sample\per\second} in standard mode, but can also be operated in Double edge sampling mode, which disables 4 cannels but increases the sampling rate to \si{2\giga\sample\per\second}\cite[p.9]{CAEN}. The data presented in this thesis was acquired in standard mode. This results in one data point per nanosecond when digitizing signals. Given a set of samples there will always be an infinite number of waveforms that fit the points\cite{Spectrum}. This is called aliasing. However, if the sampling rate is at least twice as large as the highest frequency component of tge signal then aliasing is avoided. This is known as the Nyquist Theorem. Typically though a higher sampling rate is desirable.
+The digitizer used in this work is an 8 channel CAEN VX1751 digital waveform digitizer. It has a sampling rate of \si{1\giga\sample\per\second} in standard mode, but can also be operated in Double edge sampling mode, which disables 4 cannels but increases the sampling rate to \si{2\giga\sample\per\second}\cite[p.9]{CAEN}. The data presented in this thesis was acquired in standard mode. This results in one data point per nanosecond when digitizing signals. Given a set of samples there will always be an infinite number of waveforms that fit the points\cite{Spectrum}. This is called aliasing. However, if the sampling rate is at least twice as large as the highest frequency component of the signal aliasing is avoided. This is known as the Nyquists Theorem. Typically a higher sampling rate is desirable.
 
-In order to reproduce signals with a high fidelity it is not enough to have a high sampling rate. The dynamic range, resolution and bandwidth also need to be considered. The VX1751 digitizer has a \si{1\volt} dynamic range, which means that the difference between maximum and minimum voltage is \si{1\volt}. How this range is used is controlled through the choice of signal polarity and baseline offset. The resolution of the digitizer is 10 bit, so the \si{1\volt} dynamic range is cut in 1024 pieces each of size 0.978\si{\milli\volt}\cite{CAEN}. 
+In order to reproduce signals with a high fidelity it is not enough to have a high sampling rate. The dynamic range, resolution and bandwidth also need to be considered. The VX1751 digitizer has a \SI{1}{\volt} dynamic range, which means that the difference between maximum and minimum voltage is \SI{1}{\volt}. How this range is used is controlled through the choice of signal polarity and baseline offset. The resolution of the digitizer is 10 bit, so the \si{1\volt} dynamic range is divided into 1024 bins each of size \SI{0.978}{\milli\volt}\cite{CAEN}. 
 
-The VX1751 has a bandwidth of \si{500 \mega\hertz}. The bandwidth is important because it determines the frequency range of signals that can be read without significant attenuation. If the frequency of a signal is too high, then the amplitude recorded by the digitizer will be lower than the actual signals amplitude. The Bandwidth, $B$, is related to the rise time (the time it takes the pulse to rise from 10 to 90\% of peak amplitude), $T_{rise}$, through the following formula\cite[p.354]{Leo}
+The VX1751 has a bandwidth of \SI{500}{\mega\hertz}. The bandwidth is important because it determines the frequency range of signals that can be read without significant attenuation. If the frequency of a signal is too high, then the amplitude recorded by the digitizer will be lower than the actual amplitude of the input signal. The Bandwidth, $B$, is related to the rise time (the time it takes the pulse to rise from 10 to 90\% of peak amplitude), $T_{rise}$, through the following formula\cite[p.354]{Leo}
 \begin{equation}
 \label{eq:bandwidth}
 B=0.35/T_{rise}
 \end{equation}
-Equation \ref{eq:bandwidth} tells us that an analog signal with a 1 ns rise time would need a 350 MHz bandwidth digitizer in order for the digitized signal to only be attenuated to 70\% of the analog signals amplitude. In comparison the typical rise time of the signals studied in this work is around 5-15 ns.
+Equation \ref{eq:bandwidth} tells us that an analog signal with a \SI{1}{ns} rise time would need a 350 MHz bandwidth digitizer in order for the digitized signal to only be attenuated to 70\% of the analog signals amplitude. In comparison the typical rise time of the signals studied in this work is around 5-15 ns.
 
 The digitizer is controlled via CAEN's software WaveDump, version 3.8.1, published under the terms of the GNU General Public License\cite{WaveDump}, which uses CAEN's proprietary digitizer control libraries\footnote{The version used in this work was modified to write all data to a single file rather than one file per channel.}. WaveDump configures the digitizer according to a text file supplied by the user. The number of data points per trigger is defined globally for all enabled channels. For each enabled channel the signal polarity, trigger threshold and baseline offset needs to be defined. The trigger threshold is the minimum amplitude relative to the baseline that a signal must have in order for an event to be recorded. 
 
 The baseline offset is given in percent and determines where in the dynamic range of the digitizer the baseline is placed. A baseline offset of 0\% will cause the entire range to be used for pulses of the selected polarity. This means that undershoot will not be seen. Therefore it is best to use a small baseline offset.
 
-In the data presented in this thesis the NE213 detector was connected to channel 0 and a YAP detector connected to channel 1, and assigned negative polarity. A threshold of 48.8 mV (50 ADC) was applied to the NE213 and a threshold of 9.8 mV (10 ADC) was applied to the YAP channel. A baseline offset of 10\% was applied to the YAP channel and an offset of 40\% was accidentally applied to the NE213 channel. This meant that high amplitude pulses were cut, which as will be shown in a later chapter affected the energy calibration.
+In the data presented in this thesis the NE213 detector was connected to channel 0 and a YAP detector connected to channel 1, and assigned negative polarity. A threshold of \SI{48.8}{mV} (50 ADC) was applied to the NE213 and a threshold of \SI{9.8}{mV} (10 ADC) was applied to the YAP channel. A baseline offset of 10\% was applied to the YAP channel and an offset of 40\% was accidentally applied to the NE213 channel. This meant that high amplitude pulses were clipped, the effect this had on the energy calibration will be discussed in chapter \ref{ch:results}.
 
-For a one hour run with the NE213 detector placed 1.05 m from the source and one YAP connected the output file would be approximately 120 GB. The Python library Dask was used for processing the this file, because it is optimized for processing larger than memory data sets in chunks and because it runs on all available processors by default\cite{Dask}. The processed data was saved as a parquet file of size 7.3 GB. The Python library Pandas was used for additional processing and visualization of the reduced data set\cite{Pandas}.
+For a one hour run with the NE213 detector placed 1.05 m from the source and one YAP connected the output file is a text file with a size of approximately \SI{120}{GB}. The Python library Dask was used for processing the data, because it is optimized for processing larger than memory data sets in chunks and because it runs on all available processor cores by default\cite{Dask}. After processing and data reduction the data was saved as a parquet file of size 7.3 GB. The Python library Pandas was used for additional processing and visualization of the reduced data set\cite{Pandas}.
 
 \subsection{Timestamping}
-Just as with the analog setup the digital setup needs a method for providing a timestamp in order to produce a precise timestamp for each pulse from the detectors. A general timestamp is provided by the digitizer for each event, but each event is 1204 ns long, and the pulses do not begin at the exact same time in the acquisition window for each event. For this reason a software based constant fraction discriminator was implemented. This algorithm looks at the first 40 ns before the peak amplitude and finds the first sampling point to rise above  a certain fraction of the peak amplitude (In this work 30\% was found to work well). Using linear interpolation between this point and the previous point a sub nanosecond timestamp is generated. In figure \ref{fig:cfd_trig} four pulses from the NE213 detector have been plotted centered around their CFD trigger points. Although this timestamp is given with sub nanosecond precision the accuracy is limited by the determination of the pulse amplitude, which in turn is limited by the sampling rate, resolution and bandwidth. 
+Just as with the analog setup the digital setup needs a method for providing a timestamp for each pulse from the detectors. A global timestamp is provided by the digitizer for each event. However, in this work each event is 1204 ns long, and the pulses do not begin at the exact same time in the acquisition window for each event. For this reason a software based constant fraction discriminator was implemented. This algorithm searches the first \SI{40}{ns} before the peak amplitude for the first sampling point to rise above  a certain fraction of the peak amplitude. In this work a fraction of 30\% was found to work well. By linear interpolation between this sampling point and the previous one a sub nanosecond timestamp is generated. In figure \ref{fig:cfd_trig} four pulses from the NE213 detector have been plotted centered around their CFD trigger points. Although this timestamp is given with sub nanosecond precision the accuracy is limited by the determination of the pulse amplitude, which in turn is limited by the sampling rate, resolution and bandwidth. 
 
 \begin{figure}[ht!]
     \centering
         \includegraphics[width=\textwidth]{DigitalSetup/goodevents.pdf}
-        \caption[Examples of digitized pulses and their CFD trigger points]{A CFD algorithm is used to generate a precise timestamp. Here a CFD trigger level of 30\% of maximum is used.}
+        \caption[Examples of digitized pulses and their CFD trigger points]{Relative timing for NE213 pulses of different amplitude. A CFD algorithm is used to generate a precise timestamp. Here a CFD trigger level of 30\% of the maximum amplitude is used.}
     \label{fig:cfd_trig} 
 \end{figure}
 
-\subsection{Data Processing}
-Since the VX1751 triggers on all enabled channels simultaneously it is necessary to throw away all empty acquisition windows. This is done by first determining and subtracting a baseline by averaging over the first \si{20\nano\second} of each pulse. After that the peak amplitude relative to the new baseline is found and a chosen threshold is reinforced, by removing all pulses of amplitude below the threshold.
+\subsection{Data Selection}
+As the digitizer only enforces a threshold additional selection criteria need to be applied offline in order to clean up the data set. 
+
+Since The VX1751 triggers on all enabled channels simultaneously it is necessary to throw away all empty acquisition windows. This is done by first determining and subtracting a baseline by averaging over the first \si{20\nano\second} of each pulse. After that the peak amplitude relative to the new baseline is found and a chosen threshold is reinforced, by removing all pulses of amplitude below the threshold.
 
 Certain events are removed because they cause the baseline determination, pulse integration or CFD algorithm to produce unreliable results. For example in the case of 2.69\% of all events (not counting events below trigger threshold) the baseline determination is deemed unreliable because the baseline is too unsteady. 
-Examples of this are shown in figure \ref{fig:badevents} (A). The threshold for this cut was chosen to be when the standard deviation over the baseline determination window is above 2 mV. 
-A subset of the times the baseline determination fails will be due to a pulse rising inside the baseline determination window as shown in figure \ref{fig:badevents} (B). This can be recognized from the location of the CFD trigger and happens 0.0016\% of the time. Events are also removed if they occur too late in the acquisition window. Figure \ref{fig:badevents} (C) shows a situation where the CFD trigger occurs so late that there is not enough samples following it to carry out the \si{500 \nano\second} long gate integration, which will have an adverse effect on the QDC spectrum and pulse shape discrimination. This occurs in 1.1\% of the events.
+Examples of this are shown in figure \ref{fig:badevents} (A). Events are removed when the standard deviation over the baseline determination window was above 2 mV. A subset of the times this happens because a pulse rises inside the baseline determination window as shown in figure \ref{fig:badevents} (B). This can be recognized from the location of the CFD trigger and happens 0.0016\% of the time. Events are also removed if they occur too late in the acquisition window. 
 
-0.00066\% of the events are filtered out because a peak is preceded by a smaller peak causing the CFD algorithm to trigger inside the smaller pulse. This situation results in the cfd algorithm finding a positive slope, rather than negative as one would expect for a pulse with negative polarity. Examples of this is shown in figure \ref{fig:badevents} (D).
+Figure \ref{fig:badevents} (C) shows a situation where the CFD trigger occurs so late that not enough samples follow it to carry out the \SI{500}{\nano\second} long gate integration. This occurs in 1.1\% of the events.
 
-During the digitizer configuration a too high baseline offset was applied. This meant that only 60\% of the dynamic range was available for signals from the NE213 detector. Consequently 5.67\% of the events were partly clipped. These events were not thrown away, but did have some effect on the energy spectrum. The pulse height spectrum shown in figure \ref{fig:cutoffevents} highlights the clipped events in green.
+0.00066\% of the events are filtered out because a peak is preceded by a smaller peak causing the CFD algorithm to trigger inside the smaller pulse. This situation results in the CFD algorithm finding a positive slope, rather than negative as one would expect for a pulse with negative polarity. Examples of this is shown in figure \ref{fig:badevents} (D).
+
+During the digitizer configuration, a too high baseline offset was applied. This meant that only 60\% of the dynamic range was available for signals from the NE213 detector. Consequently 5.67\% of the events were partly clipped. These events were not thrown away, but did have some effect on the QDC spectrum. The pulse height spectrum shown in figure \ref{fig:cutoffevents} highlights the clipped events in green.
 \begin{figure}[ht!]
     \centering
         \includegraphics[width=1\textwidth]{DigitalSetup/cutoffevents.pdf}
@@ -201,7 +206,7 @@ During the digitizer configuration a too high baseline offset was applied. This 
 \begin{figure}[ht!]
     \centering
         \includegraphics[width=1\textwidth]{DigitalSetup/badevents.pdf}
-        \caption[Examples of rejected digitized events]{Since The NE213 detector is used for pulse shape discrimination it is important that (A) the the baseline is stable, (B) that the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the CFD algorithm to find a slope of the wrong sign.}
+        \caption[Examples of rejected digitized events]{Since The NE213 detector is used for pulse shape discrimination it is important that (A) the baseline is stable, (B) the pulse rise does not land in the baseline determination window (a subset of (A)), (C) the tail of the pulse is contained. (D) Moreover Closely adjacent pulses may on rare occasions cause the CFD algorithm to find a slope of the wrong sign.}
     \label{fig:badevents} 
 \end{figure}
 
@@ -209,11 +214,50 @@ During the digitizer configuration a too high baseline offset was applied. This 
 Two approaches to pulse shape discrimination were explored with the digitizer. Firstly the charge comparison method was implemented by integrating the waveforms over 60 and 500 nanoseconds respectively, starting 25 nanoseconds before the CFD trigger. Other gate lengths were also attempted, and actually it seemed beneficial to keep both somewhat shorter. However, to make a direct comparison to the analog setup possible the same gate lengths were used. In addition to this the separation between neutron and gamma ray distributions was linearized by adding baseline offsets to the charge integrals.
 
 \subsection{Neural Network Based Pulse Shape Analysis}\label{sec:cnn}
-The biggest advantage a digitizer offers is that it records the entire pulses rather than just extracting a few parameters from them. With the entire digitized waveform available pulse shape discrimination can be approached in ways that are not feasible with analog electronics. Neural networks are known to be able to approximate any continuous function provided they receive sufficient data to train on and a sufficiently complex architecture. So with a labeled set of data it should be possible to train a network to discriminate neutrons from gamma rays. 
+The biggest advantage a digitizer offers is that it records the entire pulses rather than just extracting a few parameters from them. With the entire waveform available pulse shape discrimination can be approached in ways that are not feasible with analog electronics. One such approach is to train a neural network to perform pulse shape discrimination. 
 
-A digitized pulse can be seen as a 1-dimensional image of a pulse, where each element is a discrete approximation to the original analog signal. In recent years convolutional neural networks have set the standard in image classification tasks, so it makes sense to apply a CNN to the problem of pulse shape discrimination.  In contrast to a multilayer perceptron, where each node is connected to every node in the subsequent layer via weights, a CNN uses kernels, with trainable weights to generate images of smaller dimensions. This approach greatly decreases the number of weights necessary in the network, which speeds up both training and application\cite[p.330]{Goodfellow-et-al-2016}.
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=0.25\textwidth]{DigitalSetup/nn.pdf}
+        \caption[Illustration of a simple neural network]{Illustration of a simple neural network.}
+    \label{fig:nn} 
+\end{figure}
 
-Figure \ref{fig:CNN} shows an example of how a CNN operates. This is an illustrative example of how a CNN works, and does not represent the architecture of the network used in this work. After the first convolutional layer three new vectors are produced. One for each of the applied kernels. In the maxpooling layer, using a stride of 2 and size 2 only the maximum value of each pair of pixels are used. This halves the length of the 3 vectors. Then a second convolutional layer is applied. Each of the 6 kernels operates on each of the 3 feature maps in parallel resulting in 6 new feature maps. These are then flattened into a single vector and connected to the output node. By applying the logistic function($f(x)=\dfrac{1}{1-e^{-x}}$) to the output node the value will be bounded between 0 and 1, which makes it suitable for binary classification.
+
+The basic components of a neural network are neurons, weights and activation functions. The network will take an input vector $\vec{\textrm{x}}$ and propagates it through the network to produce an output vector. For binary classification tasks, such as neutron gamma PSD, the output is just a scalar. Figure \ref{fig:nn} shows an example of a simple neural network, being applied to an input vector $\vec{\textrm{x}}$. This type of network is called a multilayer perceptron, because there are hidden layer(s) between the input and output layer. The first two nodes take the value of the elements of the input vector $\vec{\textrm{x}}$. The nodes in the hidden layer, h, take values given by:
+
+\begin{equation}
+	h_i = \phi_0\left(\Sigma_j \left( \omega_{ij}x_j \right) + b_1\right)
+\end{equation}
+
+That is each hidden node,h$_\textrm{i}$,  takes a scalar argument in the form of the dot product between $\omega_\textrm{ij}\textrm{x}_{j}$ plus a bias b$_\textrm{1}$. This argument is then sent into an activation function \textphi, which outputs a scalar value. It is important that the activation function is nonlinear, but there are multiple functions that can be used. The rectified linear unit function, ReLU, is a common choice:
+\begin{equation}
+	ReLU(t) = max(0,t)
+	\label{ReLU}
+\end{equation}
+
+The outputs of subsequent layers are given in the same way, using the values of previous layers as input, and possibly a different activation function. The output node, y, in figure \ref{fig:nn} is given by:
+
+\begin{equation}
+	y = \phi_1\left(\Sigma_j \left( \tilde{\omega_{ij}}h_j \right) + b_2\right)
+\end{equation}
+
+If the weights in the network are randomly chosen, then the network wont be useful, but given a set of labeled data the network can be trained to find the optimal weigth values. The architecture sketched in figure \ref{fig:nn} is very simple, but it is sufficient to be able to for example do the XOR logic operation. The training is done through a technique called backpropagation, where the derivative of an error function with respect to each weight in the network is found through repeated use of the chain rule. These derivatives are then used to perform small adjustments of the weights. This procedure is repeated a number of time until, if the network architecture and training data was sufficient, hopefully the network has learned how to solve its task.
+
+There are however certain problems associated with MLPs. If the data set is large and multiple layers are needed, then the number of weights to be trained will be huge. Furthermore MLPs do not 
+
+A digitized pulse can be seen as a 1-dimensional image of a pulse, where each element is a discrete approximation to the original analog signal. In recent years convolutional neural networks (CNN) have set the standard in image classification tasks, so it makes sense to apply a CNN to the problem of pulse shape discrimination.  
+
+A CNN is a specific subtype of neural networks, which doesn't connect every neuron in a given layer with every neuron in the subsequent layer. Rather a number of small filters called kernels are convolved with the image in order to generate new images, which highlight local features in the original input image. in figure \ref{fig:CNN} three 1x2 kernel are applied to the input with stride two, producing 3 vectors, each half as long as the input vector. Instead of training to optimize weights between neurons one then training the networks to find optimal weights for the elements in the kernels. This approach greatly decreases the number of weights necessary in the network, which speeds up both training and application\cite[p.330]{Goodfellow-et-al-2016}.
+
+%\begin{figure}[ht!]
+%    \centering
+%        \includegraphics[width=0.7\textwidth]{DigitalSetup/MLP_CNN_comp.pdf}
+%        \caption[Illustration of MLP and CNN]{Left: an illustration of an MLP. Right: Illustration of a CNN. a single node in the last hidden layer has been highlighted for both networks along with all the nodes it is indirectly or directly connected to.}
+%    \label{fig:MLP_CNN} 
+%\end{figure}
+
+Figure \ref{fig:CNN} shows an example of how a CNN operates. This is an illustrative example and does not represent the exact architecture of the network used in this work. After the first convolutional layer three new vectors are produced. One for each of the applied kernels. In the maxpooling layer, using a stride of 2 and size 2 only the maximum value of each pair of pixels are used. This halves the length of the 3 vectors. Then a second convolutional layer is applied. Each of the 6 kernels operates on each of the 3 vectors in parallel resulting in 6 new vectors. These are then flattened into a single vector and connected to the output node. By applying the logistic function ($f(x)=1/(1-e^{-x})$) to the output node the value will be bounded between 0 and 1, which makes it suitable for binary classification.
 
 \begin{figure}[ht!]
     \centering
@@ -222,7 +266,7 @@ Figure \ref{fig:CNN} shows an example of how a CNN operates. This is an illustra
     \label{fig:CNN} 
 \end{figure}
 
-A CNN was implemented using Keras 2.2.4\footnote{Keras is a high level API for constructing deep learning models. It can be run uses various backends for carrying out operations on tensors. Here Tensorflow 1.12.0 was used as backend.}\cite{keras}. The main features of the chosen architecture are summarized in table \ref{tab:architecture}. Due to the kernel size and stride as well as the maxpooling the receptive field of each node in the flattened layer covers 50-54 samples in the input layer. Both convolutional layers employ the ReLU activation function (max(0, x)), while the final layer applies the logistic function.
+A CNN was implemented using Keras 2.2.4\footnote{Keras is a high level API for constructing deep learning models. It can be run uses various backends for carrying out operations on tensors. Here Tensorflow 1.12.0 was used as backend.}\cite{keras}. The main features of the chosen architecture are summarized in table \ref{tab:architecture}. Due to the kernel size and stride as well as the maxpooling each node in the flattened layer is indirectly connected to a large number of samples in the input layer. Both convolutional layers employ the ReLU activation function (max(0, x)), while the final layer applies the logistic function.
 \begin{table}[h]
 \center
 \begin{tabular}{|l|l|l|l|l|}
@@ -241,9 +285,9 @@ A CNN was implemented using Keras 2.2.4\footnote{Keras is a high level API for c
 \label{tab:architecture}
 \end{table}
 
-Training of neural networks to perform neutron - gamma ray pulse shape discrimination is not a new approach. It has been successfully implemented in a number of studies for various scintillators. The key difference to what has previously been done and what is done here lies in the way the training data is selected.
+Training of neural networks to perform neutron - gamma ray pulse shape discrimination is not a new approach. It has been successfully implemented in a number of studies for various scintillators. See for example \cite{Griffiths}. The key difference to what has previously been done and what is done here lies in the way the training data is selected.
 
-When constructing a neural network one needs a set of labelled data to train on\footnote{This is the case for supervised learning. There are also ways to train on unlabbeled data, i.e. unsupervised learning, but these have not been explored in this thesis.}. In order to train a network to discriminate between neutron and gamma rays one needs a set of patterns representing the pulses and a label for each pattern defining its species. One approach would be to create a simulation and train the network on the generated data. Then the labels can be known with certainty to represent the patterns they are assigned to. On the other hand the simulated data will need to be a good representation of actual detector signals. This also implies that new simulations are needed for new detectors. Another approach is to use different pulse shape discrimination techniques for labelling data as either neutrons or gamma rays. This is the approach taken by  Griffiths et al.\cite{Griffiths}. They label their training data by plotting the number of samples in a given pulse that surpasses a certain threshold as a function of peak amplitude, and then making a cut. This approach is effective as long as the model used to generate the training data is not systematically mislabeling a certain type of pulses (for example in a certain energy range). 
+When constructing a neural network one needs a set of labelled data to train on\footnote{This is the case for supervised learning. There are also ways to train on unlabbeled data, i.e. unsupervised learning, but these have not been explored in this thesis.}. In order to train a network to discriminate between neutron and gamma rays one needs a set of patterns representing the pulses and a label for each pattern defining its species. One approach would be to create a simulation and train the network on the generated data. Then the labels can be known with certainty to represent the patterns they are assigned to. On the other hand the simulated data will need to be a good representation of actual detector signals. This also implies that new simulations are needed for new detectors. Another approach is to use different pulse shape discrimination techniques for labelling data as either neutrons or gamma rays. This is the approach taken by  Griffiths et al.\cite{Griffiths}. They label their training data by plotting the number of samples in a given pulse that surpasses a certain threshold as a function of peak amplitude, and then making a cut to separate neutrons from gamma rays. This approach is effective as long as the model used to generate the training data is not systematically mislabeling a certain type of pulses (for example in a certain energy range). 
 
 The approach taken here has been to take advantage of the extra information given by the time of flight spectrum. From the time of flight spectrum one immediately has access to a labeled set of neutron and gamma pulses in the form of the neutron and gamma peaks. The downside of this approach is that the time of flight spectrum will also contain random coincidences, which means that the training data will contain neutrons mistakenly labeled as gamma rays and vice versa. Since the background is made up of random coincidences and makes up a small amount of the total training data, the false neutrons/gamma rays wont cause the network to systematically misclassify, but rather make training take longer.
 
@@ -254,17 +298,17 @@ The approach taken here has been to take advantage of the extra information give
     \label{fig:CNN_training} 
 \end{figure}
 
-The network was trained on events from the gamma and neutron peak of a 75 minute data set. 300 samples (or equivalently nanoseconds) from each pulse were used starting 20 ns prior to the CFD trigger point. 75\% of the pulses were used as labeled training data while the remaining 25\% were used to evalute the model as shown in figure \ref{fig:CNN_training}. Here the accuracy of the model is plotted as a function of training iteration (the number of times it has trained on the entire training dataset). The blue curve shows the performance achieved on the training data while the red curve shows the performance on the validation data. The green and orange curves show the same data but after being smeared by a 9 channel averaging filter in order to make trends clearer. This plot shows that although the performance on the training set keeps increasing, the performance on the validation set quickly levels out. For this reason the model achieved at iteration 28 is used. The network is still learning beyond iteration 28, but it is no longer learning features that generalizes to the validation data. Rather it is overfitting to noise in the training data. After training the model was tested on a different data set taken in a ten minute run. Seeing it performed well on this data the model was chosen to be applied on the final data set used in this thesis.
+The network was trained on events from the gamma and neutron peaks of a 75 minute data set. 300 samples (or equivalently nanoseconds) from each pulse were used starting \SI{20}{ns} prior to the CFD trigger point. 75\% of the pulses or 6036 pulses were used as labeled training data while the remaining 25\% were used to evaluate the model as shown in figure \ref{fig:CNN_training}. Here the accuracy of the model is plotted as a function of training iteration (the number of times it has trained on the entire training data set). The blue curve shows the fraction of correctly labeled pulses achieved on the training data as a function of iteration, while the red curve shows the same thing on the validation data. The green and orange curves show the same data but after being smeared by a 9 channel averaging filter in order to make trends clearer. Since both training and validation data contains some fraction of incorrectly labeled background events the model is not expected to reach 100\% accuracy. In fact in this case that would be a sign of overfitting. This plot shows that although the performance on the training set keeps increasing, the performance on the validation set quickly levels out. For this reason the model achieved at iteration 53 is used. The network is still learning beyond iteration 53, but it is no longer learning features that generalizes to the validation data. Rather it is overfitting to noise in the training data.
 
 
 \section{Energy Calibration}
-Each particle interacting in the detector will result in a pulse of charge. In the analog setup charge-to-digital converters are used to parameterize these pulses into measures of the deposited energy. Pulses are integrated on two different timescales: 60 and 500 nanoseconds. Together they can be used to express the pulse shape, PS, through the fraction of charge located in the tail.
+Each particle interacting in the detector will result in a pulse of charge. In the analog setup charge-to-digital converters are used to parameterize these pulses into measures of the deposited energy. In the digital setup the digitized waveforms are integrated. Pulses are integrated on two different timescales: 60 and 500 nanoseconds. Together they can be used to express the pulse shape, PS, through the fraction of charge located in the tail.
 
-In the NE213 detector neutrons interact via the strong force with nuclei while gamma rays primarily interact electromagnetically with electrons. This means that the pulses they produce in the detector originate from entirely different particles and processes, and consequently the specrtrum can not be calibrated in terms of the particles kinetic energy. Instead it is customary to calibrate it in terms of the electron equivalent energy. That is the energy an electron would need to have had in order to produce the same integrated charge in the detector. One way of performing the energy callibration is through the Knox method, which is described in Björn Nilssons PhD thesis\cite[pg. 55]{Nilsson}. Using this method the maximum transfered energy of a recoil electron, given the incident photons energy, via the formula:
+In the NE213 detector neutrons interact via the strong force with nuclei while gamma rays primarily interact electromagnetically with electrons. This means that the pulses they produce in the detector originate from entirely different particles and processes, and consequently the spectrum can not be calibrated in terms of the particles kinetic energy. Instead it is customary to calibrate it in terms of the electron equivalent energy. That is the energy an electron would need to have had in order to produce the same integrated charge in the detector. One way of performing the energy calibration is through the Knox method, which is described in Björn Nilssons PhD thesis\cite[pg. 55]{Nilsson}. Using this method the maximum transferred energy of a recoil electron, given the incident photons energy, via the formula:
 \begin{equation}
 	(E_{e})_{max}\;=\;\frac{2E\gamma^2}{m_e + 2E_\gamma} \;[MeV_{ee}]
 \end{equation}
-Next a gaussian is fitted to the neighbourhood of the compton edge. The QDC channel where the gaussian reaches 89\% of its height is then associated with the maximum recoil energy used as the first set of points in the energy callibration.
+Next a Gaussian is fitted to the neighborhood of the compton edge. The QDC channel where the Gaussian reaches 89\% of its height is then associated with the maximum recoil energy used as the first set of points in the energy calibration.
 
 By allowing the acquisition start to trigger on a small fraction of YAP signals as well as NE213 signals a large amount of windows with no signals were integrated, generating a pedestal close to channel zero\footnote{The number of YAP signals sent to the trigger was reduced by a factor of 256 with a prescaler.}. These events represent the baseline offset and during the calibration of the analog DAQ the location of the pedestal is associated with \SI{0}{MeV_{ee}}. All the values used in the calibration are shown in table \ref{tab:knox_a}.
 
@@ -280,7 +324,7 @@ By allowing the acquisition start to trigger on a small fraction of YAP signals 
 	\hline
 	\end{tabular}
    	\captionsetup{width=0.435\linewidth}
-	\caption[Table of values used for energy calibration, analog setup.]{Table of QDC channels and the corresponding energies. See text for details.}
+	\caption[Table of values used for energy calibration, analog setup.]{Table of QDC channels fitted to known Compton edges. See text for details.}
 	\label{tab:knox_a}
 \end{table}
 
@@ -288,11 +332,11 @@ The QDC spectrum is shown in figure \ref{fig:qdc_a} top panel. The upper x-axis 
 \begin{figure}[ht!]
     \centering
         \includegraphics[width=0.8\textwidth]{AnalogResults/Ecall.pdf}
-        \caption[Energy calibration of the analog setup]{Top: The raw QDC spectrum. Middle: The callibration fit produced with the Knox method. Bottom: The energy calibrated QDC spectrum.}
+        \caption[Energy calibration of the analog setup]{Top: The PuBe QDC spectrum. The upper x-axis has been calibrated. Middle: The callibration fit produced with the Knox method.}
     \label{fig:qdc_a}
 \end{figure}
 
-The 2.23 and the 4.44 MeV Compton edges have been highlighted in green and red. Using the Knox method a set of points correlating the energy deposition in ADC channels to \si{\MeV}$_\text{ee}$. The points are also shown in table \ref{tab:knox_a}. Using these points a linear fit was made and plotted in figure \ref{fig:qdc_a} bottom panel. With this fit the QDC spectrum was converted to \si{\MeV}$_\text{ee}$. It can be seen that the uncertainty is greatest for the 2.23 \si{\MeV} Compton edge\footnote{The uncertainty was calculated from the Gaussian fits with standard deviation k, center=$\text{x}_\text{0}$ and amplitude a using error propagation: $\sigma_channel\;=\;\sqrt{\sigma_{x_0}^2 + \sigma_{k}^2 4\left(\ln0.89\right)^2 }$}
+The \SI{2.23}{MeV} and the \SI{4.44}{MeV} Compton edges have been highlighted in green and red. Using the Knox method a set of points correlating the energy deposition in ADC channels to \si{\MeV}$_\text{ee}$. The points are also shown in table \ref{tab:knox_a}. Using these points a linear fit was made and plotted in figure \ref{fig:qdc_a} bottom panel. With this fit the QDC spectrum was converted to \si{\MeV}$_\text{ee}$. It can be seen that the uncertainty is greatest for the 2.23 \si{\MeV} Compton edge\footnote{The uncertainty was calculated from the Gaussian fits with standard deviation k, center=$\text{x}_\text{0}$ and amplitude a using error propagation: $\sigma_{channel}\;=\;\sqrt{\sigma_{x_0}^2 + \sigma_{k}^2 4\left(\ln0.89\right)^2 }$}
 
 The energy calibration of the digital setup was carried out in a similar manner to the analog setup. The pulses were integrated digitally over the same gate lengths used in the analog setup, namely 60 and 500 ns starting 25 ns before the CFD trigger. A major difference compared to the analog setup lies in the baseline determination. For the analog setup the pedestal was needed in the energy calibration in order to account for and subtract any baseline offset. It acts as a global baseline subtraction. This is not necessary in the digital setup since the baseline is subtracted on an event by event basis during the initial data processing. 
 
@@ -300,7 +344,7 @@ The energy calibration of the digital setup was carried out in a similar manner 
 	\center
 	\begin{tabular}{|l|l|l|l|}
 	\hline
-	channel            & 3791 & 7080  & 15481  \\
+	channel (mV$\cdot$ns)            & 3791 & 7080  & 15481  \\
 	\hline
 	E(MeV)          & 1.33    & 2.23  & 4.44 \\
 	\hline
@@ -308,18 +352,18 @@ The energy calibration of the digital setup was carried out in a similar manner 
 	\hline
 	\end{tabular}
    	\captionsetup{width=0.435\linewidth}
-	\caption[Table of values used for energy calibration, digital setup.]{Table of digitizer pulse integration channels and the corresponding energies. See text for details.}
+	\caption[Table of values used for energy calibration, digital setup.]{Table of digitizer pulse integration channels fitted to known Compton edges. See text for details.}
 	\label{tab:knox_d}
 \end{table}
 
-The energy calibration was carried out using the 2.23 and 4.44 Compton edges produced by the PuBe source as well as a $^{60}Co$ source, the calibration points are listed in table \ref{tab:knox_d}. As was the case for the analog setup the Knox method was used. In figure \ref{fig:D_QDC} The 2.23 and 4.44 \si{\MeV} Compton edges are marked in purple and orange respectively. The $^{60}Co$ source has Compton edges at 1.17 and 1.33 \si{\MeV}, but only one edge is visible. It is assumed that this is the 1.33 \si{\MeV} edge and that the 1.17 \si{\MeV} edge lies beneath it. As with the analog setup the uncertainty is the greatest for the 2.23 MeV Compton edge.
+Both the \SI{2.23}{\MeV} and \SI{4.44}{\MeV} Compton edges produced by the PuBe source as well as a $^{60}Co$ source, the calibration points are listed in table \ref{tab:knox_d}. As was the case for the analog setup the Knox method was used. In figure \ref{fig:D_QDC} The \SI{2.23}{\MeV} and \SI{4.44}{\MeV} Compton edges are marked in purple and orange respectively. The $^{60}Co$ source has Compton edges at \SI{1.17}{\MeV} and \SI{1.33}{\MeV}, but only one edge is visible. It is assumed that this is the \SI{1.33}{\MeV} edge and that the \SI{1.17}{\MeV} edge lies beneath it. As with the analog setup the uncertainty is the greatest for the \SI{2.23}{\MeV} Compton edge.
 
-Unfortunately the baseline shift on the NE213 channel offset was set too high, at 40\%, reducing the range available to negative pulses to only 0.6 V. This particularly affects the 4.44 \si{\MeV} compton edge. It also cuts off the signals produced by cosmic rays, but these would still have been beyond the dynamic range even if the full 1 V had been available. Inspite of this problem figure \ref{fig:D_QDC} shows that the calibration points still follow a linear trend. The fit parameters are used to produce the calibrated x-axis in the upper panel.
+Unfortunately the baseline shift on the NE213 channel offset was set too high, at 40\%, reducing the range available to negative pulses to only 0.6 V. This particularly affects the 4.44 \si{\MeV} Compton edge. In spite of this problem figure \ref{fig:D_QDC} shows that the calibration points still follow a linear trend. The fit parameters are used to produce the calibrated x-axis in the upper panel.
 
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.8\textwidth]{DigitalResults/Ecall.pdf}
-        \caption[Energy calibration of the digital setup]{The 1.17 + 1.25 MeV edge of the $^60$ source and the 2.23 and 4.44 MeV Compton edges of the PuBe source have here been used to perform an energy calibration. Due to the event by event based baseline determination it is assumed that bin 0 corresponds to \SI{0}{\MeV}$_\text{ee}$}
+        \caption[Energy calibration of the digital setup]{The \SI{1.33}{\MeV} Compton edge of the $^{60}Co$ source and the \SI{2.23}{\MeV} and \SI{4.44}{\MeV} Compton edges of the PuBe source have here been used to perform an energy calibration. Due to the event by event based baseline determination it is assumed that bin 0 corresponds to \SI{0}{\MeV}$_\text{ee}$}
     \label{fig:D_QDC}
 \end{figure}
 

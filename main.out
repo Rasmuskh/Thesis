@@ -1,10 +1,10 @@
 \BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Neutron Matter Interactions}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.1}{Neutron-Matter Interactions}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Sources of Free Neutrons}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Detecting Neutrons and Gamma Rays with Scintillation Detectors}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Neutron-Gamma Ray Discrimination}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Detecting Gamma Rays and Neutrons with Scintillation Detectors}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Neutron Gamma-Ray Discrimination}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.5}{Neutron Time of Flight and Tagging}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.6}{Project goal}{chapter.1}% 9
 \BOOKMARK [0][-]{chapter.2}{Method}{}% 10
@@ -20,7 +20,7 @@
 \BOOKMARK [1][-]{section.2.3}{Digital signal processing}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.3.1}{Digitizer Specifications and Configuration}{section.2.3}% 21
 \BOOKMARK [2][-]{subsection.2.3.2}{Timestamping}{section.2.3}% 22
-\BOOKMARK [2][-]{subsection.2.3.3}{Data Processing}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.3}{Data Selection}{section.2.3}% 23
 \BOOKMARK [2][-]{subsection.2.3.4}{Charge Comparisson PSD}{section.2.3}% 24
 \BOOKMARK [2][-]{subsection.2.3.5}{Neural Network Based Pulse Shape Analysis}{section.2.3}% 25
 \BOOKMARK [1][-]{section.2.4}{Energy Calibration}{chapter.2}% 26
@@ -39,6 +39,6 @@
 \BOOKMARK [0][-]{chapter.4}{Summary}{}% 39
 \BOOKMARK [1][-]{section.4.1}{Conclusion}{chapter.4}% 40
 \BOOKMARK [1][-]{section.4.2}{Outlook}{chapter.4}% 41
-\BOOKMARK [0][-]{section*.40}{Appendices}{}% 42
+\BOOKMARK [0][-]{section*.43}{Appendices}{}% 42
 \BOOKMARK [0][-]{Appendix.1.A}{Appendix}{}% 43
-\BOOKMARK [0][-]{chapter*.42}{Bibliography}{}% 44
+\BOOKMARK [0][-]{chapter*.45}{Bibliography}{}% 44

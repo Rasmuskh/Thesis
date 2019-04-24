@@ -10,7 +10,7 @@
 %mathmode non italic text using \text
 \usepackage{amsmath}
 %document layout
-\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[a4paper,left=1in, right=1in, top=1.5in, bottom=1.5in]{geometry}
 %links in pdf
 \usepackage[hidelinks]{hyperref}
 %document management
@@ -29,7 +29,7 @@
 %appendix
 \usepackage[toc,page]{appendix}
 
-\title{Tagging and Identification of Neutrons Using Digitized Waveforms}
+\title{Identification of Neutrons Using Digitized Waveforms}
 \author{Rasmus Kjær Høier}
 \date{May 2019}
 
@@ -38,6 +38,7 @@
 \maketitle
 
 \newpage
+\pagenumbering{roman}
 \begin{abstract}
 %-Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. In medicine for PET scans. In echolocation used by bats and toothed whales.
 %-Advantages of digital techniques
@@ -48,6 +49,7 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\subfile{LOA.tex}%concepts
 
 
 
