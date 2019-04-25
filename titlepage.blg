@@ -1,23 +1,12 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: NeutronsAndNeutronDetection.aux
+The top-level auxiliary file: titlepage.aux
 The style file: unsrtnat.bst
-Case mismatch error between cite keys nudat and Nudat
----line 38 of file NeutronsAndNeutronDetection.aux
- : \citation{nudat
- :                }
-I'm skipping whatever remains of this command
-I found no \bibdata command---while reading file NeutronsAndNeutronDetection.aux
-Warning--I didn't find a database entry for "Nudat"
-Warning--I didn't find a database entry for "Krane"
-Warning--I didn't find a database entry for "Leo"
-Warning--I didn't find a database entry for "Tavernier"
-Warning--I didn't find a database entry for "Scherzinger2017"
-Warning--I didn't find a database entry for "Mauritzsson"
-Warning--I didn't find a database entry for "ScherzingerPhd"
+I found no \citation commands---while reading file titlepage.aux
+I found no \bibdata command---while reading file titlepage.aux
 You've used 0 entries,
             2481 wiz_defined-function locations,
-            564 strings with 4582 characters,
+            550 strings with 4422 characters,
 and the built_in function-call counts, 34 in all, are:
 = -- 0
 > -- 0

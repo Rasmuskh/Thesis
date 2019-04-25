@@ -18,6 +18,8 @@
 %linespacing
 \usepackage{setspace}
 \singlespacing
+%Equation alighnment
+\usepackage{mathtools}
 %SI units
 \usepackage{siunitx}
 \DeclareSIUnit{\sample}{S} %get sample unit
@@ -26,17 +28,18 @@
 %degree symbol
 \usepackage{gensymb}
 \onehalfspacing
+%titlepage dependencies
+\usepackage{tikz}
+\usetikzlibrary{calc}
 %appendix
 \usepackage[toc,page]{appendix}
+%List of abbreviations
+\usepackage{acronym}
+\usepackage{changepage}
 
-\title{Identification of Neutrons Using Digitized Waveforms}
-\author{Rasmus Kjær Høier}
-\date{May 2019}
 
 \begin{document}
-
-\maketitle
-
+\subfile{titlepage.tex}%concepts
 \newpage
 \pagenumbering{roman}
 \begin{abstract}
@@ -45,7 +48,8 @@
 %-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
 \end{abstract}
 \newpage
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -70,4 +74,5 @@
 \subfile{appendix.tex}
 \clearpage
 \bibliography{references}
+
 \end{document}

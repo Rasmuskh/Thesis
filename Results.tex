@@ -91,7 +91,7 @@ Comparing with the reference spectrum shown in figure \ref{fig:scherzinger} the 
 \subsection{Pulse shape discrimination}
 Just like with the analog setup \SI{500}{ns} and \SI{60}{ns} charge integrals were used to perform pulse shape discrimination. The parameters a and b in equation \ref{eq:ps} were chosen in order to linearize the separation between the bands. In the digital setup, where each pulse is digitized, these offsets can be interpreted as voltage offsets of the sampling points. During shortgate integration each sample point was offset by 4.79 mV while during longgate integration each sample point was offset by 0.24 mV .
 
-The resulting PSD heat map is shown figure \ref{fig:psd_d}. The \SI{2.23}{\MeV} amd \SI{4.44}{MeV} Compton edges are indicated with arrows in the gamma ray band. The gamma ray band also contains a large concentration of low energy gamma rays near the threshold, which was not apparent in the analog PSD spectrum, due to a higher threshold. This large concentration is located below \SI{1}{MeV}, so it is likely to be gamma rays produced by deexcitation of $\text{235}$U.
+The resulting PSD heat map is shown figure \ref{fig:psd_d}. The \SI{2.23}{\MeV} amd \SI{4.44}{MeV} Compton edges are indicated with arrows in the gamma ray band. The gamma ray band also contains a large concentration of low energy gamma rays near the threshold, which was not apparent in the analog PSD spectrum, due to a higher threshold. This large concentration is located below \SI{1}{MeV}, so it is likely to be gamma rays produced by deexcitation of $\text{234}$U.
 A cut at PS=0.222 separates the neutron and gamma bands, although the two distributions overlap at lower energies.
 
 \begin{figure}[ht]
@@ -104,7 +104,7 @@ A cut at PS=0.222 separates the neutron and gamma bands, although the two distri
 %\subsection{Convolutional Neural Network}
 The convolutional neural network described in \ref{sec:cnn} was applied to the digitized waveforms. The network was trained to ascribe a value between 0 and 1 depending on how much a signal looks like a neutron or a gamma ray. The result is shown in figure \ref{fig:cnn_E} as a function of deposited energy. 
 
-Like for the charge comparison method the upper distribution is neutrons and the lower distribution consists of gamma rays. The two bands are separated by a cut at prediction=0.5. In order to highlight that the distributions overlap slightly at lower energies the z-axis has been strongly suppressed. The low energy concentration associated with deexcitation of $\text{235}$U as well as the the two Compton edges are distinguishable, although the \SI{2.23}{\MeV} is less concentrated.
+Like for the charge comparison method the upper distribution is neutrons and the lower distribution consists of gamma rays. The two bands are separated by a cut at prediction=0.5. In order to highlight that the distributions overlap slightly at lower energies the z-axis has been strongly suppressed. The low energy concentration associated with deexcitation of $\text{234}$U as well as the the two Compton edges are distinguishable, although the \SI{2.23}{\MeV} is less concentrated.
 
 \begin{figure}[ht]
     \centering
@@ -132,7 +132,7 @@ In figure \ref{fig:tof_cc_tof_cnn} PS as well as CNN prediction are shown as fun
     \label{fig:tof_cc_tof_cnn}
 \end{figure}
 
-The heatmap shown in figure \ref{fig:tof_E_d} shows energy deposition in the NE213 detector as a function of time of flight. The gamma ray distribution is constituted of gamma rays that were produced in the deexcitation of $^\mathrm{12}$C or in deexcitation of $^\mathrm{235}$U as described in the chapter \ref{ch:1}. $^\mathrm{12}$C is primarily excited to the \SI{4.44}{\MeV} state. $^\mathrm{235}$U on the other hand can be excited to a wide range of states with excitation energies between \SI{0}{MeV} and \SI{1.1}{MeV}\cite{Nudat}.It is apparent that the low energy gamma rays are particularly dominating in the gamma ray time of flight peak.
+The heatmap shown in figure \ref{fig:tof_E_d} shows energy deposition in the NE213 detector as a function of time of flight. The gamma ray distribution is constituted of gamma rays that were produced in the deexcitation of $^\mathrm{12}$C or in deexcitation of $^\mathrm{234}$U as described in the chapter \ref{ch:1}. $^\mathrm{12}$C is primarily excited to the \SI{4.44}{\MeV} state. $^\mathrm{234}$U on the other hand can be excited to a wide range of states with excitation energies between \SI{13}{keV} and \SI{678}{keV}\cite{Nudat}.It is apparent that the low energy gamma rays are particularly dominating in the gamma ray time of flight peak.
 
 The \SI{2.23}{MeV} gamma peak seen in the PSD and Energy spectra should not be visible in figure \ref{fig:tof_E_d} as these gamma rays are produced in an entirely different process by neutrons being absorbed by hydrogen nuclei. Strangely However, the figure shows a nearly continuous distribution of gamma rays from 0 up to around \SI{4.5}{MeV}.
 
@@ -252,23 +252,22 @@ The correct fraction of events due to neutrons interacting in the NE213 is not t
     \centering
     \begin{subfigure}[bh]{\textwidth}
    	   	\centering
-	    \includegraphics{AnalogResults/ToF_filt.pdf}
+	    \includegraphics[\textwidth]{AnalogResults/ToF_filt.pdf}
     	\caption{Time of flight spectrum filtered by a linear cut at PS = 0.259.}
     	\label{fig:ToF_filt_A}
    	\end{subfigure}
     \begin{subfigure}[bh]{\textwidth}
    	    \centering
-        \includegraphics{DigitalResults/ToF_filt.pdf}
+        \includegraphics[width=0.85\textwidth]{DigitalResults/ToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at PS=0.222.}
         \label{fig:ToF_filt_D}
     \end{subfigure}
 	\begin{subfigure}[bh]{\textwidth}
 	    \centering
-        \includegraphics{DigitalResults/CNNToF_filt.pdf}
+        \includegraphics[width=0.85\textwidth]{DigitalResults/CNNToF_filt.pdf}
         \caption{Time of flight spectrum filtered by a linear cut at prediction = 0.5.}
         \label{fig:ToF_filt_D_CNN}
     \end{subfigure}
-	
 	\caption[Misclassification of different PSD implementations.]{Misclassification of different PSD implementations.}
     \label{fig:tof_cc_cnn}
 \end{figure}
