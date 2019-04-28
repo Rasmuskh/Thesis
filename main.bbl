@@ -28,6 +28,19 @@ S.~Tavernier.
 \newblock ISBN 9783642008290.
 \newblock URL \url{https://books.google.se/books?id=C1GT\_\_RkewUC}.
 
+\bibitem[Scherzinger et~al.(2015)Scherzinger, Annand, Davatz, Fissum, Gendotti,
+  Hall-Wilton, Håkansson, Jebali, Kanaki, Lundin, Nilsson, Rosborge, and
+  Svensson]{Scherzinger:2015}
+J.~Scherzinger, J.R.M. Annand, G.~Davatz, K.G. Fissum, U.~Gendotti,
+  R.~Hall-Wilton, E.~Håkansson, R.~Jebali, K.~Kanaki, M.~Lundin, B.~Nilsson,
+  A.~Rosborge, and H.~Svensson.
+\newblock Tagging fast neutrons from an 241am/9be source.
+\newblock \emph{Applied Radiation and Isotopes}, 98:\penalty0 74 -- 79, 2015.
+\newblock ISSN 0969-8043.
+\newblock \doi{https://doi.org/10.1016/j.apradiso.2015.01.003}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0969804315000044}.
+
 \bibitem[Mauritzsson(2017)]{Mauritzsson}
 Nicholai Mauritzsson.
 \newblock Design, construction and characterization of a portable fast-neutron
@@ -49,19 +62,6 @@ Julius Scherzinger, Ramsey Al~Jebali, John Annand, Kevin Fissum, Richard
   $^{241}$AmBe and $^{238}$PuBe sources}.
 \newblock \emph{Appl. Radiat. Isot.}, 127:\penalty0 98--102, 2017.
 \newblock \doi{10.1016/j.apradiso.2017.05.014}.
-
-\bibitem[Scherzinger et~al.(2015)Scherzinger, Annand, Davatz, Fissum, Gendotti,
-  Hall-Wilton, Håkansson, Jebali, Kanaki, Lundin, Nilsson, Rosborge, and
-  Svensson]{Scherzinger:2015}
-J.~Scherzinger, J.R.M. Annand, G.~Davatz, K.G. Fissum, U.~Gendotti,
-  R.~Hall-Wilton, E.~Håkansson, R.~Jebali, K.~Kanaki, M.~Lundin, B.~Nilsson,
-  A.~Rosborge, and H.~Svensson.
-\newblock Tagging fast neutrons from an 241am/9be source.
-\newblock \emph{Applied Radiation and Isotopes}, 98:\penalty0 74 -- 79, 2015.
-\newblock ISSN 0969-8043.
-\newblock \doi{https://doi.org/10.1016/j.apradiso.2015.01.003}.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S0969804315000044}.
 
 \bibitem[Technology()]{Eljen}
 Eljen Technology.

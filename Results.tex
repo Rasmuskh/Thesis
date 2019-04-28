@@ -38,7 +38,7 @@ Comparing to the spectrum obtained by Scherzinger\cite{ScherzingerPhd} and shown
 
 
 \subsection{Pulse Shape Discrimination}
-Neutrons and gamma rays were discriminated through the pulse shape parameter given in equation \ref{eq:ps}. The parameters a=120 and b=0 were found to linearize pulse shape as a function of energy, and gate lengths of \SI{500}{\ns} and \SI{60}{ns} were used for the longgate and shortgate integrations respectively.
+Neutrons and gamma rays were discriminated through the pulse shape parameter given in Eq. \ref{eq:ps}. The parameters a=120 and b=0 were found to linearize pulse shape as a function of energy, and gate lengths of \SI{500}{\ns} and \SI{60}{ns} were used for the longgate and shortgate integrations respectively.
 
 \begin{figure}[ht]
     \centering
@@ -89,7 +89,7 @@ The spectrum goes to lower energies than what we see for the analog setup in fig
 Comparing with the reference spectrum shown in figure \ref{fig:scherzinger} the  \SI{3}{MeV} peak is apparent in both spectra. The small peak seen at \SI{4.8}{MeV} in the reference spectrum is however not present here. Since neutron pulses generally are well below 400 mV amplitude this can not be related to the limited available dynamic range.
 
 \subsection{Pulse shape discrimination}
-Just like with the analog setup \SI{500}{ns} and \SI{60}{ns} charge integrals were used to perform pulse shape discrimination. The parameters a and b in equation \ref{eq:ps} were chosen in order to linearize the separation between the bands. In the digital setup, where each pulse is digitized, these offsets can be interpreted as voltage offsets of the sampling points. During shortgate integration each sample point was offset by 4.79 mV while during longgate integration each sample point was offset by 0.24 mV .
+Just like with the analog setup \SI{500}{ns} and \SI{60}{ns} charge integrals were used to perform pulse shape discrimination. The parameters a and b in Eq. \ref{eq:ps} were chosen in order to linearize the separation between the bands. In the digital setup, where each pulse is digitized, these offsets can be interpreted as voltage offsets of the sampling points. During shortgate integration each sample point was offset by 4.79 mV while during longgate integration each sample point was offset by 0.24 mV .
 
 The resulting PSD heat map is shown figure \ref{fig:psd_d}. The \SI{2.23}{\MeV} amd \SI{4.44}{MeV} Compton edges are indicated with arrows in the gamma ray band. The gamma ray band also contains a large concentration of low energy gamma rays near the threshold, which was not apparent in the analog PSD spectrum, due to a higher threshold. This large concentration is located below \SI{1}{MeV}, so it is likely to be gamma rays produced by deexcitation of $\text{234}$U.
 A cut at PS=0.222 separates the neutron and gamma bands, although the two distributions overlap at lower energies.
@@ -143,11 +143,11 @@ The \SI{2.23}{MeV} gamma peak seen in the PSD and Energy spectra should not be v
     \label{fig:tof_E_d} 
 \end{figure}
 
-The neutron distribution shows a relation between time of flight and deposited energy. The slowest neutrons have a smaller spread in deposited energy, whereas the faster ones have a much wider spread. This is because the neutron in each elastic scattering can loose up to a certain fraction of it's total kinetic energy, as described by equation \ref{eq:scat}. In NE213 the neutron primarily scatters against hydrogen nuclei. By equation \ref{eq:scat} it is then possible for the neutron to deposit anywhere between 0 and 100\% of its energy, with 0\% implying the neutron missed the nucleus and 100\% implying a head on collision.
+The neutron distribution shows a relation between time of flight and deposited energy. The slowest neutrons have a smaller spread in deposited energy, whereas the faster ones have a much wider spread. This is because the neutron in each elastic scattering can loose up to a certain fraction of it's total kinetic energy, as described by Eq. \ref{eq:scat}. In NE213 the neutron primarily scatters against hydrogen nuclei. By Eq. \ref{eq:scat} it is then possible for the neutron to deposit anywhere between 0 and 100\% of its energy, with 0\% implying the neutron missed the nucleus and 100\% implying a head on collision.
 
 In figure \ref{fig:N_E} this relation is highlighted. The top panel shows the ratio of deposited energy to neutron kinetic energy as a function of neutron energy. The red point represent the center of Gaussian functions fitted to the ratio of deposited to kinetic energy for narrow slices of neutron kinetic energies. the dotted line is the center point of the same type of fit covering all neutron energies. The ratio is nearly constant over the entire energy range, which suggests that the relation between deposited energy and neutron kinetic energy is approximately linear.
 
-In fact the scintillation light output produced by an NE213 detector is expected to follow the following equation\cite{Scherzinger:2016}, Which approaches a linear shape at as neutron energies rise and the exponential term approaches unity:
+In fact the scintillation light output produced by an NE213 detector is expected to follow the following Eq.\cite{Scherzinger:2016}, Which approaches a linear shape at as neutron energies rise and the exponential term approaches unity:
 \begin{equation}
 	E_{deposited} = C\left(  0.83\cdot E_{neutron} - 2.82\cdot\left(  1 - e^{(-0.25\cdot E_{neutron}^{0.93})}  \right)  \right)
 \end{equation}
@@ -198,7 +198,7 @@ By fitting Gaussian functions to the neutron and gamma distribution shown in \re
 F = \frac{C_n - C_\gamma}{W_n + W_\gamma}
 \end{equation}
 
-figure \ref{fig:fom_analog} and figure \ref{fig:fom_digital} shows histograms of the PS parameter along with the Gaussian fits used to calculate F. This way of parameterizing the quality of a PSD method requires that the distributions are approximately Gaussian. This assumption appears to be valid for the neutron distributions, centered at 0.3, but both figure \ref{fig:fom_analog} and figure \ref{fig:fom_digital} shows a tail on the gamma distributions which is not matching with the fit. The assumption of Gaussian distributions is not valid for the distributions produced by the CNN method, so the figure of merit, F, will only be used for comparing the charge comparison methods. 
+Figure \ref{fig:fom_analog} and Fig. \ref{fig:fom_digital} shows histograms of the PS parameter along with the Gaussian fits used to calculate F. This way of parameterizing the quality of a PSD method requires that the distributions are approximately Gaussian. This assumption appears to be valid for the neutron distributions, centered at 0.3, but both Fig. \ref{fig:fom_analog} and Fig. \ref{fig:fom_digital} shows a tail on the gamma distributions which is not matching with the fit. The assumption of Gaussian distributions is not valid for the distributions produced by the CNN method, so the Fig. of merit, F, will only be used for comparing the charge comparison methods. 
 
 
 \begin{figure}[h]
@@ -235,7 +235,7 @@ This definition of misclassificaton rate is relying on the assumption that the b
 
 Figure \ref{fig:tof_cc_cnn} shows the time of flight spectrum obtained with the analog setup filtered according to the charge comparison method, as well as the spectrum obtained from the digital setup, filtered by charge comparison and by the CNN. Gamma rays are colored blue, neutrons red and their intersection is purple. Ideally the intersection of the distributions should be flat, but if there is some systematic misclassification, then the intersection will rise up above the background level at the neutron and gamma peaks. This is an expression of the extent of misclassification of the given PSD implementation.
 
-For the analog setup a high degree of contamination is evident in the form of the two purple peaks coinciding with the neutron and gamma peaks. This gives an estimated misclassification of 13\% for neutrons and 12\% for gamma rays. From figure \ref{fig:tof_ps_a} it was found that a number of the injected YAP start triggers remained even after cutting away events below \SI{0.8}{\MeV}, and that these landed at the gamma ToF but with very high PS values. These events may be part of the reason why there is nearly 12\% misclassification near the gamma ray peak.
+For the analog setup a high degree of contamination is evident in the form of the two purple peaks coinciding with the neutron and gamma peaks. This gives an estimated misclassification of 13\% for neutrons and 12\% for gamma rays. From Fig. \ref{fig:tof_ps_a} it was found that a number of the injected YAP start triggers remained even after cutting away events below \SI{0.8}{\MeV}, and that these landed at the gamma ToF but with very high PS values. These events may be part of the reason why there is nearly 12\% misclassification near the gamma ray peak.
 
 The digital setup provides a lower misclassification rate with the charge comparison method, at 10\% for neutrons and 3\% for gamma rays. The much higher misclassification for neutrons imply that the model is biased towards gamma rays.
 
@@ -252,7 +252,7 @@ The correct fraction of events due to neutrons interacting in the NE213 is not t
     \centering
     \begin{subfigure}[bh]{\textwidth}
    	   	\centering
-	    \includegraphics[\textwidth]{AnalogResults/ToF_filt.pdf}
+	    \includegraphics[width=0.85\textwidth]{AnalogResults/ToF_filt.pdf}
     	\caption{Time of flight spectrum filtered by a linear cut at PS = 0.259.}
     	\label{fig:ToF_filt_A}
    	\end{subfigure}

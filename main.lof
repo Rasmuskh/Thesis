@@ -1,38 +1,38 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Illustration of a scintillator connected to a PMT}}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical shapes of neutron and gamma pulses. The red gamma pulse is significantly shorter than the blue neutron pulse.\relax }}{7}{figure.caption.10}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{lg}$}}{8}{figure.caption.11}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of a neutron tagging setup}}{9}{figure.caption.12}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time of flight spectrum.}}{10}{figure.caption.13}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum}}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Scintillation detector}}{7}{figure.caption.9}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical shapes of neutron and gamma ray pulses}}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{LG}$}}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of a neutron tagging setup}}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time of flight spectrum.}}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum}}{12}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Photograps of the analog DAQ setup and the digitizer.}}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces CAD drawing of the aquarium}}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram of experimental setup}}{15}{figure.caption.17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Threshold discriminators and time walk}}{16}{figure.caption.18}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces CFD trigger principle}}{16}{figure.caption.19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces TDC calibration of analog setup}}{18}{figure.caption.20}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Examples of digitized pulses and their CFD trigger points}}{21}{figure.caption.21}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Digitized pulse height spectrum}}{22}{figure.caption.22}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of rejected digitized events}}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of a simple neural network}}{30}{figure.caption.24}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Training and validation accuracy of the CNN}}{31}{figure.caption.27}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy calibration of the analog setup}}{31}{figure.caption.29}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Photograps of the analog DAQ setup and the digitizer.}}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces CAD drawing of the aquarium}}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram of experimental setup}}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Threshold discriminators and time walk}}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces CFD trigger principle}}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces TDC calibration of analog setup}}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Examples of digitized pulses and their CFD trigger points}}{23}{figure.caption.21}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Digitized pulse height spectrum}}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of rejected digitized events}}{32}{figure.caption.23}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of a simple neural network}}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Training and validation accuracy of the CNN}}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy calibration of the analog setup}}{34}{figure.caption.29}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{35}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{34}{figure.caption.33}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{36}{figure.caption.34}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{37}{figure.caption.35}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{38}{figure.caption.36}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{39}{figure.caption.37}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{40}{figure.caption.38}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{41}{figure.caption.39}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{42}{figure.caption.40}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{43}{figure.caption.41}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{44}{figure.caption.42}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{45}{figure.caption.43}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{49}{figure.caption.44}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Misclassification of different PSD implementations.}}{50}{figure.caption.45}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{37}{figure.caption.33}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{41}{figure.caption.36}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{43}{figure.caption.38}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{44}{figure.caption.39}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{45}{figure.caption.40}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{46}{figure.caption.41}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{47}{figure.caption.42}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{48}{figure.caption.43}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{52}{figure.caption.44}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Misclassification of different PSD implementations.}}{53}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{54}{figure.caption.47}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{57}{figure.caption.47}
