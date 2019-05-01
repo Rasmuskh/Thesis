@@ -52,6 +52,11 @@ Julius Scherzinger.
 \newblock \emph{Neutron Irradiation Techniques}.
 \newblock PhD thesis, Lund University, 2016.
 
+\bibitem[Messi et~al.(2017)]{Messi}
+F.~Messi et~al.
+\newblock {The neutron tagging facility at Lund University}.
+\newblock 2017.
+
 \bibitem[Scherzinger et~al.(2017)Scherzinger, Al~Jebali, Annand, Fissum,
   Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and
   Rofors]{Scherzinger:2017}
@@ -80,6 +85,12 @@ Johan Sjögren.
 Emil Rofors.
 \newblock Fast photoneutron detection, 2016.
 \newblock Student Paper.
+
+\bibitem[Nilsson(2003)]{Nilsson}
+Björn Nilsson.
+\newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
+  Reaction in the Giant Resonance Region}.
+\newblock Lund University, 2003.
 
 \bibitem[CAEN(2012)]{CAENTDC}
 CAEN.
@@ -117,18 +128,6 @@ Wes McKinney.
   \emph{Proceedings of the 9th Python in Science Conference}, pages 51 -- 56,
   2010.
 
-\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and
-  Courville]{Goodfellow-et-al-2016}
-Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
-\newblock \emph{Deep Learning}.
-\newblock MIT Press, 2016.
-\newblock \url{http://www.deeplearningbook.org}.
-
-\bibitem[Chollet et~al.(2015)]{keras}
-Fran\c{c}ois Chollet et~al.
-\newblock Keras.
-\newblock \url{https://keras.io}, 2015.
-
 \bibitem[Griffiths et~al.(2018)Griffiths, Kleinegesse, Saunders, Taylor, and
   Vacheret]{Griffiths}
 J.~Griffiths, S.~Kleinegesse, D.~Saunders, R.~Taylor, and A.~Vacheret.
@@ -136,11 +135,10 @@ J.~Griffiths, S.~Kleinegesse, D.~Saunders, R.~Taylor, and A.~Vacheret.
   Using Convolutional Neural Networks}.
 \newblock 2018.
 
-\bibitem[Nilsson(2003)]{Nilsson}
-Björn Nilsson.
-\newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
-  Reaction in the Giant Resonance Region}.
-\newblock Lund University, 2003.
+\bibitem[Chollet et~al.(2015)]{keras}
+Fran\c{c}ois Chollet et~al.
+\newblock Keras.
+\newblock \url{https://keras.io}, 2015.
 
 \bibitem[Scherzinger et~al.(2016)]{Scherzinger:2016}
 J.~Scherzinger et~al.

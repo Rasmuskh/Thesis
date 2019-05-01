@@ -24,8 +24,10 @@
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{iii}{chapter*.2}}
 \@writefile{toc}{\contentsline {chapter}{List of Tables}{v}{chapter*.3}}
 \newacro{CFD}[\AC@hyperlink{CFD}{CFD}]{Constant Fraction Discriminator}
+\newacro{DAQ}[\AC@hyperlink{DAQ}{DAQ}]{Data Acquisition}
 \newacro{CNN}[\AC@hyperlink{CNN}{CNN}]{Convolutional Neural Network}
 \newacro{ESS}[\AC@hyperlink{ESS}{ESS}]{European Spallation Source}
+\newacro{FIFO}[\AC@hyperlink{FIFO}{FIFO}]{Fan-In Fan-Out}
 \newacro{LG}[\AC@hyperlink{LG}{LG}]{Long gate}
 \newacro{MLP}[\AC@hyperlink{MLP}{MLP}]{Multilayer Perceptron}
 \newacro{NIM}[\AC@hyperlink{NIM}{NIM}]{Nuclear Instrument Module}
@@ -36,7 +38,7 @@
 \newacro{SG}[\AC@hyperlink{SG}{SG}]{Short gate}
 \newacro{STF}[\AC@hyperlink{STF}{STF}]{Source-Testing Facility}
 \newacro{TDC}[\AC@hyperlink{TDC}{TDC}]{Time to Digital Converter}
-\newacro{ToF}[\AC@hyperlink{ToF}{ToF}]{Time of Flight}
+\newacro{ToF}[\AC@hyperlink{ToF}{ToF}]{Time-of-Flight}
 \newacro{VME}[\AC@hyperlink{VME}{VME}]{Versa Module Europa}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -55,6 +57,7 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tab:neutron}{{1.1}{3}{Neutron nomenclature as a function of energy}{table.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Sources of Free Neutrons}{4}{subsection.1.2.2}}
+\newlabel{sec:freeNeutrons}{{1.2.2}{4}{Sources of Free Neutrons}{subsection.1.2.2}{}}
 \newlabel{eq:actinide}{{1.1}{4}{Sources of Free Neutrons}{equation.1.2.1}{}}
 \citation{Scherzinger:2015}
 \citation{Krane}
@@ -73,187 +76,199 @@
 \newlabel{fig:pmt}{{1.1}{7}{Scintillation detector}{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Neutron/Gamma-Ray Discrimination}{7}{subsection.1.2.4}}
 \newlabel{sec:psd}{{1.2.4}{7}{Neutron/Gamma-Ray Discrimination}{subsection.1.2.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Typical shapes of neutron and gamma ray pulses}}{8}{figure.caption.10}}
-\newlabel{fig:pulse_types}{{1.2}{8}{Typical shapes of neutron and gamma ray pulses}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Pulse shape sensitivity.}}{8}{figure.caption.10}}
+\newlabel{fig:pulse_types}{{1.2}{8}{Pulse shape sensitivity}{figure.caption.10}{}}
 \newlabel{eq:ps}{{1.4}{8}{Neutron/Gamma-Ray Discrimination}{equation.1.2.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{LG}$}}{9}{figure.caption.11}}
 \newlabel{fig:psd_sketch}{{1.3}{9}{PS versus $Q_{LG}$}{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}Neutron Time of Flight and Tagging}{9}{subsection.1.2.5}}
 \newlabel{sec:tof}{{1.2.5}{9}{Neutron Time of Flight and Tagging}{subsection.1.2.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of a neutron tagging setup}}{10}{figure.caption.12}}
-\newlabel{fig:tof_setup}{{1.4}{10}{Illustration of a neutron tagging setup}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of the neutron-tagging setup}}{10}{figure.caption.12}}
+\newlabel{fig:tof_setup}{{1.4}{10}{Illustration of the neutron-tagging setup}{figure.caption.12}{}}
+\newlabel{eq:tof_cal}{{1.5}{10}{Neutron Time of Flight and Tagging}{equation.1.2.5}{}}
+\newlabel{eq:Tn}{{1.6}{10}{Neutron Time of Flight and Tagging}{equation.1.2.6}{}}
+\citation{ScherzingerPhd}
 \citation{ScherzingerPhd}
 \citation{ScherzingerPhd}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time of flight spectrum.}}{11}{figure.caption.13}}
 \newlabel{fig:tof_sketch}{{1.5}{11}{Sketch of a time of flight spectrum}{figure.caption.13}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum}}{12}{figure.caption.14}}
 \newlabel{fig:scherzinger}{{1.6}{12}{Reference neutron energy spectrum}{figure.caption.14}{}}
-\citation{Nudat}
-\citation{Nudat}
-\citation{Scherzinger:2017}
+\citation{Messi}
+\citation{Messi}
+\citation{Messi}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Method}{13}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Experimental Setup}{13}{section.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Radiation Sources}{13}{subsection.2.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Experimental Infrastructure}{13}{section.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Source-Testing Facility}{13}{subsection.2.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}The Aquarium}{13}{subsection.2.1.2}}
 \citation{Scherzinger:2017}
-\citation{Scherzinger:2015}
-\citation{Scherzinger:2017}
-\newlabel{fig:aquadaq_image}{{2.1a}{14}{Photograph of analog DAQ electronics}{figure.caption.15}{}}
-\newlabel{sub@fig:aquadaq_image}{{a}{14}{Photograph of analog DAQ electronics}{figure.caption.15}{}}
-\newlabel{fig:aquadaq_zoom_image}{{2.1b}{14}{Photograph of analog VME modules}{figure.caption.15}{}}
-\newlabel{sub@fig:aquadaq_zoom_image}{{b}{14}{Photograph of analog VME modules}{figure.caption.15}{}}
-\newlabel{fig:digitizer_image}{{2.1c}{14}{Photograph of the CAEN VX1751 digitizer}{figure.caption.15}{}}
-\newlabel{sub@fig:digitizer_image}{{c}{14}{Photograph of the CAEN VX1751 digitizer}{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Photograps of the analog DAQ setup and the digitizer.}}{14}{figure.caption.15}}
+\citation{Nudat}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces The Source-Testing Facility.}}{14}{figure.caption.15}}
+\newlabel{fig:STF}{{2.1}{14}{The Source-Testing Facility}{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Radiation Sources}{14}{subsection.2.1.3}}
 \citation{Eljen}
 \citation{sjogren}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Fast Neutron and Gamma Ray Detectors}{15}{subsection.2.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}The Aquarium}{16}{subsection.2.1.3}}
-\newlabel{fig:aquarium_pers}{{2.2a}{16}{Aquarium 3D}{figure.caption.16}{}}
-\newlabel{sub@fig:aquarium_pers}{{a}{16}{Aquarium 3D}{figure.caption.16}{}}
-\newlabel{fig:aquarium_bird}{{2.2b}{16}{Aquarium 2D, top view}{figure.caption.16}{}}
-\newlabel{sub@fig:aquarium_bird}{{b}{16}{Aquarium 2D, top view}{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces CAD drawing of the aquarium}}{16}{figure.caption.16}}
-\newlabel{fig:aquarium}{{2.2}{16}{CAD drawing of the aquarium}{figure.caption.16}{}}
-\citation{rofors}
-\citation{rofors}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram of experimental setup}}{17}{figure.caption.17}}
-\newlabel{fig:setup}{{2.3}{17}{Diagram of experimental setup}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Analog Signal Processing}{17}{section.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Discriminators}{17}{subsection.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces The Aquarium}}{15}{figure.caption.16}}
+\newlabel{fig:aquarium}{{2.2}{15}{The Aquarium}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Fast Neutron and Gamma Ray Detectors}{15}{subsection.2.1.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic of experimental setup}}{16}{figure.caption.17}}
+\newlabel{fig:setup}{{2.3}{16}{Schematic of experimental setup}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Photographs of detectors}}{16}{figure.caption.18}}
+\newlabel{fig:detectors}{{2.4}{16}{Photographs of detectors}{figure.caption.18}{}}
 \citation{Leo}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Signal Processing}{17}{section.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Analog}{17}{subsection.2.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Discriminators}{17}{section*.20}}
 \citation{rofors}
 \citation{rofors}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Threshold discriminators and time walk}}{18}{figure.caption.18}}
-\newlabel{fig:discriminator}{{2.4}{18}{Threshold discriminators and time walk}{figure.caption.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces CFD trigger principle}}{18}{figure.caption.19}}
-\newlabel{fig:cfd}{{2.5}{18}{CFD trigger principle}{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Trigger logic}{18}{subsection.2.2.2}}
+\citation{rofors}
+\citation{rofors}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Data acquisition systems.}}{18}{figure.caption.19}}
+\newlabel{fig:DAQ}{{2.5}{18}{Data acquisition systems}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Trigger logic}{18}{section*.23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Time walk resulting from leading edge triggering}}{19}{figure.caption.21}}
+\newlabel{fig:discriminator}{{2.6}{19}{Time walk resulting from leading edge triggering}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces CFD trigger principle}}{19}{figure.caption.22}}
+\newlabel{fig:cfd}{{2.7}{19}{CFD trigger principle}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Charge to digital converters}{19}{section*.24}}
+\citation{Nilsson}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Analog energy calibration data.}}{20}{table.caption.25}}
+\newlabel{tab:knox_a}{{2.1}{20}{Analog energy calibration data}{table.caption.25}{}}
 \citation{CAENTDC}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Charge to digital converters}{19}{subsection.2.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Time to digital converter}{19}{subsection.2.2.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces TDC calibration of analog setup}}{20}{figure.caption.20}}
-\newlabel{fig:Tcal}{{2.6}{20}{TDC calibration of analog setup}{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Digital signal processing}{20}{section.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Digitizer Specifications and Configuration}{20}{subsection.2.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Energy calibration of the analog setup}}{21}{figure.caption.26}}
+\newlabel{fig:qdc_a}{{2.8}{21}{Energy calibration of the analog setup}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Time-to-digital converters}{21}{section*.27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces TDC calibration spectrum.}}{22}{figure.caption.28}}
+\newlabel{fig:Tcal}{{2.9}{22}{TDC calibration spectrum}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Digital signal processing}{22}{subsection.2.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Digitizer Specifications and Configuration}{22}{section*.29}}
 \citation{CAEN}
 \citation{Spectrum}
+\citation{Spectrum}
 \citation{CAEN}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{23}{figure.caption.30}}
+\newlabel{fig:samplingrate}{{2.10}{23}{Sampling rate}{figure.caption.30}{}}
 \citation{Leo}
 \citation{WaveDump}
-\newlabel{eq:bandwidth}{{2.1}{21}{Digitizer Specifications and Configuration}{equation.2.3.1}{}}
+\newlabel{eq:bandwidth}{{2.2}{24}{Digitizer Specifications and Configuration}{equation.2.2.2}{}}
 \citation{Dask}
 \citation{Pandas}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Timestamping}{22}{subsection.2.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Examples of digitized pulses and their CFD trigger points}}{23}{figure.caption.21}}
-\newlabel{fig:cfd_trig}{{2.7}{23}{Examples of digitized pulses and their CFD trigger points}{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Data Selection}{23}{subsection.2.3.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Digitized pulse height spectrum}}{24}{figure.caption.22}}
-\newlabel{fig:cutoffevents}{{2.8}{24}{Digitized pulse height spectrum}{figure.caption.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Charge Comparisson PSD}{25}{subsection.2.3.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.5}Neural Network Based Pulse Shape Analysis}{25}{subsection.2.3.5}}
-\newlabel{sec:cnn}{{2.3.5}{25}{Neural Network Based Pulse Shape Analysis}{subsection.2.3.5}{}}
-\newlabel{ReLU}{{2.3}{25}{Neural Network Based Pulse Shape Analysis}{equation.2.3.3}{}}
-\citation{Goodfellow-et-al-2016}
+\@writefile{toc}{\contentsline {subsubsection}{Time stamping}{25}{section*.31}}
+\@writefile{toc}{\contentsline {subsubsection}{Data Selection}{25}{section*.33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Examples of digitized pulses and their CFD trigger points}}{26}{figure.caption.32}}
+\newlabel{fig:cfd_trig}{{2.11}{26}{Examples of digitized pulses and their CFD trigger points}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse height spectrum}}{26}{figure.caption.34}}
+\newlabel{fig:cutoffevents}{{2.12}{26}{Digitized pulse height spectrum}{figure.caption.34}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Problematic events.}}{27}{table.caption.35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events}}{28}{figure.caption.36}}
+\newlabel{fig:badevents}{{2.13}{28}{Examples of rejected digitized events}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Energy Calibration}{29}{section*.37}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Table of values used for energy calibration, digital setup.}}{29}{table.caption.38}}
+\newlabel{tab:knox_d}{{2.3}{29}{Table of values used for energy calibration, digital setup}{table.caption.38}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Charge Comparisson Pulse Shape Discrimination}{29}{section*.40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{30}{figure.caption.39}}
+\newlabel{fig:D_QDC}{{2.14}{30}{Energy calibration of the digital setup}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Covolutional Neural-Networks}{30}{section*.41}}
+\newlabel{sec:cnn}{{2.2.2}{30}{Covolutional Neural-Networks}{section*.41}{}}
+\citation{Griffiths}
+\citation{Griffiths}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{32}{figure.caption.42}}
+\newlabel{fig:CNN_data}{{2.15}{32}{Selection of training and validation data}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel, producing a new vector or feature map.}}{32}{figure.caption.43}}
+\newlabel{fig:CNN_frame1}{{2.16}{32}{Convolution of a vector and a kernel, producing a new vector or feature map}{figure.caption.43}{}}
 \citation{keras}
-\citation{Griffiths}
-\citation{Griffiths}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Table of the essential parameters in the CNN.\relax }}{27}{table.caption.26}}
-\newlabel{tab:architecture}{{2.1}{27}{Table of the essential parameters in the CNN.\relax }{table.caption.26}{}}
-\citation{Nilsson}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Energy Calibration}{29}{section.2.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Table of values used for energy calibration, analog setup.}}{29}{table.caption.28}}
-\newlabel{tab:knox_a}{{2.2}{29}{Table of values used for energy calibration, analog setup}{table.caption.28}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Table of values used for energy calibration, digital setup.}}{30}{table.caption.30}}
-\newlabel{tab:knox_d}{{2.3}{30}{Table of values used for energy calibration, digital setup}{table.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of rejected digitized events}}{32}{figure.caption.23}}
-\newlabel{fig:badevents}{{2.9}{32}{Examples of rejected digitized events}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of a simple neural network}}{33}{figure.caption.24}}
-\newlabel{fig:nn}{{2.10}{33}{Illustration of a simple neural network}{figure.caption.24}{}}
-\newlabel{fig:CNN}{{2.11}{33}{}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Training and validation accuracy of the CNN}}{34}{figure.caption.27}}
-\newlabel{fig:CNN_training}{{2.12}{34}{Training and validation accuracy of the CNN}{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Energy calibration of the analog setup}}{34}{figure.caption.29}}
-\newlabel{fig:qdc_a}{{2.13}{34}{Energy calibration of the analog setup}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{35}{figure.caption.31}}
-\newlabel{fig:D_QDC}{{2.14}{35}{Energy calibration of the digital setup}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{33}{figure.caption.44}}
+\newlabel{fig:CNN_frame2}{{2.17}{33}{Two-layer convolutional neural network}{figure.caption.44}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Table of the essential parameters in the CNN.\relax }}{34}{table.caption.45}}
+\newlabel{tab:architecture}{{2.4}{34}{Table of the essential parameters in the CNN.\relax }{table.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Training and validation accuracy of the CNN}}{34}{figure.caption.46}}
+\newlabel{fig:CNN_training}{{2.18}{34}{Training and validation accuracy of the CNN}{figure.caption.46}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Results}{36}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:results}{{3}{36}{Results}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Data Sets}{36}{section.3.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Overview table of the two data sets.}}{36}{table.caption.32}}
-\newlabel{tab:settings}{{3.1}{36}{Overview table of the two data sets}{table.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Overview table of the two data sets.}}{36}{table.caption.47}}
+\newlabel{tab:settings}{{3.1}{36}{Overview table of the two data sets}{table.caption.47}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Analog Setup}{37}{section.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{37}{subsection.3.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{37}{figure.caption.33}}
-\newlabel{fig:tof_a}{{3.1}{37}{Time of flight spectrum, analog setup}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{37}{figure.caption.48}}
+\newlabel{fig:tof_a}{{3.1}{37}{Time of flight spectrum, analog setup}{figure.caption.48}{}}
 \citation{ScherzingerPhd}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{38}{subsection.3.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{39}{figure.caption.34}}
-\newlabel{fig:psd_a}{{3.2}{39}{PSD spectrum, analog setup}{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{40}{figure.caption.35}}
-\newlabel{fig:tof_ps_a}{{3.3}{40}{Heat map of pulse shape as a function of time of flight}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{39}{figure.caption.49}}
+\newlabel{fig:psd_a}{{3.2}{39}{PSD spectrum, analog setup}{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{40}{figure.caption.50}}
+\newlabel{fig:tof_ps_a}{{3.3}{40}{Heat map of pulse shape as a function of time of flight}{figure.caption.50}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Digital setup}{40}{section.3.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{40}{subsection.3.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{41}{figure.caption.36}}
-\newlabel{fig:tof_d}{{3.4}{41}{Time of flight spectrum, digital setup}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{41}{figure.caption.51}}
+\newlabel{fig:tof_d}{{3.4}{41}{Time of flight spectrum, digital setup}{figure.caption.51}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{41}{subsection.3.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{42}{figure.caption.37}}
-\newlabel{fig:psd_d}{{3.5}{42}{PSD spectrum, digital setup}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{42}{figure.caption.52}}
+\newlabel{fig:psd_d}{{3.5}{42}{PSD spectrum, digital setup}{figure.caption.52}{}}
 \citation{Nudat}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{43}{figure.caption.38}}
-\newlabel{fig:cnn_E}{{3.6}{43}{PSD spectrum obtained with CNN}{figure.caption.38}{}}
-\newlabel{fig:tof_digi_cc}{{3.7a}{44}{\relax }{figure.caption.39}{}}
-\newlabel{sub@fig:tof_digi_cc}{{a}{44}{\relax }{figure.caption.39}{}}
-\newlabel{fig:tof_digi_cnn}{{3.7b}{44}{\relax }{figure.caption.39}{}}
-\newlabel{sub@fig:tof_digi_cnn}{{b}{44}{\relax }{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{44}{figure.caption.39}}
-\newlabel{fig:tof_cc_tof_cnn}{{3.7}{44}{Pulse shape parameters as function of time of flight, digital setup}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{43}{figure.caption.53}}
+\newlabel{fig:cnn_E}{{3.6}{43}{PSD spectrum obtained with CNN}{figure.caption.53}{}}
+\newlabel{fig:tof_digi_cc}{{3.7a}{44}{\relax }{figure.caption.54}{}}
+\newlabel{sub@fig:tof_digi_cc}{{a}{44}{\relax }{figure.caption.54}{}}
+\newlabel{fig:tof_digi_cnn}{{3.7b}{44}{\relax }{figure.caption.54}{}}
+\newlabel{sub@fig:tof_digi_cnn}{{b}{44}{\relax }{figure.caption.54}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{44}{figure.caption.54}}
+\newlabel{fig:tof_cc_tof_cnn}{{3.7}{44}{Pulse shape parameters as function of time of flight, digital setup}{figure.caption.54}{}}
 \citation{Scherzinger:2016}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{45}{figure.caption.40}}
-\newlabel{fig:tof_E_d}{{3.8}{45}{Time of flight plotted against energy deposition}{figure.caption.40}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{46}{figure.caption.41}}
-\newlabel{fig:N_E}{{3.9}{46}{Neutron kinetic energy and deposited energy}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{45}{figure.caption.55}}
+\newlabel{fig:tof_E_d}{{3.8}{45}{Time of flight plotted against energy deposition}{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{46}{figure.caption.56}}
+\newlabel{fig:N_E}{{3.9}{46}{Neutron kinetic energy and deposited energy}{figure.caption.56}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{46}{section.3.4}}
 \newlabel{sec:comp}{{3.4}{46}{Results and Performance Comparisson}{section.3.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{46}{subsection.3.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{47}{figure.caption.42}}
-\newlabel{fig:qdc_comp}{{3.10}{47}{Comparison of analog and digital NE213 energy spectra}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{47}{figure.caption.57}}
+\newlabel{fig:qdc_comp}{{3.10}{47}{Comparison of analog and digital NE213 energy spectra}{figure.caption.57}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Time of Flight Spectra}{48}{subsection.3.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{48}{figure.caption.43}}
-\newlabel{fig:tof_comp}{{3.11}{48}{Comparison of analog and digital time of flight spectra}{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{48}{figure.caption.58}}
+\newlabel{fig:tof_comp}{{3.11}{48}{Comparison of analog and digital time of flight spectra}{figure.caption.58}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}PSD Performance}{49}{subsection.3.4.3}}
-\newlabel{fig:fom_analog}{{3.12a}{52}{Analog setup\relax }{figure.caption.44}{}}
-\newlabel{sub@fig:fom_analog}{{a}{52}{Analog setup\relax }{figure.caption.44}{}}
-\newlabel{fig:fom_digital}{{3.12b}{52}{Digital setup\relax }{figure.caption.44}{}}
-\newlabel{sub@fig:fom_digital}{{b}{52}{Digital setup\relax }{figure.caption.44}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{52}{figure.caption.44}}
-\newlabel{fig:ToF_filt_A}{{3.13a}{53}{Time of flight spectrum filtered by a linear cut at PS = 0.259.\relax }{figure.caption.45}{}}
-\newlabel{sub@fig:ToF_filt_A}{{a}{53}{Time of flight spectrum filtered by a linear cut at PS = 0.259.\relax }{figure.caption.45}{}}
-\newlabel{fig:ToF_filt_D}{{3.13b}{53}{Time of flight spectrum filtered by a linear cut at PS=0.222.\relax }{figure.caption.45}{}}
-\newlabel{sub@fig:ToF_filt_D}{{b}{53}{Time of flight spectrum filtered by a linear cut at PS=0.222.\relax }{figure.caption.45}{}}
-\newlabel{fig:ToF_filt_D_CNN}{{3.13c}{53}{Time of flight spectrum filtered by a linear cut at prediction = 0.5.\relax }{figure.caption.45}{}}
-\newlabel{sub@fig:ToF_filt_D_CNN}{{c}{53}{Time of flight spectrum filtered by a linear cut at prediction = 0.5.\relax }{figure.caption.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Misclassification of different PSD implementations.}}{53}{figure.caption.45}}
-\newlabel{fig:tof_cc_cnn}{{3.13}{53}{Misclassification of different PSD implementations}{figure.caption.45}{}}
+\newlabel{fig:fom_analog}{{3.12a}{52}{Analog setup\relax }{figure.caption.59}{}}
+\newlabel{sub@fig:fom_analog}{{a}{52}{Analog setup\relax }{figure.caption.59}{}}
+\newlabel{fig:fom_digital}{{3.12b}{52}{Digital setup\relax }{figure.caption.59}{}}
+\newlabel{sub@fig:fom_digital}{{b}{52}{Digital setup\relax }{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{52}{figure.caption.59}}
+\newlabel{fig:ToF_filt_A}{{3.13a}{53}{Time of flight spectrum filtered by a linear cut at PS = 0.259.\relax }{figure.caption.60}{}}
+\newlabel{sub@fig:ToF_filt_A}{{a}{53}{Time of flight spectrum filtered by a linear cut at PS = 0.259.\relax }{figure.caption.60}{}}
+\newlabel{fig:ToF_filt_D}{{3.13b}{53}{Time of flight spectrum filtered by a linear cut at PS=0.222.\relax }{figure.caption.60}{}}
+\newlabel{sub@fig:ToF_filt_D}{{b}{53}{Time of flight spectrum filtered by a linear cut at PS=0.222.\relax }{figure.caption.60}{}}
+\newlabel{fig:ToF_filt_D_CNN}{{3.13c}{53}{Time of flight spectrum filtered by a linear cut at prediction = 0.5.\relax }{figure.caption.60}{}}
+\newlabel{sub@fig:ToF_filt_D_CNN}{{c}{53}{Time of flight spectrum filtered by a linear cut at prediction = 0.5.\relax }{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Misclassification of different PSD implementations.}}{53}{figure.caption.60}}
+\newlabel{fig:tof_cc_cnn}{{3.13}{53}{Misclassification of different PSD implementations}{figure.caption.60}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Summary}{54}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Conclusion}{54}{section.4.1}}
 \citation{ScherzingerPhd}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Outlook}{55}{section.4.2}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{56}{section*.46}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix}{57}{Appendix.1.A}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{56}{section*.61}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Energy dependence of FOM}{57}{Appendix.1.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:appA}{{A}{57}{Appendix}{Appendix.1.A}{}}
-\newlabel{fig:psd_fom_trend}{{A.1a}{57}{\relax }{figure.caption.47}{}}
-\newlabel{sub@fig:psd_fom_trend}{{a}{57}{\relax }{figure.caption.47}{}}
-\newlabel{fig:psd_cut_trend}{{A.1b}{57}{\relax }{figure.caption.47}{}}
-\newlabel{sub@fig:psd_cut_trend}{{b}{57}{\relax }{figure.caption.47}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{57}{figure.caption.47}}
+\newlabel{ch:appA}{{A}{57}{Energy dependence of FOM}{Appendix.1.A}{}}
+\newlabel{fig:psd_fom_trend}{{A.1a}{58}{\relax }{figure.caption.62}{}}
+\newlabel{sub@fig:psd_fom_trend}{{a}{58}{\relax }{figure.caption.62}{}}
+\newlabel{fig:psd_cut_trend}{{A.1b}{58}{\relax }{figure.caption.62}{}}
+\newlabel{sub@fig:psd_cut_trend}{{b}{58}{\relax }{figure.caption.62}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{58}{figure.caption.62}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Neural Network Background}{59}{Appendix.1.B}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:appB}{{B}{59}{Neural Network Background}{Appendix.1.B}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Illustration of a simple neural network}}{59}{figure.caption.63}}
+\newlabel{fig:nn}{{B.1}{59}{Illustration of a simple neural network}{figure.caption.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Example of a convolutional neural network}}{61}{figure.caption.64}}
+\newlabel{fig:CNN}{{B.2}{61}{Example of a convolutional neural network}{figure.caption.64}{}}
 \bibdata{references}
 \bibcite{Nudat}{{1}{2008}{{National Nuclear Data~Center}}{{}}}
 \bibcite{Krane}{{2}{1988}{{Krane}}{{}}}
@@ -262,19 +277,19 @@
 \bibcite{Scherzinger:2015}{{5}{2015}{{Scherzinger et~al.}}{{Scherzinger, Annand, Davatz, Fissum, Gendotti, Hall-Wilton, H\IeC {\r a}kansson, Jebali, Kanaki, Lundin, Nilsson, Rosborge, and Svensson}}}
 \bibcite{Mauritzsson}{{6}{2017}{{Mauritzsson}}{{}}}
 \bibcite{ScherzingerPhd}{{7}{2016}{{Scherzinger}}{{}}}
-\bibcite{Scherzinger:2017}{{8}{2017}{{Scherzinger et~al.}}{{Scherzinger, Al~Jebali, Annand, Fissum, Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and Rofors}}}
-\bibcite{Eljen}{{9}{}{{Technology}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{58}{chapter*.48}}
-\bibcite{sjogren}{{10}{2010}{{Sj\IeC {\"o}gren}}{{}}}
-\bibcite{rofors}{{11}{2016}{{Rofors}}{{}}}
-\bibcite{CAENTDC}{{12}{2012}{{CAEN}}{{}}}
-\bibcite{CAEN}{{13}{2017}{{CAEN}}{{}}}
-\bibcite{Spectrum}{{14}{}{{Pini et~al.}}{{Pini, Tate, and Rovini}}}
-\bibcite{WaveDump}{{15}{2018}{{CAEN}}{{}}}
-\bibcite{Dask}{{16}{2016}{{Dask Development Team}}{{}}}
-\bibcite{Pandas}{{17}{2010}{{McKinney}}{{}}}
-\bibcite{Goodfellow-et-al-2016}{{18}{2016}{{Goodfellow et~al.}}{{Goodfellow, Bengio, and Courville}}}
-\bibcite{keras}{{19}{2015}{{Chollet et~al.}}{{}}}
+\bibcite{Messi}{{8}{2017}{{Messi et~al.}}{{}}}
+\bibcite{Scherzinger:2017}{{9}{2017}{{Scherzinger et~al.}}{{Scherzinger, Al~Jebali, Annand, Fissum, Hall-Wilton, Koufigar, Mauritzson, Messi, Perrey, and Rofors}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{62}{chapter*.65}}
+\bibcite{Eljen}{{10}{}{{Technology}}{{}}}
+\bibcite{sjogren}{{11}{2010}{{Sj\IeC {\"o}gren}}{{}}}
+\bibcite{rofors}{{12}{2016}{{Rofors}}{{}}}
+\bibcite{Nilsson}{{13}{2003}{{Nilsson}}{{}}}
+\bibcite{CAENTDC}{{14}{2012}{{CAEN}}{{}}}
+\bibcite{CAEN}{{15}{2017}{{CAEN}}{{}}}
+\bibcite{Spectrum}{{16}{}{{Pini et~al.}}{{Pini, Tate, and Rovini}}}
+\bibcite{WaveDump}{{17}{2018}{{CAEN}}{{}}}
+\bibcite{Dask}{{18}{2016}{{Dask Development Team}}{{}}}
+\bibcite{Pandas}{{19}{2010}{{McKinney}}{{}}}
 \bibcite{Griffiths}{{20}{2018}{{Griffiths et~al.}}{{Griffiths, Kleinegesse, Saunders, Taylor, and Vacheret}}}
-\bibcite{Nilsson}{{21}{2003}{{Nilsson}}{{}}}
+\bibcite{keras}{{21}{2015}{{Chollet et~al.}}{{}}}
 \bibcite{Scherzinger:2016}{{22}{2016}{{Scherzinger et~al.}}{{}}}

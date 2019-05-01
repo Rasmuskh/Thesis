@@ -5,6 +5,7 @@ The style file: unsrtnat.bst
 Database file #1: references.bib
 Warning--empty publisher in Krane
 Warning--empty publisher in Leo
+Warning--empty booktitle in Messi
 Warning--empty year in Eljen
 Warning--empty journal in Spectrum
 Warning--empty year in Spectrum
@@ -12,43 +13,43 @@ Warning--empty year in Spectrum
 Warning--empty journal in Griffiths
 You've used 22 entries,
             2481 wiz_defined-function locations,
-            682 strings with 7899 characters,
-and the built_in function-call counts, 7088 in all, are:
+            680 strings with 7825 characters,
+and the built_in function-call counts, 7077 in all, are:
 = -- 558
-> -- 362
-< -- 18
-+ -- 152
-- -- 108
-* -- 451
-:= -- 1177
-add.period$ -- 76
+> -- 356
+< -- 19
++ -- 150
+- -- 106
+* -- 442
+:= -- 1169
+add.period$ -- 75
 call.type$ -- 22
-change.case$ -- 34
+change.case$ -- 35
 chr.to.int$ -- 22
-cite$ -- 29
-duplicate$ -- 385
-empty$ -- 668
-format.name$ -- 132
-if$ -- 1492
+cite$ -- 30
+duplicate$ -- 387
+empty$ -- 674
+format.name$ -- 131
+if$ -- 1494
 int.to.chr$ -- 1
 int.to.str$ -- 23
-missing$ -- 18
-newline$ -- 128
+missing$ -- 17
+newline$ -- 127
 num.names$ -- 68
-pop$ -- 229
+pop$ -- 232
 preamble$ -- 1
 purify$ -- 22
 quote$ -- 0
-skip$ -- 239
+skip$ -- 242
 stack$ -- 0
 substring$ -- 132
 swap$ -- 56
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
-warning$ -- 7
+type$ -- 139
+warning$ -- 8
 while$ -- 50
 width$ -- 0
-write$ -- 291
-(There were 7 warnings)
+write$ -- 288
+(There were 8 warnings)

@@ -30,6 +30,9 @@
 \onehalfspacing
 %titlepage dependencies
 \usepackage{tikz}
+%circled number (relies on tikz)
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 \usetikzlibrary{calc}
 %appendix
 \usepackage[toc,page]{appendix}
@@ -48,7 +51,7 @@
 %-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
 \end{abstract}
 \newpage
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{2}
 \tableofcontents
 \listoffigures
