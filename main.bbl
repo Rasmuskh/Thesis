@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -80,6 +80,13 @@ Johan Sjögren.
 \newblock \emph{Construction and initial testing of a neutron detector
   prototype}.
 \newblock Lund University, 2010.
+
+\bibitem[Scionix()]{Scionix}
+Scionix.
+\newblock Yap:ce detectors for fast x-ray spectroscopy.
+\newblock URL
+  \url{https://scionix.nl/wp-content/uploads/2017/07/YAP-Ce-scintillators.pdf}.
+\newblock Retrieved: May 1rst 2019.
 
 \bibitem[Rofors(2016)]{rofors}
 Emil Rofors.

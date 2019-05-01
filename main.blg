@@ -7,49 +7,50 @@ Warning--empty publisher in Krane
 Warning--empty publisher in Leo
 Warning--empty booktitle in Messi
 Warning--empty year in Eljen
+Warning--empty year in Scionix
 Warning--empty journal in Spectrum
 Warning--empty year in Spectrum
 Warning--empty year in Spectrum
 Warning--empty journal in Griffiths
-You've used 22 entries,
+You've used 23 entries,
             2481 wiz_defined-function locations,
-            680 strings with 7825 characters,
-and the built_in function-call counts, 7077 in all, are:
-= -- 558
-> -- 356
-< -- 19
-+ -- 150
-- -- 106
-* -- 442
-:= -- 1169
-add.period$ -- 75
-call.type$ -- 22
-change.case$ -- 35
-chr.to.int$ -- 22
-cite$ -- 30
-duplicate$ -- 387
-empty$ -- 674
-format.name$ -- 131
-if$ -- 1494
+            685 strings with 7977 characters,
+and the built_in function-call counts, 7342 in all, are:
+= -- 581
+> -- 363
+< -- 20
++ -- 154
+- -- 108
+* -- 453
+:= -- 1209
+add.period$ -- 79
+call.type$ -- 23
+change.case$ -- 37
+chr.to.int$ -- 23
+cite$ -- 32
+duplicate$ -- 401
+empty$ -- 704
+format.name$ -- 134
+if$ -- 1552
 int.to.chr$ -- 1
-int.to.str$ -- 23
+int.to.str$ -- 24
 missing$ -- 17
-newline$ -- 127
-num.names$ -- 68
-pop$ -- 232
+newline$ -- 133
+num.names$ -- 71
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 23
 quote$ -- 0
-skip$ -- 242
+skip$ -- 251
 stack$ -- 0
-substring$ -- 132
-swap$ -- 56
+substring$ -- 134
+swap$ -- 58
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 139
-warning$ -- 8
-while$ -- 50
+type$ -- 146
+warning$ -- 9
+while$ -- 52
 width$ -- 0
-write$ -- 288
-(There were 8 warnings)
+write$ -- 301
+(There were 9 warnings)

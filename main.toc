@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.2.1}Neutron/Matter Interactions}{3}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Sources of Free Neutrons}{4}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Scintillation Detectors}{5}{subsection.1.2.3}
-\contentsline {subsubsection}{Detecting Gamma rays}{5}{section*.6}
+\contentsline {subsubsection}{Detecting Gamma-rays}{5}{section*.6}
 \contentsline {subsubsection}{Detecting Neutrons}{6}{section*.7}
 \contentsline {subsubsection}{Photomultiplier Tubes}{6}{section*.8}
 \contentsline {subsection}{\numberline {1.2.4}Neutron/Gamma-Ray Discrimination}{7}{subsection.1.2.4}
@@ -16,11 +16,11 @@
 \contentsline {subsection}{\numberline {2.1.1}Source-Testing Facility}{13}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}The Aquarium}{13}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Radiation Sources}{14}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Fast Neutron and Gamma Ray Detectors}{15}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.4}Fast Neutron and Gamma-Ray Detectors}{15}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Signal Processing}{17}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Analog}{17}{subsection.2.2.1}
 \contentsline {subsubsection}{Discriminators}{17}{section*.20}
-\contentsline {subsubsection}{Trigger logic}{18}{section*.23}
+\contentsline {subsubsection}{Trigger logic}{19}{section*.23}
 \contentsline {subsubsection}{Charge to digital converters}{19}{section*.24}
 \contentsline {subsubsection}{Time-to-digital converters}{21}{section*.27}
 \contentsline {subsection}{\numberline {2.2.2}Digital signal processing}{22}{subsection.2.2.2}
