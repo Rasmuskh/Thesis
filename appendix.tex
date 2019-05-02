@@ -20,38 +20,38 @@ The figure of merit is highly energy dependent. Figure \ref{fig:psd_fom_trend} s
     \caption[Energy dependence of PSD figure of merit.]{(a) Pulse shape discrimination figure of merit plotted as a function of minimum deposited energy. (b) Ideal pulse shape cut as a function of minimum deposited energy.}
 \end{figure}
 
-\chapter{Neural Network Background}\label{ch:appB}
-
-Neural networks are function approximators, which are build of three building blocks. Neurons, weights and activation functions. Given an input pattern (vector, matrix or a higher rank tensor), then the network will propagate the pattern through a number of layers of neurons. Each neuron takes a weighted sum of the output values of the preceding layer as input to an activation function and outputs a single value. Figure \ref{fig:nn} shows an example of a simple neural network, which can in fact be trained to learn the XOR logic operation. An input pattern $\vec{\textrm{x}}$ is propagated through the network in accordance to:
-
-\begin{figure}[ht!]
-    \centering
-        \includegraphics[width=0.25\textwidth]{DigitalSetup/nn.pdf}
-        \caption[Illustration of a simple neural network]{Illustration of a simple neural network.}
-    \label{fig:nn} 
-\end{figure}
-
-
-\begin{equation}
-	\begin{split}
-	h_i = \phi_0\left(\Sigma_j \left( \omega_{ij}x_j \right) + b_1\right)\\
-	y = \phi_1\left(\Sigma_j \left( \tilde{\omega_{ij}}h_j \right) + b_2\right)
-	\end{split}
-\end{equation}
-
-If the network is trained to perform XOR, then the desired output is one for $\vec{\textrm{x}} = [1,0]$, $\vec{\textrm{x}} = [0,1]$ and zero for $\vec{\textrm{x}} = [0,0]$ and  $\vec{\textrm{x}} = [1,1]$. The network is trained in order to improve performance through a method called backpropagation. The derivative of an error function with respect to each weight in the network is found through repeated use of the chain rule. These derivatives are then used to perform small adjustments of the weights. The procedure is repeated a number of time until, if the network architecture and training data was sufficient, the network has learned how to solve its task. There are many variations of this algorithm, often incorporating momentum terms or calculating the error over a batch of many patterns at a time.
-
-The task of discriminating neutrons from gamma rays based on pulse shape is fundamentally a highly visual task, and in recent years a class of neural networks known as Convolutional Neural Networks (CNN) have been found to excel at this type of task. \ref{fig:MLP_CNN} shows a comparison between a so-called multilayer perceptron (MLP) and a CNN. The multilayer perceptron is conecting every neuron in a layer to every neuron in the next layer via a unique weight. This means that there are a total of 55 weights to be trained in this network. In the CNN shown here each neuron is connected to three neurons in the preceding layer via three weights these weights are unique for each layer, but shared between neurons in a layer. The sets of shared weights are known as kernels, and they are defined by their size and their stride. The size in the example shown here is 3 and the stride or stepsize is 1. Clearly this network contains much less weights to be trained, but it also offers another advantage. By sharing the weights the network becomes insensitve to where in the input space a certain feature appears. When trying to recognize a bird in an image it should not matter if the bird is in the left side or right side of the image. Likewise the network should not care too much about where in the input space the rising edge of a pulse is located. Rather it should be sensitive to the shape of it. These features make CNNs strong candidates for neural network based PSD.
-
-In general one will apply multiple kernels in each convolutional layer. This allows each kernel to highlight particular features of the input and will result in one output vector for each kernel. The kernels in subsequent convolutional layers will then operate on all of these vectors in parallel in order to learn connections between the various features that each vector highlights.
-Figure \ref{fig:CNN} shows an example of how a CNN operates. This is an illustrative example and does not represent the exact architecture of the network used in this work. The first convolutional layer employs 3 kernels of size 4 and stride 4, and produces 3 output vectors, which act as input to the second convolutional layer. Then a second convolutional layer is applied, using 6 kernels of size 2 and stride 2. Each of the 6 kernels operates on each of the 3 vectors in parallel resulting in 6 new vectors. These are then flattened into a single vector and connected to the output node. By applying the logistic function ($f(x)=1/(1-e^{-x})$) to the output node the value will be bounded between 0 and 1, which makes it suitable for binary classification.
-
-\begin{figure}[ht!]
-    \centering
-        \includegraphics[width=0.8\textwidth]{DigitalSetup/CNN.pdf}
-        \caption[Example of a convolutional neural network]{Example of a convolutional neural network operating on a 1D input vector with 2 convolutional layers. The first convolutional layer uses three kernel to output 3 new vectors. The second convolutional layer employs 6 kernels to produce 6 output vector. Each kernel operates on all vectors from the preceding layer. For the actual architecture employed in this work seesee table \ref{tab:architecture}.}
-    \label{fig:CNN} 
-\end{figure}
+%\chapter{Neural Network Background}\label{ch:appB}
+%
+%Neural networks are function approximators, which are build of three building blocks. Neurons, weights and activation functions. Given an input pattern (vector, matrix or a higher rank tensor), then the network will propagate the pattern through a number of layers of neurons. Each neuron takes a weighted sum of the output values of the preceding layer as input to an activation function and outputs a single value. Figure \ref{fig:nn} shows an example of a simple neural network, which can in fact be trained to learn the XOR logic operation. An input pattern $\vec{\textrm{x}}$ is propagated through the network in accordance to:
+%
+%\begin{figure}[ht!]
+%    \centering
+%        \includegraphics[width=0.25\textwidth]{DigitalSetup/nn.pdf}
+%        \caption[Illustration of a simple neural network]{Illustration of a simple neural network.}
+%    \label{fig:nn} 
+%\end{figure}
+%
+%
+%\begin{equation}
+%	\begin{split}
+%	h_i = \phi_0\left(\Sigma_j \left( \omega_{ij}x_j \right) + b_1\right)\\
+%	y = \phi_1\left(\Sigma_j \left( \tilde{\omega_{ij}}h_j \right) + b_2\right)
+%	\end{split}
+%\end{equation}
+%
+%If the network is trained to perform XOR, then the desired output is one for $\vec{\textrm{x}} = [1,0]$, $\vec{\textrm{x}} = [0,1]$ and zero for $\vec{\textrm{x}} = [0,0]$ and  $\vec{\textrm{x}} = [1,1]$. The network is trained in order to improve performance through a method called backpropagation. The derivative of an error function with respect to each weight in the network is found through repeated use of the chain rule. These derivatives are then used to perform small adjustments of the weights. The procedure is repeated a number of time until, if the network architecture and training data was sufficient, the network has learned how to solve its task. There are many variations of this algorithm, often incorporating momentum terms or calculating the error over a batch of many patterns at a time.
+%
+%The task of discriminating neutrons from gamma rays based on pulse shape is fundamentally a highly visual task, and in recent years a class of neural networks known as Convolutional Neural Networks (CNN) have been found to excel at this type of task. \ref{fig:MLP_CNN} shows a comparison between a so-called multilayer perceptron (MLP) and a CNN. The multilayer perceptron is conecting every neuron in a layer to every neuron in the next layer via a unique weight. This means that there are a total of 55 weights to be trained in this network. In the CNN shown here each neuron is connected to three neurons in the preceding layer via three weights these weights are unique for each layer, but shared between neurons in a layer. The sets of shared weights are known as kernels, and they are defined by their size and their stride. The size in the example shown here is 3 and the stride or stepsize is 1. Clearly this network contains much less weights to be trained, but it also offers another advantage. By sharing the weights the network becomes insensitve to where in the input space a certain feature appears. When trying to recognize a bird in an image it should not matter if the bird is in the left side or right side of the image. Likewise the network should not care too much about where in the input space the rising edge of a pulse is located. Rather it should be sensitive to the shape of it. These features make CNNs strong candidates for neural network based PSD.
+%
+%In general one will apply multiple kernels in each convolutional layer. This allows each kernel to highlight particular features of the input and will result in one output vector for each kernel. The kernels in subsequent convolutional layers will then operate on all of these vectors in parallel in order to learn connections between the various features that each vector highlights.
+%Figure \ref{fig:CNN} shows an example of how a CNN operates. This is an illustrative example and does not represent the exact architecture of the network used in this work. The first convolutional layer employs 3 kernels of size 4 and stride 4, and produces 3 output vectors, which act as input to the second convolutional layer. Then a second convolutional layer is applied, using 6 kernels of size 2 and stride 2. Each of the 6 kernels operates on each of the 3 vectors in parallel resulting in 6 new vectors. These are then flattened into a single vector and connected to the output node. By applying the logistic function ($f(x)=1/(1-e^{-x})$) to the output node the value will be bounded between 0 and 1, which makes it suitable for binary classification.
+%
+%\begin{figure}[ht!]
+%    \centering
+%        \includegraphics[width=0.8\textwidth]{DigitalSetup/CNN.pdf}
+%        \caption[Example of a convolutional neural network]{Example of a convolutional neural network operating on a 1D input vector with 2 convolutional layers. The first convolutional layer uses three kernel to output 3 new vectors. The second convolutional layer employs 6 kernels to produce 6 output vector. Each kernel operates on all vectors from the preceding layer. For the actual architecture employed in this work seesee table \ref{tab:architecture}.}
+%    \label{fig:CNN} 
+%\end{figure}
 
 
 

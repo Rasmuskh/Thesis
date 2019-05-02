@@ -23,21 +23,24 @@
 \contentsline {subsubsection}{Trigger logic}{19}{section*.23}
 \contentsline {subsubsection}{Charge to digital converters}{19}{section*.24}
 \contentsline {subsubsection}{Time-to-digital converters}{21}{section*.27}
-\contentsline {subsection}{\numberline {2.2.2}Digital signal processing}{22}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Digital}{22}{subsection.2.2.2}
 \contentsline {subsubsection}{Digitizer Specifications and Configuration}{22}{section*.29}
 \contentsline {subsubsection}{Time stamping}{25}{section*.31}
-\contentsline {subsubsection}{Data Selection}{25}{section*.33}
-\contentsline {subsubsection}{Energy Calibration}{29}{section*.37}
-\contentsline {subsubsection}{Charge Comparisson Pulse Shape Discrimination}{29}{section*.40}
-\contentsline {subsubsection}{Covolutional Neural-Networks}{30}{section*.41}
-\contentsline {chapter}{\numberline {3}Results}{36}{chapter.3}
-\contentsline {section}{\numberline {3.1}Data Sets}{36}{section.3.1}
-\contentsline {section}{\numberline {3.2}Analog Setup}{37}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{37}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{38}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Digital setup}{40}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{40}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{41}{subsection.3.3.2}
+\contentsline {subsubsection}{Data Selection}{26}{section*.33}
+\contentsline {subsubsection}{Energy Calibration}{28}{section*.37}
+\contentsline {subsubsection}{Charge-Comparison Pulse-Shape Discrimination}{30}{section*.40}
+\contentsline {section}{\numberline {2.3}Convolutional Neural-Network}{31}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Training dataset}{31}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}How It Works}{32}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Implementation of the Network}{35}{subsection.2.3.3}
+\contentsline {chapter}{\numberline {3}Results}{37}{chapter.3}
+\contentsline {section}{\numberline {3.1}Data Sets}{37}{section.3.1}
+\contentsline {section}{\numberline {3.2}Analog Setup}{38}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{38}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{39}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Digital setup}{41}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{41}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{42}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{46}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{46}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Time of Flight Spectra}{48}{subsection.3.4.2}
@@ -47,5 +50,4 @@
 \contentsline {section}{\numberline {4.2}Outlook}{55}{section.4.2}
 \contentsline {chapter}{Appendices}{56}{section*.61}
 \contentsline {chapter}{\numberline {A}Energy dependence of FOM}{57}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Neural Network Background}{59}{Appendix.1.B}
-\contentsline {chapter}{Bibliography}{62}{chapter*.65}
+\contentsline {chapter}{Bibliography}{59}{chapter*.63}

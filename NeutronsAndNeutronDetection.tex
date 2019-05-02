@@ -27,7 +27,7 @@ Neutrons are often classified according to their energy, since in different ener
 \center
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Name} & \textbf{Energy} \\ \hline
+Name & Energy \\ \hline
 thermal       & 0.025 eV        \\ \hline
 epithermal    & 1 eV            \\ \hline
 slow          & 1 keV           \\ \hline
@@ -152,7 +152,7 @@ Recall that an actinide/Beryllium source produces neutrons and gamma-rays. The g
     \label{fig:tof_setup} 
 \end{figure}
 
-By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron/gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig. \ref{fig:tof_setup}. 
+By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig. \ref{fig:tof_setup}. 
 In Figure \ref{fig:tof_setup}, the distance from the center of the actinide/Berylium source to the center of the neutron/gamma-ray detector is $L$. Consider two coincidental low-energy cascade gamma-rays from the de-excitation of the actinide. One of these gamma-rays is detected by the neutron and gamma-ray sensitive detector, while the other is detected by the gamma-ray detector. Suppose that signal delay is employed so that the signal from the neutron and gamma-ray detector is used to start the flight-time measurement, while the signal from the gamma-ray detector is used to stop it. Since the speed of the gamma-rays is $c$ and the source-to-detector distances and delays are fixed, the time difference between the start and stop signals is also fixed. This constant time difference is known as the gamma flash, $T_\gamma$, and serves as an absolute timing calibration point for the flight-time measurement. This calibration may be carried out by referencing the measured flight times $\Delta T$ to the flight time of gamma-rays. Here the flight time is defined as $\Delta T=\tau -(t_{\textrm{stop}}-t_{\textrm{start}})$. The time between start and stop is subtracted from an arbitrary constant $\tau$ in order to preserve time orderring (since the stop signal was delayed). Since the distance from source to detector is known, the corrected flight time, $ToF$ is given by:
 \begin{equation}
 	ToF = \Delta T -(T_\gamma - T_0).

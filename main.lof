@@ -16,31 +16,29 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Energy calibration of the analog setup}}{21}{figure.caption.26}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces TDC calibration spectrum.}}{22}{figure.caption.28}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{23}{figure.caption.30}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Examples of digitized pulses and their CFD trigger points}}{26}{figure.caption.32}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse height spectrum}}{26}{figure.caption.34}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events}}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Relative timing for NE213 detector pulses of different amplitude}}{26}{figure.caption.32}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse-height spectrum}}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events}}{29}{figure.caption.36}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{30}{figure.caption.39}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{32}{figure.caption.42}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel, producing a new vector or feature map.}}{32}{figure.caption.43}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{33}{figure.caption.44}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Training and validation accuracy of the CNN}}{34}{figure.caption.46}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{32}{figure.caption.41}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel}}{33}{figure.caption.42}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{34}{figure.caption.43}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Max pooling principle}}{35}{figure.caption.44}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN}}{36}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{37}{figure.caption.48}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{38}{figure.caption.48}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{39}{figure.caption.49}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{40}{figure.caption.50}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{41}{figure.caption.51}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{42}{figure.caption.52}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{43}{figure.caption.53}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{44}{figure.caption.54}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{45}{figure.caption.55}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{46}{figure.caption.56}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{47}{figure.caption.57}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{48}{figure.caption.58}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{52}{figure.caption.59}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{41}{figure.caption.50}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{42}{figure.caption.51}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectrum, digital setup.}}{43}{figure.caption.52}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces PSD spectrum obtained with CNN}}{44}{figure.caption.53}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{45}{figure.caption.54}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Time of flight plotted against energy deposition.}}{46}{figure.caption.55}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Neutron kinetic energy and deposited energy.}}{47}{figure.caption.56}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{48}{figure.caption.57}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{49}{figure.caption.58}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{51}{figure.caption.59}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Misclassification of different PSD implementations.}}{53}{figure.caption.60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{58}{figure.caption.62}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Illustration of a simple neural network}}{59}{figure.caption.63}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Example of a convolutional neural network}}{61}{figure.caption.64}

@@ -4,11 +4,10 @@ The top-level auxiliary file: Results.aux
 The style file: unsrtnat.bst
 I found no \bibdata command---while reading file Results.aux
 Warning--I didn't find a database entry for "ScherzingerPhd"
-Warning--I didn't find a database entry for "Nudat"
 Warning--I didn't find a database entry for "Scherzinger:2016"
 You've used 0 entries,
             2481 wiz_defined-function locations,
-            556 strings with 4488 characters,
+            554 strings with 4478 characters,
 and the built_in function-call counts, 34 in all, are:
 = -- 0
 > -- 0

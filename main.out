@@ -23,29 +23,31 @@
 \BOOKMARK [3][-]{section*.23}{Trigger logic}{subsection.2.2.1}% 23
 \BOOKMARK [3][-]{section*.24}{Charge to digital converters}{subsection.2.2.1}% 24
 \BOOKMARK [3][-]{section*.27}{Time-to-digital converters}{subsection.2.2.1}% 25
-\BOOKMARK [2][-]{subsection.2.2.2}{Digital signal processing}{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.2}{Digital}{section.2.2}% 26
 \BOOKMARK [3][-]{section*.29}{Digitizer Specifications and Configuration}{subsection.2.2.2}% 27
 \BOOKMARK [3][-]{section*.31}{Time stamping}{subsection.2.2.2}% 28
 \BOOKMARK [3][-]{section*.33}{Data Selection}{subsection.2.2.2}% 29
 \BOOKMARK [3][-]{section*.37}{Energy Calibration}{subsection.2.2.2}% 30
-\BOOKMARK [3][-]{section*.40}{Charge Comparisson Pulse Shape Discrimination}{subsection.2.2.2}% 31
-\BOOKMARK [3][-]{section*.41}{Covolutional Neural-Networks}{subsection.2.2.2}% 32
-\BOOKMARK [0][-]{chapter.3}{Results}{}% 33
-\BOOKMARK [1][-]{section.3.1}{Data Sets}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.2}{Analog Setup}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.2.1}{Neutron Tagging}{section.3.2}% 36
-\BOOKMARK [2][-]{subsection.3.2.2}{Pulse Shape Discrimination}{section.3.2}% 37
-\BOOKMARK [1][-]{section.3.3}{Digital setup}{chapter.3}% 38
-\BOOKMARK [2][-]{subsection.3.3.1}{Neutron Tagging}{section.3.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.2}{Pulse shape discrimination}{section.3.3}% 40
-\BOOKMARK [1][-]{section.3.4}{Results and Performance Comparisson}{chapter.3}% 41
-\BOOKMARK [2][-]{subsection.3.4.1}{Energy Spectra and Livetime}{section.3.4}% 42
-\BOOKMARK [2][-]{subsection.3.4.2}{Time of Flight Spectra}{section.3.4}% 43
-\BOOKMARK [2][-]{subsection.3.4.3}{PSD Performance}{section.3.4}% 44
-\BOOKMARK [0][-]{chapter.4}{Summary}{}% 45
-\BOOKMARK [1][-]{section.4.1}{Conclusion}{chapter.4}% 46
-\BOOKMARK [1][-]{section.4.2}{Outlook}{chapter.4}% 47
-\BOOKMARK [0][-]{section*.61}{Appendices}{}% 48
-\BOOKMARK [0][-]{Appendix.1.A}{Energy dependence of FOM}{}% 49
-\BOOKMARK [0][-]{Appendix.1.B}{Neural Network Background}{}% 50
-\BOOKMARK [0][-]{chapter*.65}{Bibliography}{}% 51
+\BOOKMARK [3][-]{section*.40}{Charge-Comparison Pulse-Shape Discrimination}{subsection.2.2.2}% 31
+\BOOKMARK [1][-]{section.2.3}{Convolutional Neural-Network}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.3.1}{Training dataset}{section.2.3}% 33
+\BOOKMARK [2][-]{subsection.2.3.2}{How It Works}{section.2.3}% 34
+\BOOKMARK [2][-]{subsection.2.3.3}{Implementation of the Network}{section.2.3}% 35
+\BOOKMARK [0][-]{chapter.3}{Results}{}% 36
+\BOOKMARK [1][-]{section.3.1}{Data Sets}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.2}{Analog Setup}{chapter.3}% 38
+\BOOKMARK [2][-]{subsection.3.2.1}{Neutron Tagging}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.2}{Pulse Shape Discrimination}{section.3.2}% 40
+\BOOKMARK [1][-]{section.3.3}{Digital setup}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.3.1}{Neutron Tagging}{section.3.3}% 42
+\BOOKMARK [2][-]{subsection.3.3.2}{Pulse shape discrimination}{section.3.3}% 43
+\BOOKMARK [1][-]{section.3.4}{Results and Performance Comparisson}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.4.1}{Energy Spectra and Livetime}{section.3.4}% 45
+\BOOKMARK [2][-]{subsection.3.4.2}{Time of Flight Spectra}{section.3.4}% 46
+\BOOKMARK [2][-]{subsection.3.4.3}{PSD Performance}{section.3.4}% 47
+\BOOKMARK [0][-]{chapter.4}{Summary}{}% 48
+\BOOKMARK [1][-]{section.4.1}{Conclusion}{chapter.4}% 49
+\BOOKMARK [1][-]{section.4.2}{Outlook}{chapter.4}% 50
+\BOOKMARK [0][-]{section*.61}{Appendices}{}% 51
+\BOOKMARK [0][-]{Appendix.1.A}{Energy dependence of FOM}{}% 52
+\BOOKMARK [0][-]{chapter*.63}{Bibliography}{}% 53
