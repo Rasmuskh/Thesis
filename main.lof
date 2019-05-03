@@ -23,8 +23,8 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{33}{figure.caption.42}
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel}}{34}{figure.caption.43}
 \contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{35}{figure.caption.44}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Max pooling principle}}{36}{figure.caption.45}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN}}{37}{figure.caption.47}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces The Max pooling principle}}{36}{figure.caption.45}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN.}}{37}{figure.caption.47}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{39}{figure.caption.49}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{40}{figure.caption.50}
