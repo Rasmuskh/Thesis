@@ -16,38 +16,39 @@
 \contentsline {subsection}{\numberline {2.1.1}Source-Testing Facility}{13}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}The Aquarium}{13}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Radiation Sources}{14}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Fast Neutron and Gamma-Ray Detectors}{15}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Signal Processing}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.4}Fast-Neutron and Gamma-Ray Detectors}{15}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Signal Processing}{16}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Analog}{17}{subsection.2.2.1}
 \contentsline {subsubsection}{Discriminators}{17}{section*.20}
 \contentsline {subsubsection}{Trigger logic}{19}{section*.23}
-\contentsline {subsubsection}{Charge to digital converters}{19}{section*.24}
-\contentsline {subsubsection}{Time-to-digital converters}{21}{section*.27}
-\contentsline {subsection}{\numberline {2.2.2}Digital}{22}{subsection.2.2.2}
-\contentsline {subsubsection}{Digitizer Specifications and Configuration}{22}{section*.29}
-\contentsline {subsubsection}{Time stamping}{25}{section*.31}
-\contentsline {subsubsection}{Data Selection}{26}{section*.33}
-\contentsline {subsubsection}{Energy Calibration}{28}{section*.37}
-\contentsline {subsubsection}{Charge-Comparison Pulse-Shape Discrimination}{30}{section*.40}
+\contentsline {subsubsection}{Time-to-digital converters}{19}{section*.24}
+\contentsline {subsubsection}{Charge-to-digital converters}{20}{section*.26}
+\contentsline {subsubsection}{Charge-Comparisson Pulse-Shape Discrimination}{23}{section*.29}
+\contentsline {subsection}{\numberline {2.2.2}Digital}{23}{subsection.2.2.2}
+\contentsline {subsubsection}{Digitizer Specifications and Configuration}{23}{section*.30}
+\contentsline {subsubsection}{Time stamping}{26}{section*.32}
+\contentsline {subsubsection}{Data Selection}{27}{section*.34}
+\contentsline {subsubsection}{Energy Calibration}{30}{section*.38}
+\contentsline {subsubsection}{Charge-Comparison Pulse-Shape Discrimination}{30}{section*.41}
 \contentsline {section}{\numberline {2.3}Convolutional Neural-Network}{31}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Training dataset}{31}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}How It Works}{32}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Implementation of the Network}{35}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}Results}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Data Sets}{37}{section.3.1}
-\contentsline {section}{\numberline {3.2}Analog Setup}{38}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{38}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{39}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Digital setup}{41}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{41}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{42}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{46}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{46}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Time of Flight Spectra}{48}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}PSD Performance}{49}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}Summary}{54}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conclusion}{54}{section.4.1}
-\contentsline {section}{\numberline {4.2}Outlook}{55}{section.4.2}
-\contentsline {chapter}{Appendices}{56}{section*.61}
-\contentsline {chapter}{\numberline {A}Energy dependence of FOM}{57}{Appendix.1.A}
-\contentsline {chapter}{Bibliography}{59}{chapter*.63}
+\contentsline {subsection}{\numberline {2.3.1}Training dataset}{32}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}How It Works}{33}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Implementation of the Network}{36}{subsection.2.3.3}
+\contentsline {chapter}{\numberline {3}Results}{38}{chapter.3}
+\contentsline {section}{\numberline {3.1}Data Sets}{38}{section.3.1}
+\contentsline {section}{\numberline {3.2}Analog Setup}{39}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{39}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Pulse Shape Discrimination}{40}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Digital setup}{42}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{42}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Pulse shape discrimination}{43}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Results and Performance Comparisson}{48}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Energy Spectra and Livetime}{48}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Time of Flight Spectra}{50}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}PSD Performance}{51}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Summary}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conclusion}{55}{section.4.1}
+\contentsline {section}{\numberline {4.2}Outlook}{56}{section.4.2}
+\contentsline {chapter}{Appendices}{57}{section*.61}
+\contentsline {chapter}{\numberline {A}Energy dependence of FOM}{58}{Appendix.1.A}
+\contentsline {chapter}{Bibliography}{60}{chapter*.63}

@@ -93,17 +93,17 @@ Emil Rofors.
 \newblock Fast photoneutron detection, 2016.
 \newblock Student Paper.
 
-\bibitem[Nilsson(2003)]{Nilsson}
-Björn Nilsson.
-\newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
-  Reaction in the Giant Resonance Region}.
-\newblock Lund University, 2003.
-
 \bibitem[CAEN(2012)]{CAENTDC}
 CAEN.
 \newblock \emph{Technical Information Manual, MOD. V775 series, MOD. V775 N
   series}.
 \newblock CAEN, 2012.
+
+\bibitem[Nilsson(2003)]{Nilsson}
+Björn Nilsson.
+\newblock \emph{High-Resolution Measurements of the $^\text{4}$He(\textgamma,n)
+  Reaction in the Giant Resonance Region}.
+\newblock Lund University, 2003.
 
 \bibitem[CAEN(2017)]{CAEN}
 CAEN.

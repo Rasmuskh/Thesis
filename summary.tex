@@ -4,22 +4,25 @@
 \chapter{Summary}
 The goal of this project was to develop algorithms for carrying out neutron tagging and pulse shape discrimination of digitized waveforms and to benchmark the result of the digitizer based setup to those of established analog setup.
 
-This was done by developing code for processing the large data files produced by the analog setup, and subsequently collecting data from the two setups in parallel. The energy spectra, time of flight spectra and PSD capabilities of the two setups were compared.
+This was done by developing algorithms for processing the large data files produced by the digital setup, and subsequently collecting data from the two setups in parallel. The energy spectra, time of flight spectra and PSD capabilities of the two setups were compared.
 
-The digital setup allowed for a neural network to be trained on the digitized waveforms. The novel approach employed here was to allow the network to train on the events found in the peaks of the time of flight spectrum. In order to compare the performance of this network to those obtained with the charge comparison method the misclasification rates of each methods was calculated using time of flight information.
+The digital setup allowed for a neural network to be trained on the digitized waveforms. The novel approach employed here was to allow the network to train on the events found in the peaks of the time of flight spectrum. In order to compare the performance of this network to those obtained with the charge comparison method a misclassification rate of each PSD implementation was calculated based on ToF information.
 
 
 
 \section{Conclusion}
-It was found that the analog setup had a higher livetime than the digital setup although in the future this can be remedied by configuring the digitizer to transfer events in blocks rather than one at a time. It was also found that the digital setup offered better time resolution, based on the full width at half maximum of the gamma peak in the time of flight spectrum. Likewise the energy resolution of the digital setup was found to be superior based on the greater performance of the charge comparison method in the digital setup. 
 
-A limiting factor with the digital setup is the dynamic range. In this work only 60\% of the \SI{1}{V} range was used for negative polarity pulses. In future work I would recommend increasing this to 90-95\%. However even then cosmic muons will be cut off by the dynamic range. 
+\begin{itemize}
+	\item The digital setup significantly outperforms the analog setup both in terms of time resolution and PSD capabilities.
+	\item The digitizer allows for a CNN based PSD, which performs significantly better than the CCM
+	\item A limiting factor with the digital setup is the dynamic range. It needs to be carefully allocated. Likewise the data transfer needs to be optimized to minimize deadtime.
+\end{itemize}
 
 \section{Outlook}
-During this project a lot has been learned about the two setups. In future experiments the digital setup will be making better use of the dynamic range and transfer the data in blocks to limit deadtime. In addition an ESS-STF developed data acquisition software will be used instead of CAEN's WaveDump. This software will speed up data processing by writing data to HDF5 format instead of text files. 
+During this project a lot has been learned about the two setups, which can be used to make the two setups perform even better. In future experiments the digital setup will be making better use of the dynamic range and transfer the data in blocks to limit deadtime. In addition an ESS-STF developed data acquisition software will be used instead of CAEN's \textsc{WaveDump}. This software is expected to speed up data processing by writing data to HDF5 format instead of text files.
 
-The analog setup was found not to be in peak condition, so before a future benchmarking it will need to be optimized. Previous results obtained byJulius Scherzinger showed the Analog setup achive a PSD figure of merit of 1.03, applying a cut at \SI{0.58}{\MeV}\cite{ScherzingerPhd}. Although this result was obtained with a smaller and cylindrical NE213 detector it still indicates that the analog setup can produce significantly improved results.
+The analog setup was found to not be in peak condition, so before a future benchmarking it will need to be tuned. Previous results obtained by Julius Scherzinger showed the Analog setup achieve a PSD figure of merit of 1.03, applying a cut an energy threshold of \SI{0.58}{\MeV}\cite{ScherzingerPhd}. Although this result was obtained with a smaller and cylindrical NE213 detector it still indicates that the analog setup can produce better results.
 
-In terms of Pulse shape discrimination, the Digital setup showed significantly better results. This is because the baseline is determined on an event by event basis, and because it has a higher energy resolution than the analog setup. It is possible that the charge comparison method can get further tuned to approach the current performance of the CNN. However training the network on a larger and cleaner data set would also improve CNN performance. This could be done either by using shielding to obtain separate gamma-ray and neutron data sets. Additionally other PSD methods should be explored.
+There are ways to optimize both digital PSD implementations. Charge comparison method might benefit from different gate lengths, and the possibility of using shielding to obtain separate gamma-ray and neutron data sets for CNN training needs to be explored. Additionally other PSD methods should be explored.
 
 \end{document}
