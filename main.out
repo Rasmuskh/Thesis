@@ -36,19 +36,22 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{Implementation of the Network}{section.2.3}% 36
 \BOOKMARK [0][-]{chapter.3}{Results}{}% 37
 \BOOKMARK [1][-]{section.3.1}{Data Sets}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.2}{Analog Setup}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.2.1}{Neutron Tagging}{section.3.2}% 40
-\BOOKMARK [2][-]{subsection.3.2.2}{Pulse Shape Discrimination}{section.3.2}% 41
-\BOOKMARK [1][-]{section.3.3}{Digital setup}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.3.1}{Neutron Tagging}{section.3.3}% 43
-\BOOKMARK [2][-]{subsection.3.3.2}{Pulse shape discrimination}{section.3.3}% 44
-\BOOKMARK [1][-]{section.3.4}{Results and Performance Comparisson}{chapter.3}% 45
-\BOOKMARK [2][-]{subsection.3.4.1}{Energy Spectra and Livetime}{section.3.4}% 46
-\BOOKMARK [2][-]{subsection.3.4.2}{Time of Flight Spectra}{section.3.4}% 47
-\BOOKMARK [2][-]{subsection.3.4.3}{PSD Performance}{section.3.4}% 48
-\BOOKMARK [0][-]{chapter.4}{Summary}{}% 49
-\BOOKMARK [1][-]{section.4.1}{Conclusion}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.2}{Outlook}{chapter.4}% 51
-\BOOKMARK [0][-]{section*.61}{Appendices}{}% 52
-\BOOKMARK [0][-]{Appendix.1.A}{Energy dependence of FOM}{}% 53
-\BOOKMARK [0][-]{chapter*.63}{Bibliography}{}% 54
+\BOOKMARK [2][-]{subsection.3.1.1}{Overview}{section.3.1}% 39
+\BOOKMARK [2][-]{subsection.3.1.2}{Livetime and threshold alignment}{section.3.1}% 40
+\BOOKMARK [3][-]{section*.49}{Deposited energy}{subsection.3.1.2}% 41
+\BOOKMARK [3][-]{section*.51}{Time-of-flight spectra}{subsection.3.1.2}% 42
+\BOOKMARK [1][-]{section.3.2}{Analog Setup}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.2.1}{Neutron Tagging}{section.3.2}% 44
+\BOOKMARK [2][-]{subsection.3.2.2}{Pulse Shape Discrimination}{section.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.2.3}{PSD Performance}{section.3.2}% 46
+\BOOKMARK [1][-]{section.3.3}{Digital setup}{chapter.3}% 47
+\BOOKMARK [2][-]{subsection.3.3.1}{Neutron Tagging}{section.3.3}% 48
+\BOOKMARK [2][-]{subsection.3.3.2}{Pulse shape discrimination}{section.3.3}% 49
+\BOOKMARK [1][-]{section.3.4}{Misidentification}{chapter.3}% 50
+\BOOKMARK [1][-]{section.3.5}{Fractional Energy Deposition}{chapter.3}% 51
+\BOOKMARK [0][-]{chapter.4}{Summary}{}% 52
+\BOOKMARK [1][-]{section.4.1}{Conclusion}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.2}{Outlook}{chapter.4}% 54
+\BOOKMARK [0][-]{section*.63}{Appendices}{}% 55
+\BOOKMARK [0][-]{Appendix.1.A}{Energy dependence of FOM}{}% 56
+\BOOKMARK [0][-]{chapter*.65}{Bibliography}{}% 57

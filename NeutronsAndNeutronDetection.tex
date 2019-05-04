@@ -152,34 +152,37 @@ Recall that an actinide/Beryllium source produces neutrons and gamma-rays. The g
     \label{fig:tof_setup} 
 \end{figure}
 
-By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig.~\ref{fig:tof_setup}. 
-In Figure~\ref{fig:tof_setup}, the distance from the center of the actinide/Berylium source to the center of the neutron/gamma-ray detector is $L$. Consider two coincidental low-energy cascade gamma-rays from the de-excitation of the actinide. One of these gamma-rays is detected by the neutron and gamma-ray sensitive detector, while the other is detected by the gamma-ray detector. Suppose that signal delay is employed so that the signal from the neutron and gamma-ray detector is used to start the flight-time measurement, while the signal from the gamma-ray detector is used to stop it. Since the speed of the gamma-rays is $c$ and the source-to-detector distances and delays are fixed, the time difference between the start and stop signals is also fixed. This constant time difference is known as the gamma flash, $T_\gamma$, and serves as an absolute timing calibration point for the flight-time measurement. This calibration may be carried out by referencing the measured flight times $\Delta T$ to the flight time of gamma-rays. Here the flight time is defined as $\Delta T=\tau -(t_{\textrm{stop}}-t_{\textrm{start}})$. The time between start and stop is subtracted from an arbitrary constant $\tau$ in order to preserve time orderring (since the stop signal was delayed). Since the distance from source to detector is known, the corrected flight time, $ToF$ is given by:
+By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig.~\ref{fig:tof_setup}. Often signal delay will be applied to the gamma-ray detector to let the neutron/gamma-ray detector provide the start signal (even though it is located further away from the source than the gamma-ray detector).
+In Figure~\ref{fig:tof_setup}, the distance from the center of the actinide/Berylium source to the center of the neutron/gamma-ray detector is $L$.  Due to the applied delay the measured flight time $T$ will be shorter for neutrons than for gamma rays. By instead using;
 \begin{equation}
-	ToF = \Delta T -(T_\gamma - T_0).
+T'=-T,
+\end{equation}
+time ordering is restored, with neutrons having longer flight times than gamma-rays. Figure \ref{fig:tof_sketch} left panel shows a histogram of uncalibrated flight times $T'$. This spectrum may be calibrated by considering two coincidental low-energy cascade gamma-rays from the de-excitation of the actinide. One of these gamma-rays is detected by the neutron and gamma-ray sensitive detector, while the other is detected by the gamma-ray detector. 
+Since the speed of the gamma-rays is $c$ and the source-to-detector distances and delays are fixed, the time difference between the start and stop signals is also fixed. This constant time difference is known as the gamma flash, and serves as an absolute timing calibration point for the flight-time measurement.
+This calibration may be carried out by shifting the observed location of the gamma flash $T_\gamma^{obs}$ to the expected location $T_\gamma^{exp}$ defined as $L/c$. The calibrated time of flight, $ToF$ is given by:
+\begin{equation}
+	ToF = T' -(T_\gamma^{obs} - T_\gamma^{exp}).
 	\label{eq:tof_cal}
 \end{equation}
-Here $T_\gamma$ is the location of the gamma flash and $T_0=L/c$ is the expected gamma-ray time-of-flight.
+This produces the calibrated time of flight spectrum shown in the right panel of Fig. \ref{fig:tof_sketch}.
 
-If instead a neutron is detected by the neutron and gamma-ray sensitive detector while a \SI{4.44}{\MeV} gamma-ray from the de-excitation of the first excited state of $^\textrm{12}$C is detected by the gamma-ray detector, the flight time will always be longer than for the gamma-ray cascade because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $T_n$ may be determined classically according to:
+If instead a neutron is detected by the neutron and gamma-ray sensitive detector while a \SI{4.44}{\MeV} gamma-ray is detected by the gamma-ray detector, the flight time will always be longer than for a gamma-ray cascade because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $K_n$ may be determined classically according to:
 \begin{equation}
-	T_n = \frac{1}{2} m_n v_n^2 = \frac{1}{2}m_n\left(\frac{L}{ToF}\right)^2
-	\label{eq:Tn}
+	K_n = \frac{1}{2} m_n v_n^2 = \frac{1}{2}m_n\left(\frac{L}{ToF}\right)^2
+	\label{eq:Kn}
 \end{equation}
 Where $m_n$ and $v_n$ are the mass and the speed of the neutron, respectively.
 
-Thus knowledge of the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector together with the location of $T_\gamma$ in the flight-time spectrum is all that is needed to determine the energy of a tagged neutron on an event-by-event basis.
-
-Figure~\ref{fig:tof_sketch} shows the calibration of a sample timing spectrum measured using the equipment shown in Fig.~\ref{fig:tof_setup}. The neutron and gamma-ray sensitive detector is used to start the flight-time measurement and the gamma-ray detector is used to stop it. The spectrum on the left side is uncalibrated. The peak labelled $\gamma,\gamma$ comes from events where one of the correlated cascade gamma-rays from the de-excitation of the actinide is detected in each of the detectors and is known as the gamma flash. The bump labelled $n,\gamma$ is due to events where the \SI{4.44}{\MeV} gamma-ray from the de-excitation of $^{12}$C is detected in the gamma-ray detector and the corresponding neutron is detected in the neutron/gamma-ray detector. Random coincidences between uncorrelated particles corresponds to the flat distribution spanning the entire spectrum.
-All of the features of the spectrum to the right in~\ref{fig:tof_sketch} are the same except that this spectrum has been calibrated using Eq.~\ref{eq:tof_cal}.
+Thus knowledge of the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector together with the location of $T_\gamma^{obs}$ in the uncalibrated flight-time spectrum is all that is needed to determine the energy of a tagged neutron on an event-by-event basis.
 
 \begin{figure}[t]
     \centering
-        \includegraphics[width=\linewidth]{Theory/tof_sketch_axes.pdf}
-        \caption[Sketch of a time of flight spectrum.]{Sketch of a time of flight spectrum. Left: Spectrum of uncalibrated flight times. The gamma flash is shaded blue, the neutron bump is shaded red, and the random coincidences are shaded orange. Right: The spectrum has been calibrated to a ToF spectrum by shifting $T_\gamma$ to $T_0$.}
+        \includegraphics[width=0.8\linewidth]{Theory/tof_sketch_axes.pdf}
+        \caption[Sketch of a time of flight spectrum.]{Sketch of a time of flight spectrum. Left: Spectrum of uncalibrated flight times. The gamma flash is shaded blue, the neutron bump is shaded red, and the random coincidences are shaded orange. Right: The spectrum has been calibrated to a ToF spectrum by shifting $T_\gamma^{obs}$ to $T_\gamma^{exp}.$}
     \label{fig:tof_sketch} 
 \end{figure}
-Figure~\ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) contrasted with the entire neutron energy spectrum (red) measured for a PuBe source~\cite{ScherzingerPhd}. In forming this spectrum the mapping from neutron time-of.flight to neutron kinetic energy presented in Eq~\ref{eq:Tn}has been applied. Although neutrons from a Pu/Be source can have up to $\sim$\SI{11}{\MeV}, the tagged-neutron spectrum ends at $\sim$\SI{6.5}{\MeV}. This is because only the neutrons accompanied by a \SI{4.44}{\MeV} gamma-ray are tagged. The the full Pu/Be neutron energy spectrum contains four peaks, two of which are visible in the tagged neutron spectrum. The reason that the full spectrum doesn't go to as low energies as the tagged neutron spectrum may be that the tagged spectrum has employed a lower amplitude threshold.
-\begin{figure}[t]
+Figure~\ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) contrasted with the entire neutron energy spectrum (red) measured for a PuBe source~\cite{ScherzingerPhd}. In forming this spectrum the mapping from neutron time-of.flight to neutron kinetic energy presented in Eq~\ref{eq:Kn} has been applied. Although neutrons from a Pu/Be source can have up to $\sim$\SI{11}{\MeV}, the tagged-neutron spectrum ends at $\sim$\SI{6.5}{\MeV}. This is because only the neutrons accompanied by a \SI{4.44}{\MeV} gamma-ray are tagged. The full Pu/Be neutron energy spectrum contains four peaks, two of which are visible in the tagged neutron spectrum. The reason that the full spectrum doesn't go to as low energies as the tagged neutron spectrum may be that the tagged spectrum has employed a lower amplitude threshold.
+\begin{figure}[b]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/scherzinger.pdf}
         \caption[Reference neutron energy spectrum]{Reference neutron energy spectrum for a PuBe source. Grey: a tagged neutron energy spectrum. Red: Neutron energy spectrum. Figure from Scherzinger~\cite{ScherzingerPhd}.}

@@ -4,40 +4,40 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{LG}$}}{9}{figure.caption.11}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of the neutron-tagging setup}}{10}{figure.caption.12}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time of flight spectrum.}}{11}{figure.caption.13}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum}}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum}}{11}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The Source-Testing Facility.}}{14}{figure.caption.15}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The Aquarium}}{15}{figure.caption.16}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Photographs of detectors}}{15}{figure.caption.17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic of the experimental setup}}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Data-acquisition systems.}}{18}{figure.caption.19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Time walk resulting from leading edge triggering}}{18}{figure.caption.21}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces CFD trigger principle}}{19}{figure.caption.22}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces TDC calibration spectrum.}}{20}{figure.caption.25}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Energy calibration of the analog setup}}{22}{figure.caption.28}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{24}{figure.caption.31}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Relative timing for NE213 detector pulses of different amplitude}}{26}{figure.caption.33}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse-height spectrum}}{27}{figure.caption.35}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events}}{29}{figure.caption.37}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{31}{figure.caption.40}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{33}{figure.caption.42}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel}}{34}{figure.caption.43}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{35}{figure.caption.44}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces The Max pooling principle}}{36}{figure.caption.45}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN.}}{37}{figure.caption.47}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Source-Testing Facility.}}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The Aquarium}}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Photographs of detectors}}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic of the experimental setup}}{16}{figure.caption.18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Data-acquisition systems.}}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Time walk resulting from leading edge triggering}}{17}{figure.caption.21}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces CFD trigger principle}}{18}{figure.caption.22}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces TDC calibration spectrum.}}{19}{figure.caption.25}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Energy calibration of the analog setup}}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{23}{figure.caption.31}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Relative timing for NE213 detector pulses of different amplitude}}{25}{figure.caption.33}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse-height spectrum}}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events}}{28}{figure.caption.37}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup}}{30}{figure.caption.40}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data}}{32}{figure.caption.42}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel}}{33}{figure.caption.43}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer convolutional neural network.}}{34}{figure.caption.44}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces The Max pooling principle}}{35}{figure.caption.45}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN.}}{36}{figure.caption.47}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Time of flight spectrum, analog setup.}}{39}{figure.caption.49}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces PSD spectrum, analog setup.}}{40}{figure.caption.50}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{42}{figure.caption.51}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Time of flight spectrum, digital setup.}}{43}{figure.caption.52}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces PSD spectra obtained with charge comparison and CNN methods.}}{44}{figure.caption.53}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{46}{figure.caption.54}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Time of flight plotted against energy deposition.}}{47}{figure.caption.55}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Neutron kinetic energy and deposited energy.}}{48}{figure.caption.56}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparison of analog and digital NE213 energy spectra}}{49}{figure.caption.57}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of analog and digital time of flight spectra.}}{50}{figure.caption.58}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{52}{figure.caption.59}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Misclassification of different PSD implementations.}}{54}{figure.caption.60}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Comparison of analog and digital spectra from the NE213 detector}}{38}{figure.caption.50}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Analog and digital time-of-flight spectra.}}{40}{figure.caption.52}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Time of flight spectrum, analog setup.}}{41}{figure.caption.53}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces PSD spectrum, analog setup.}}{42}{figure.caption.54}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Histograms of pulseshape, with Gaussian fits.}}{44}{figure.caption.55}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Heat map of pulse shape as a function of time of flight.}}{44}{figure.caption.56}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Time of flight spectrum, digital setup.}}{45}{figure.caption.57}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces PSD spectra obtained with charge comparison and CNN methods.}}{47}{figure.caption.58}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pulse shape parameters as function of time of flight, digital setup.}}{48}{figure.caption.59}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Misclassification of different PSD implementations.}}{51}{figure.caption.60}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Time of flight plotted against energy deposition.}}{52}{figure.caption.61}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Neutron kinetic energy and deposited energy.}}{53}{figure.caption.62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{59}{figure.caption.62}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Energy dependence of PSD figure of merit.}}{58}{figure.caption.64}
