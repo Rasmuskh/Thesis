@@ -2,9 +2,7 @@
 \begin{document}
 
 \chapter{Summary}
-The goal of this project was to develop algorithms for carrying out neutron tagging and pulse shape discrimination of digitized waveforms and to benchmark the result of the digitizer based setup to those of established analog setup.
-
-This was done by developing algorithms for processing the large data files produced by the digital setup, and subsequently collecting data from the two setups in parallel. The energy spectra, time of flight spectra and PSD capabilities of the two setups were compared.
+The goal of this project was to develop algorithms for carrying out neutron tagging and pulse shape discrimination of digitized waveforms and to benchmark the result of the digitizer based setup to those of established analog setup. This was done by developing algorithms for processing the large data files produced by the digital setup, and subsequently collecting data from the two setups in parallel. The energy spectra, time of flight spectra and PSD capabilities of the two setups were compared.
 
 The digital setup allowed for a neural network to be trained on the digitized waveforms. The novel approach employed here was to allow the network to train on the events found in the peaks of the time of flight spectrum. In order to compare the performance of this network to those obtained with the charge comparison method a misclassification rate of each PSD implementation was calculated based on ToF information.
 
@@ -13,13 +11,14 @@ The digital setup allowed for a neural network to be trained on the digitized wa
 \section{Conclusion}
 
 \begin{itemize}
-	\item The digital setup significantly outperforms the analog setup both in terms of time resolution and PSD capabilities.
-	\item The digitizer allows for a CNN based PSD, which performs significantly better than the CCM
+	\item The digital setup significantly outperforms the analog setup both in terms PSD capabilities.
+	\item The digitizer allows for CNN based PSD, which performs significantly better than the CC method.
 	\item A limiting factor with the digital setup is the dynamic range. It needs to be carefully allocated. Likewise the data transfer needs to be optimized to minimize deadtime.
+	%\item The digital setup achieves more reliable neutron tagging.
 \end{itemize}
 
 \section{Outlook}
-During this project a lot has been learned about the two setups, which can be used to make the two setups perform even better. In future experiments the digital setup will be making better use of the dynamic range and transfer the data in blocks to limit deadtime. In addition an ESS-STF developed data acquisition software will be used instead of CAEN's \textsc{WaveDump}. This software is expected to speed up data processing by writing data to HDF5 format instead of text files.
+During this project a lot has been learned about the two setups, which can be used to make them perform even better in future experiments. In future experiments the digital setup will be making better use of the dynamic range and transfer the data in blocks to limit deadtime. In addition an ESS-STF developed data acquisition software will be used instead of CAEN's \textsc{WaveDump}. This software is expected to speed up data processing by writing data to HDF5 format instead of text files.
 
 The analog setup was found to not be in peak condition, so before a future benchmarking it will need to be tuned. Previous results obtained by Julius Scherzinger showed the Analog setup achieve a PSD figure of merit of 1.03, applying a cut an energy threshold of \SI{0.58}{\MeV}\cite{ScherzingerPhd}. Although this result was obtained with a smaller and cylindrical NE213 detector it still indicates that the analog setup can produce better results.
 

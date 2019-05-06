@@ -1,12 +1,12 @@
 \BOOKMARK [0][-]{chapter.1}{Results}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Data Sets}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Overview}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.1}{Overview and Comparison}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Livetime and threshold alignment}{section.1.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Analog Setup}{chapter.1}% 5
 \BOOKMARK [2][-]{subsection.1.2.1}{Neutron Tagging}{section.1.2}% 6
 \BOOKMARK [2][-]{subsection.1.2.2}{Pulse-Shape Discrimination}{section.1.2}% 7
 \BOOKMARK [1][-]{section.1.3}{Digital setup}{chapter.1}% 8
 \BOOKMARK [2][-]{subsection.1.3.1}{Neutron Tagging}{section.1.3}% 9
-\BOOKMARK [2][-]{subsection.1.3.2}{Pulse shape discrimination}{section.1.3}% 10
-\BOOKMARK [1][-]{section.1.4}{Misidentification}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.3.2}{Pulse-shape discrimination}{section.1.3}% 10
+\BOOKMARK [1][-]{section.1.4}{Misclassification Rate}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.5}{Fractional Energy Deposition}{chapter.1}% 12
