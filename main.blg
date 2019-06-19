@@ -14,36 +14,36 @@ Warning--empty year in Spectrum
 Warning--empty journal in Griffiths
 You've used 23 entries,
             2481 wiz_defined-function locations,
-            685 strings with 7977 characters,
-and the built_in function-call counts, 7342 in all, are:
-= -- 581
-> -- 363
-< -- 20
-+ -- 154
-- -- 108
-* -- 453
-:= -- 1209
-add.period$ -- 79
+            689 strings with 8086 characters,
+and the built_in function-call counts, 7416 in all, are:
+= -- 588
+> -- 369
+< -- 19
++ -- 156
+- -- 110
+* -- 470
+:= -- 1223
+add.period$ -- 81
 call.type$ -- 23
 change.case$ -- 37
 chr.to.int$ -- 23
 cite$ -- 32
 duplicate$ -- 401
-empty$ -- 704
-format.name$ -- 134
-if$ -- 1552
+empty$ -- 707
+format.name$ -- 135
+if$ -- 1565
 int.to.chr$ -- 1
 int.to.str$ -- 24
 missing$ -- 17
-newline$ -- 133
+newline$ -- 135
 num.names$ -- 71
-pop$ -- 247
+pop$ -- 245
 preamble$ -- 1
 purify$ -- 23
 quote$ -- 0
-skip$ -- 251
+skip$ -- 249
 stack$ -- 0
-substring$ -- 134
+substring$ -- 140
 swap$ -- 58
 text.length$ -- 1
 text.prefix$ -- 0
@@ -52,5 +52,5 @@ type$ -- 146
 warning$ -- 9
 while$ -- 52
 width$ -- 0
-write$ -- 301
+write$ -- 305
 (There were 9 warnings)

@@ -1,27 +1,25 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\chapter{Summary}
-The goal of this project was to develop algorithms for carrying out neutron tagging and pulse shape discrimination of digitized waveforms and to benchmark the result of the digitizer based setup to those of established analog setup. This was done by developing algorithms for processing the large data files produced by the digital setup, and subsequently collecting data from the two setups in parallel. The energy spectra, time of flight spectra and PSD capabilities of the two setups were compared.
+\chapter{Closing Remarks}
+\section{Summary}
+The advantages of performing neutron-tagging measurements using a waveform digitizer were explored. An existing analog setup consisting of modular crate electronics at the STF at the Division of Nuclear Physics  in Lund, Sweden was digitally replicated. Neutrons were detected using an organic liquid-scintillator detector while the corresponding \SI{4.44}{MeV} gamma-rays were detected using inorganic scintillation crystals. The performance of the digitizer-based setup was compared to that of the modular analog setup in terms of neutron and gamma-ray PSD and ToF. The results obtained using the digitizer-based approach are superior to those obtained using the modular analog electronics approach in all aspects. The digitizer-based approach was then succesfully employed both to distinguish between neutrons and gamma-rays via a CNN and to relate neutron deposition-energy to neutron kinetic energy via ToF.
 
-The digital setup allowed for a neural network to be trained on the digitized waveforms. The novel approach employed here was to allow the network to train on the events found in the peaks of the time of flight spectrum. In order to compare the performance of this network to those obtained with the charge comparison method a misclassification rate of each PSD implementation was calculated based on ToF information.
+\section{Conclusions}
+In conclusion, the digital setup significantly outperformed the analog setup in terms of CC PSD capabilities. 
+The digital setup also facilitated a CNN-based PSD approach, which outperformed both the analog and the digital CC implementations.
+The measurements from the analog setup were hampered by the use of a too high amplitude threshold. This is a classic pitfall associated with analog electronics. Unlike the digitizer approach, choices of thresholds and gate lengths for the analog setup can not be undone after the dataset has been acquired.
+A limiting factor with the digital setup is the dynamic range, which needs to be carefully allocated. 
+Likewise the data transfer needs to be partitioned into blocks to minimize deadtime. 
+Indeed, the dynamic range of the digitizer was not optimized for the measurements performed here, resulting in clipping for high energy gamma-rays. 
+Additionally, ToF information was used to relate the neutron kinetic energy to its deposited energy. It was found that the NE213 scintillator had degraded with time.
 
-
-
-\section{Conclusion}
-
-\begin{itemize}
-	\item The digital setup significantly outperforms the analog setup both in terms PSD capabilities.
-	\item The digitizer allows for CNN based PSD, which performs significantly better than the CC method.
-	\item A limiting factor with the digital setup is the dynamic range. It needs to be carefully allocated. Likewise the data transfer needs to be optimized to minimize deadtime.
-	%\item The digital setup achieves more reliable neutron tagging.
-\end{itemize}
 
 \section{Outlook}
-During this project a lot has been learned about the two setups, which can be used to make them perform even better in future experiments. In future experiments the digital setup will be making better use of the dynamic range and transfer the data in blocks to limit deadtime. In addition an ESS-STF developed data acquisition software will be used instead of CAEN's \textsc{WaveDump}. This software is expected to speed up data processing by writing data to HDF5 format instead of text files.
+Much has been learned about the two DAQs which can be used to make them perform even better in future experiments. 
+It is clear that the analog setup is pedagogically superior to the digital setup, but it requires careful optimization before use. The digital setup requires careful allocation of the dynamic range and of the data-transfer rate. Finally the software \textsc{WaveDump} felt primitive and could likely be improved upon by custom software fine-tuned to the task at hand. Indeed, this is underway.
+There are ways to optimize both digital PSD implementations. The digital CC method will likely benefit from different integration-gate lengths. Further, the possibility of using shielding to obtain separate gamma-ray and neutron data sets for CNN training needs to be explored. Additionally other PSD methods such as Fourier transform-based PSD should be explored. The future clearly lies with the digitizer approach.
 
-The analog setup was found to not be in peak condition, so before a future benchmarking it will need to be tuned. Previous results obtained by Julius Scherzinger showed the Analog setup achieve a PSD figure of merit of 1.03, applying a cut an energy threshold of \SI{0.58}{\MeV}\cite{ScherzingerPhd}. Although this result was obtained with a smaller and cylindrical NE213 detector it still indicates that the analog setup can produce better results.
 
-There are ways to optimize both digital PSD implementations. Charge comparison method might benefit from different gate lengths, and the possibility of using shielding to obtain separate gamma-ray and neutron data sets for CNN training needs to be explored. Additionally other PSD methods should be explored.
 
 \end{document}

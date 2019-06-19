@@ -4,7 +4,7 @@
 \chapter{Introduction}\label{ch:1}
 \section{Motivation}
 In the late 1960s, the Nuclear Instrument Module (NIM) standard for experimental physics electronics was established. The NIM standard specifies certain parameters, such as module dimensions and back-plane voltages, which make it possible to easily combine electronics modules from different manufacturers into a single signal-processing system. These modules each perform specific tasks, such as enforce thresholds, copy or sum signals or perform logic operations. When combined, they can be used to process signals from experiments in the analog domain. The modular design also makes it easy to assemble, disassemble and recombine the modules to perform a wide array of different signal processing tasks. 
-This makes it possible to easily construct electronics for signal processing in nuclear-physics experiments without necessarily knowing all of the exact functional parameters of each component. Simply knowing the operation the component is to perform is sufficient. Later, additional modularized electronics components which allow for an interface to computers were introduced. For example, the Versa Bus Europa (VME) modules are a widely used format for digitizing various features of analog input signals, such as charge or time differences. VME modules can be considered a bridge between the analog and truly digital domains.
+This makes it possible to easily construct electronics for signal processing in nuclear-physics experiments without necessarily knowing all of the exact functional parameters of each component. Simply knowing the operation the component is to perform is sufficient. Later, additional modularized electronics components which allow for an interface to computers were introduced. For example, the Versa Module Europa (VME) modules are a widely used format for digitizing various features of analog input signals, such as charge or time differences. VME modules can be considered a bridge between the analog and truly digital domains.
 
 Today, a leap forward is being taken in the field of instrumentation electronics with the adoption of fully digital signal-processing techniques. This step is possible due to a variety of factors. For example storage prices of less than 0.5 SEK per GB make it feasible to save much more information than ever before. Also, increases in computer processing power have made the detailed investigation of large data sets more practical. Further, the falling cost and increasing performance of \textit{digitizers}, devices which digitally sample analog signals at up to GHz frequencies, is key. We are now positioned on the cusp of the truly digital domain.
 
@@ -12,7 +12,7 @@ Currently, a wide variety of detectors under development for the European Spalla
 The setup is quasi-digital employing various standard NIM modules for analog signal processing with digitization of charge and timing information performed by VME modules. Although this setup does employ some digitization it will be refereed to as the \textit{analog setup} to distinguish it from a fully digitizer-based \textit{digital setup}. Using the analog setup, most components must be painstakingly fine tuned for a particular detector setup by changing delays, gate lengths and thresholds in order to optimize the performance. This is not a trivial task. 
 
 The motivation for the work performed in this thesis is to emulate the NIM/VME based detector-characterization data-acquisition setup currently employed at the STF with a fully digital digitizer-based  system. In doing so, a large number of NIM and VME modules which need to be individually tuned to the task at hand will be replaced by a single digitizer module. 
-This will enable optimizations to be performed digitally and make it possible to study the effects of various thresholds, delays and gate lengths on the same data set offline. Furthermore, access to the entire digitized waveforms on a pulse-by-pulse basis will make it possible for advanced pulse-shape discrimination (PSD) techniques to be applied to the data. This is simply not possible in the analog domain, where PSD parameters must be carefully established before the measurements begin.
+This will enable optimizations to be performed digitally and make it possible to study the effects of various thresholds, delays and gate lengths on the same data set offline. Furthermore, access to the digitized waveforms on a pulse-by-pulse basis will make it possible for advanced pulse-shape discrimination (PSD) techniques to be applied to the data.
 
 Thus the potential of using modern digitization techniques to complement an existing analog setup will be evaluated by comparing the performance of a well-established analog setup with that of a digitizer-based setup. A classical charge-comparison method will be employed for analog/digital PSD benchmarking. Furthermore fully digital PSD will be investigated using a convolutional neural network, a technique simply not available when employing an analog electronics setup.
 %pulse shape discrimination as well as a convolutional neural network based approach.
@@ -36,8 +36,8 @@ fast          & 0.1-10 MeV      \\ \hline
 \caption[Neutron nomenclature as a function of energy.]{Neutron nomenclature as a function of energy.}
 \label{tab:neutron}
 \end{table}
-Fast neutrons are of particular interest to this project. For fast neutrons, the dominating interactions with matter are elastic and inelastic scattering. In elastic scattering, the neutron generally transfers part of its kinetic energy to a nucleus which recoils from the collision in its ground state. In inelastic scattering, the recoiling nucleus is excited, and it later de-excites by emitting for example a gamma-ray. Thermal neutrons have a wavelengths on the order of \SI{0.1}{nm} which makes them useful for examining the structure of matter on an atomic scale. 
-Thermal neutrons predominantly interact via absorption. Here a nucleus absorbs a neutron resulting in a different isotope of the same element usually in an excited state. De-excitation can occur via the emission of for example a gamma-ray~\cite{Leo}. The probability for neutron absorption is roughly inversely proportional to its velocity. This means that fast neutrons need to be first slowed down or \textit{moderated} to thermal energies if they are to undergo neutron absorption. 
+Fast neutrons are of particular interest to this project. For fast neutrons, the dominating interactions with matter are elastic and inelastic scattering. In elastic scattering, the neutron generally transfers part of its kinetic energy to a nucleus which recoils from the collision in its ground state. In inelastic scattering, the recoiling nucleus is excited, and it later de-excites by emitting for example a gamma-ray. Thermal neutrons have wavelengths on the order of \SI{0.1}{nm} which makes them useful for examining the structure of matter on an atomic scale. 
+Thermal neutrons predominantly interact via absorption. Here a nucleus absorbs a neutron resulting in a different isotope of the same element usually in an excited state. De-excitation can occur via the emission of for example a gamma-ray~\cite{Leo}. The probability for neutron absorption is roughly inversely proportional to its velocity. This means that fast neutrons need to first be slowed down or \textit{moderated} to thermal energies if they are to undergo neutron absorption. 
 
 \subsection{Sources of Free Neutrons} \label{sec:freeNeutrons}
 Free neutrons can be produced for experimental use in different ways. Large-scale production involves accelerator facilities or nuclear reactors. Spallation neutron sources such as ESS will produce neutrons by directing a highly energetic beam of protons onto a neutron-rich target. The collision will cause the target nucleus to fragment in a process known as spallation releasing many neutrons. 
@@ -95,12 +95,12 @@ For this reason, scintillation detectors are typically $^1$H rich. The recoiling
 
 
 \subsubsection{Photomultiplier Tubes}
-A photomultiplier tube is a device used to convert scintillation photons into a current pulse, see Fig.~\ref{fig:pmt}. The scintillation light produced by neutrons and gamma-rays in a scintillator is converted to electrons at the photocathode via the photoelectric effect. The charge produced in this manner is not sufficient to result in a particularly strong signal, so a photomultiplier tube is used to increase the total charge, This results in a current pulse that is large enough to be processed. 
+A photomultiplier tube is a device used to convert scintillation photons into a current pulse, see Fig.~\ref{fig:pmt}. The scintillation light produced by neutrons and gamma-rays in a scintillator is converted to electrons at the photocathode via the photoelectric effect. The charge produced in this manner is not sufficient to result in a particularly strong signal, so a photomultiplier tube is used to increase the total charge. This results in a current pulse that is large enough to be processed. 
 
 \begin{figure}[ht]
 	\centering
     	\includegraphics[width=\linewidth]{AnalogSetup/pmt_nicholai.pdf}
-        \caption[Scintillation detector]{Scintillation detector. The blue volume to the left is the scintillator, which is coupled to a PMT via a photocathode (yellow). The grey curves represent the trajectories of the electrons and the black curves are the dynodes. The red pulse to the right is the resulting elecronic signal. Figure from Ref.~\cite{Mauritzsson}.}
+        \caption[Scintillation detector.]{Scintillation detector. The blue volume to the left is the scintillator, which is coupled to a PMT via a photocathode (yellow). The grey curves represent the trajectories of the electrons and the black curves are the dynodes. The red pulse to the right is the resulting elecronic signal. Figure from Ref.~\cite{Mauritzsson}.}
 	    \label{fig:pmt} 
 \end{figure}
 
@@ -113,11 +113,11 @@ The advantage of a PMT is that it makes it possible to amplify charges by severa
 
 \subsection{Neutron/Gamma-Ray Discrimination}\label{sec:psd}
 The metastable states of scintillators have associated average decay times. 
-Furthermore, the probability of a metastable state being occupied depends on whether the incident particle is a gamma-ray or a neutron~\cite{Krane}. For some scintillators, the differences in decay times between different metastable states which are excited by different types of particle species are large. This means that the signals produced by neutrons (recoiling protons) and gamma-rays (recoiling electrons) have different time dependencies or shapes. This in turn makes it possible to discriminate between them based on the resulting pulse shape (PS). A scintillator which demonstrates PS sensitivity to different particle species is said to have pulse-shape discrimination (PSD) properties.
+Furthermore, the probability of a metastable state being occupied depends on whether the incident particle is a gamma-ray or a neutron~\cite{Krane}. For some scintillators, the differences in decay times between different metastable states which are excited by different types of particle species are large. This means that the signals produced by neutrons (recoiling protons) and gamma-rays (recoiling electrons) have different time dependencies or shapes. This in turn makes it possible to discriminate between them based on the resulting pulse shape (PS). A scintillator which demonstrates PS sensitivity to different particle species is said to have pulse-shape discrimination (PSD) capabilities.
 \begin{figure}[ht]
 	\centering
     	\includegraphics[width=0.8\linewidth]{DigitalSetup/pulse_types.pdf}
-        \caption[Pulse shape sensitivity.]{Pulse shape sensitivity. Typical shapes of neutron and gamma-ray pulses from a detector with PSD capabilities. The red gamma-ray pulse is significantly shorter than the blue neutron pulse. ``Short gate" and ``long gate" refer to integration times.}
+        \caption[Pulse shape sensitivity.]{Pulse shape sensitivity. Typical shapes of neutron and gamma-ray pulses from a detector with PSD capabilities. The blue gamma-ray pulse is significantly shorter than the red neutron pulse. ``Short gate" and ``long gate" refer to integration times.}
 	    \label{fig:pulse_types} 
 \end{figure}
 
@@ -131,11 +131,11 @@ With optimal choices of $a$ and $b$, the neutron and gamma-ray distributions can
 
 If a scintillator has PSD capabilities, then signals from recoiling protons will have significantly more slow scintillation components. This will result in more charge in the tail of the scintillation pulse and hence a larger PS value than for electrons/gamma-rays. A typical way of visualizing the PS as a function of deposited energy is shown in Fig.~\ref{fig:psd_sketch}. The upper distribution corresponds to neutrons and the lower corresponds to gamma-rays. It will generally be harder to discriminate between the two distributions at lower deposited energies.
 
-A drawback with using analog electronics is that the $LG$ and $SG$ integration windows need to be decided before any measurements are taken. This makes optimization of the gate lengths tedious and time consuming, as an incorrect choice of gate length may render a dataset useless. It is anticipated that the digitizer-based approach will greatly streamline this process, as gates can be optimized after the data have been collected.
+A drawback with using analog electronics is that the $LG$ and $SG$ integration windows need to be decided before any measurements are taken. This makes optimization of the gate lengths tedious and time consuming, as an incorrect choice of gate length may render a data set useless. It is anticipated that the digitizer-based approach will greatly streamline this process, as gates can be optimized after the data have been collected.
 \begin{figure}[ht]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/psd_sketch_axes.pdf}
-        \caption[PS versus $Q_{LG}$]{PS versus $Q_{LG}$. Left panel: the parameters $a$ and $b$ are both zero. Right panel: $a$ and $b$ have been tuned to achieve a linear separation between neutrons (upper band) and gamma-rays (lower band). A typical cut is marked with a dashed red line.}
+        \caption[PS versus $Q_{LG}$.]{PS versus $Q_{LG}$. Left panel: the parameters $a$ and $b$ are both zero. Right panel: $a$ and $b$ have been tuned to achieve a linear separation between neutrons (upper band) and gamma-rays (lower band). A typical cut is marked with a dashed red line.}
     \label{fig:psd_sketch} 
 \end{figure}
 
@@ -148,12 +148,12 @@ Recall that an actinide/Beryllium source produces neutrons and gamma-rays. The g
 \begin{figure}[t]
     \centering
         \includegraphics[width=0.9\linewidth]{Theory/tof_setup.pdf}
-        \caption[Illustration of the neutron-tagging setup]{Illustration of the neutron-tagging setup. The detector sensitive to both neutrons and gamma-rays (green) is placed a distance $L$ from the source (pink). The gamma-ray detector (yellow) is placed closer to the source at distance $s$. }
+        \caption[Illustration of the neutron-tagging setup.]{Illustration of the neutron-tagging setup. The detector sensitive to both neutrons and gamma-rays (green) is placed a distance $L$ from the source (green). The gamma-ray detector (yellow) is placed closer to the source at distance $s$. }
     \label{fig:tof_setup} 
 \end{figure}
 
 By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig.~\ref{fig:tof_setup}. Often signal delay will be applied to the gamma-ray detector to let the neutron/gamma-ray detector provide the start signal (even though it is located further away from the source than the gamma-ray detector).
-In Figure~\ref{fig:tof_setup}, the distance from the center of the actinide/Berylium source to the center of the neutron/gamma-ray detector is $L$.  Due to the applied delay the measured flight time $T$ will be shorter for neutrons than for gamma rays. By instead using;
+In Figure~\ref{fig:tof_setup}, the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector is $L$.  Due to the applied delay the measured flight time $T$ will be shorter for neutrons than for gamma rays. By instead using;
 \begin{equation}
 T'=-T,
 \end{equation}
@@ -166,7 +166,7 @@ This calibration may be carried out by shifting the observed location of the gam
 \end{equation}
 This produces the calibrated time of flight spectrum shown in the right panel of Fig. \ref{fig:tof_sketch}.
 
-If instead a neutron is detected by the neutron and gamma-ray sensitive detector while a \SI{4.44}{\MeV} gamma-ray is detected by the gamma-ray detector, the flight time will always be longer than for a gamma-ray cascade because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $K_n$ may be determined classically according to:
+If instead a neutron is detected by the neutron and gamma-ray sensitive detector while a \SI{4.44}{\MeV} gamma-ray is detected by the gamma-ray detector, the flight time will always be longer than for a pair of gamma-rays because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $K_n$ may be determined classically according to:
 \begin{equation}
 	K_n = \frac{1}{2} m_n v_n^2 = \frac{1}{2}m_n\left(\frac{L}{ToF}\right)^2
 	\label{eq:Kn}
@@ -182,10 +182,10 @@ Thus knowledge of the distance from the center of the actinide/Beryllium source 
     \label{fig:tof_sketch} 
 \end{figure}
 Figure~\ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) contrasted with the entire neutron energy spectrum (red) measured for a Pu/Be source~\cite{ScherzingerPhd}. In forming this spectrum the mapping from neutron time-of.flight to neutron kinetic energy presented in Eq~\ref{eq:Kn} has been applied. Although neutrons from a Pu/Be source can have up to $\sim$\SI{11}{\MeV}, the tagged-neutron spectrum ends at $\sim$\SI{6.5}{\MeV}. This is because only the neutrons accompanied by a \SI{4.44}{\MeV} gamma-ray are tagged. The full Pu/Be neutron energy spectrum contains four peaks, two of which are visible in the tagged neutron spectrum. The reason that the full spectrum doesn't go to as low energies as the tagged neutron spectrum may be that the tagged spectrum has employed a lower amplitude threshold.
-\begin{figure}[b]
+\begin{figure}[h]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/scherzinger.pdf}
-        \caption[Reference neutron energy spectrum]{Reference neutron energy spectrum for a Pu/Be source. Grey: a tagged neutron energy spectrum. Red: Neutron energy spectrum. Figure from Scherzinger~\cite{ScherzingerPhd}.}
+        \caption[Reference neutron energy spectrum for a Pu/Be source.]{Reference neutron energy spectrum for a Pu/Be source. Grey: a tagged neutron energy spectrum. Red: Neutron energy spectrum. Figure from Scherzinger~\cite{ScherzingerPhd}.}
     \label{fig:scherzinger} 
 \end{figure}
 

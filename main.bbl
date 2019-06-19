@@ -88,7 +88,7 @@ Scionix.
   \url{https://scionix.nl/wp-content/uploads/2017/07/YAP-Ce-scintillators.pdf}.
 \newblock Retrieved: May 1rst 2019.
 
-\bibitem[Rofors(2016)]{rofors}
+\bibitem[Rofors(2016)]{Rofors}
 Emil Rofors.
 \newblock Fast photoneutron detection, 2016.
 \newblock Student Paper.
@@ -147,11 +147,15 @@ Fran\c{c}ois Chollet et~al.
 \newblock Keras.
 \newblock \url{https://keras.io}, 2015.
 
-\bibitem[Scherzinger et~al.(2016)]{Scherzinger:2016}
-J.~Scherzinger et~al.
-\newblock {The light-yield response of a NE-213 liquid-scintillator detector
-  measured using 2–6 MeV tagged neutrons}.
-\newblock \emph{Nucl. Instrum. Meth.}, A840:\penalty0 121--127, 2016.
-\newblock \doi{10.1016/j.nima.2016.10.011}.
+\bibitem[Cecil et~al.(1979)Cecil, Anderson, and Madey]{Cecil}
+R.A. Cecil, B.D. Anderson, and R.~Madey.
+\newblock Improved predections of neutron detection efficiency for hydrocarbon
+  scintillators from 1 mev to about 300 mev.
+\newblock \emph{Nuclear Instruments and Methods}, 161\penalty0 (3):\penalty0
+  439 -- 447, 1979.
+\newblock ISSN 0029-554X.
+\newblock \doi{https://doi.org/10.1016/0029-554X(79)90417-8}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0029554X79904178}.
 
 \end{thebibliography}
