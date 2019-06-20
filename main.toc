@@ -2,7 +2,7 @@
 \contentsline {chapter}{List of Tables}{v}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}The basics}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}The Basics}{2}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Neutron/Matter Interactions}{2}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Sources of Free Neutrons}{3}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Scintillation Detectors}{4}{subsection.1.2.3}
@@ -10,7 +10,7 @@
 \contentsline {subsubsection}{Detecting Neutrons}{5}{section*.7}
 \contentsline {subsubsection}{Photomultiplier Tubes}{5}{section*.8}
 \contentsline {subsection}{\numberline {1.2.4}Neutron/Gamma-Ray Discrimination}{6}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Neutron Time of Flight and Tagging}{8}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.5}Neutron Time-of-Flight and Tagging}{8}{subsection.1.2.5}
 \contentsline {chapter}{\numberline {2}Method}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Experimental Infrastructure}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Source-Testing Facility}{11}{subsection.2.1.1}
@@ -20,37 +20,37 @@
 \contentsline {section}{\numberline {2.2}Signal Processing}{14}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Analog}{15}{subsection.2.2.1}
 \contentsline {subsubsection}{Constant-Fraction Discriminators}{15}{section*.20}
-\contentsline {subsubsection}{Trigger logic}{16}{section*.23}
-\contentsline {subsubsection}{Time-to-digital converters}{17}{section*.24}
-\contentsline {subsubsection}{Charge-to-digital converters}{18}{section*.26}
-\contentsline {subsubsection}{Charge-Comparisson Pulse-Shape Discrimination}{19}{section*.29}
+\contentsline {subsubsection}{Trigger Logic}{16}{section*.23}
+\contentsline {subsubsection}{Time-to-Digital Converters}{17}{section*.24}
+\contentsline {subsubsection}{Charge-to-Digital Converters}{18}{section*.26}
+\contentsline {subsubsection}{Charge-Comparison Pulse-Shape Discrimination}{19}{section*.29}
 \contentsline {subsection}{\numberline {2.2.2}Digital}{20}{subsection.2.2.2}
 \contentsline {subsubsection}{Digitizer Specifications and Configuration}{20}{section*.30}
 \contentsline {subsubsection}{Time Stamping}{22}{section*.32}
 \contentsline {subsubsection}{Data Selection}{22}{section*.34}
 \contentsline {subsubsection}{Energy Calibration}{26}{section*.38}
 \contentsline {subsubsection}{Charge-Comparison Pulse-Shape Discrimination}{26}{section*.41}
-\contentsline {section}{\numberline {2.3}Convolutional Neural-Network}{27}{section.2.3}
+\contentsline {section}{\numberline {2.3}Convolutional Neural Network}{27}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Training Dataset}{28}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}How It Works}{28}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Implementation of the Network}{31}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Decision Study}{33}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Decision Study}{32}{subsection.2.3.4}
 \contentsline {chapter}{\numberline {3}Results}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Data Sets}{35}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Overview and Comparison}{35}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Livetime and threshold alignment}{35}{subsection.3.1.2}
-\contentsline {subsubsection}{Deposited energy}{35}{section*.51}
-\contentsline {subsubsection}{Time-of-flight spectra}{37}{section*.53}
+\contentsline {subsection}{\numberline {3.1.2}Livetime and Threshold Alignment}{35}{subsection.3.1.2}
+\contentsline {subsubsection}{Deposited Energy}{35}{section*.51}
+\contentsline {subsubsection}{Time-of-Flight Spectra}{37}{section*.53}
 \contentsline {section}{\numberline {3.2}Analog Setup}{38}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Neutron Tagging}{38}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Pulse-Shape Discrimination}{39}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Digital setup}{41}{section.3.3}
+\contentsline {section}{\numberline {3.3}Digital Setup}{41}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Neutron Tagging}{41}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Pulse-shape discrimination}{42}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Pulse-shape Discrimination}{42}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Misclassification}{46}{section.3.4}
 \contentsline {section}{\numberline {3.5}Neutron Kinetic Energy and Energy Deposition}{48}{section.3.5}
-\contentsline {chapter}{\numberline {4}Closing Remarks}{50}{chapter.4}
-\contentsline {section}{\numberline {4.1}Summary}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Conclusions}{50}{section.4.2}
-\contentsline {section}{\numberline {4.3}Outlook}{51}{section.4.3}
-\contentsline {chapter}{Bibliography}{52}{chapter*.69}
+\contentsline {chapter}{\numberline {4}Closing Remarks}{51}{chapter.4}
+\contentsline {section}{\numberline {4.1}Summary}{51}{section.4.1}
+\contentsline {section}{\numberline {4.2}Conclusions}{51}{section.4.2}
+\contentsline {section}{\numberline {4.3}Outlook}{52}{section.4.3}
+\contentsline {chapter}{Bibliography}{53}{chapter*.69}

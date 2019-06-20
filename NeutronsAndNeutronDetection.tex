@@ -4,22 +4,21 @@
 \chapter{Introduction}\label{ch:1}
 \section{Motivation}
 In the late 1960s, the Nuclear Instrument Module (NIM) standard for experimental physics electronics was established. The NIM standard specifies certain parameters, such as module dimensions and back-plane voltages, which make it possible to easily combine electronics modules from different manufacturers into a single signal-processing system. These modules each perform specific tasks, such as enforce thresholds, copy or sum signals or perform logic operations. When combined, they can be used to process signals from experiments in the analog domain. The modular design also makes it easy to assemble, disassemble and recombine the modules to perform a wide array of different signal processing tasks. 
-This makes it possible to easily construct electronics for signal processing in nuclear-physics experiments without necessarily knowing all of the exact functional parameters of each component. Simply knowing the operation the component is to perform is sufficient. Later, additional modularized electronics components which allow for an interface to computers were introduced. For example, the Versa Module Europa (VME) modules are a widely used format for digitizing various features of analog input signals, such as charge or time differences. VME modules can be considered a bridge between the analog and truly digital domains.
+This makes it possible to easily construct electronics for signal processing in nuclear-physics experiments without necessarily knowing all of the exact functional parameters of each component. Simply knowing the operation the component is to perform is sufficient. Later, additional modularized electronics components which allow for an interface to computers were introduced. For example, the Versa Module Europa (VME) modules are a widely used format for digitizing various features of analog input signals, such as charge or time differences. VME modules can be considered a bridge between the analog and digital domains.
 
-Today, a leap forward is being taken in the field of instrumentation electronics with the adoption of fully digital signal-processing techniques. This step is possible due to a variety of factors. For example storage prices of less than 0.5 SEK per GB make it feasible to save much more information than ever before. Also, increases in computer processing power have made the detailed investigation of large data sets more practical. Further, the falling cost and increasing performance of \textit{digitizers}, devices which digitally sample analog signals at up to GHz frequencies, is key. We are now positioned on the cusp of the truly digital domain.
+Today, a leap forward is being taken in the field of instrumentation electronics with the adoption of fully digital signal-processing techniques. This step is possible due to a variety of factors. For example, storage prices of less than 0.5 SEK per GB make it feasible to save much more information than ever before. Also, increases in computer processing power have made the detailed investigation of large data sets more practical. Further, the falling cost and increasing performance of digitizers, devices which digitally sample analog signals at up to GHz frequencies, is key. We are now positioned on the cusp of the truly digital domain.
 
 Currently, a wide variety of detectors under development for the European Spallation Source (ESS) need to be characterized. In particular, the $^\textrm{3}$He crisis has made it necessary to invent new detector technologies with high pixel count and granularity. The Source-Testing Facility (STF) at the Division of Nuclear Physics in Lund, Sweden, currently provides well-understood radioactive sources and a dedicated experimental setup for detector characterization. 
-The setup is quasi-digital employing various standard NIM modules for analog signal processing with digitization of charge and timing information performed by VME modules. Although this setup does employ some digitization it will be refereed to as the \textit{analog setup} to distinguish it from a fully digitizer-based \textit{digital setup}. Using the analog setup, most components must be painstakingly fine tuned for a particular detector setup by changing delays, gate lengths and thresholds in order to optimize the performance. This is not a trivial task. 
+The setup is quasi-digital employing various standard NIM modules for analog signal processing with digitization of charge and timing information performed by VME modules. Although this setup does employ some digitization, it will be referred to as the analog setup to distinguish it from a fully digitizer-based digital setup. Using the analog setup, most components must be painstakingly fine tuned for a particular detector setup by changing delays, gate lengths and thresholds in order to optimize the performance. This is not a trivial task. 
 
 The motivation for the work performed in this thesis is to emulate the NIM/VME based detector-characterization data-acquisition setup currently employed at the STF with a fully digital digitizer-based  system. In doing so, a large number of NIM and VME modules which need to be individually tuned to the task at hand will be replaced by a single digitizer module. 
 This will enable optimizations to be performed digitally and make it possible to study the effects of various thresholds, delays and gate lengths on the same data set offline. Furthermore, access to the digitized waveforms on a pulse-by-pulse basis will make it possible for advanced pulse-shape discrimination (PSD) techniques to be applied to the data.
 
-Thus the potential of using modern digitization techniques to complement an existing analog setup will be evaluated by comparing the performance of a well-established analog setup with that of a digitizer-based setup. A classical charge-comparison method will be employed for analog/digital PSD benchmarking. Furthermore fully digital PSD will be investigated using a convolutional neural network, a technique simply not available when employing an analog electronics setup.
-%pulse shape discrimination as well as a convolutional neural network based approach.
+Thus, the potential of using modern digitization techniques to complement an existing analog setup will be evaluated by comparing the performance of a well-established analog setup with that of a digitizer-based setup. A classical charge-comparison method will be employed for analog/digital PSD benchmarking. Furthermore, fully digital PSD will be investigated using a convolutional neural network, a technique which is not available when employing an analog electronics setup.
 
-\section{The basics}
+\section{The Basics}
 \subsection{Neutron/Matter Interactions}\label{sec:neutronMatterInteractions}
-Neutrons are subatomic particles, which together with protons make up atomic nuclei. With a mass of \SI{939.6}{\MeV}$/c^\textrm{2}$, the neutron is \SI{1.293}{\MeV}$/c^\textrm{2}$ more massive than the proton and 1839 times as massive as the electron. 
+Neutrons are subatomic particles which together with protons make up atomic nuclei. With a mass of \SI{939.6}{\MeV}$/c^\textrm{2}$, the neutron is \SI{1.293}{\MeV}$/c^\textrm{2}$ more massive than the proton and 1839 times as massive as the electron. 
 Free neutrons were first discovered by Chadwick in 1932, and have since come to play an important role as probes of matter. This is due to the fact that they are uncharged particles. With zero net electric charge, neutrons are a relatively penetrating type of radiation, capable of moving through the electric fields of charged particles unaffected. When not bound in a nucleus, a neutron decays into a proton via beta decay. This process has a half-life of 10.2 minutes~\cite{Nudat}, which means that neutrons have to be freed from nuclei at the location of the experiment that will use them.
 
 Neutrons are often classified according to their energy, since in different energy ranges, they have different probabilities for interactions of different types. The classifications shown in Table~\ref{tab:neutron} are given by Krane~\cite{Krane}. 
@@ -27,7 +26,7 @@ Neutrons are often classified according to their energy, since in different ener
 \center
 \begin{tabular}{|l|l|}
 \hline
-Name & Energy \\ \hline
+Name & Energy \\ \hhline{|=|=|}
 thermal       & 0.025 eV        \\ \hline
 epithermal    & 1 eV            \\ \hline
 slow          & 1 keV           \\ \hline
@@ -37,14 +36,14 @@ fast          & 0.1-10 MeV      \\ \hline
 \label{tab:neutron}
 \end{table}
 Fast neutrons are of particular interest to this project. For fast neutrons, the dominating interactions with matter are elastic and inelastic scattering. In elastic scattering, the neutron generally transfers part of its kinetic energy to a nucleus which recoils from the collision in its ground state. In inelastic scattering, the recoiling nucleus is excited, and it later de-excites by emitting for example a gamma-ray. Thermal neutrons have wavelengths on the order of \SI{0.1}{nm} which makes them useful for examining the structure of matter on an atomic scale. 
-Thermal neutrons predominantly interact via absorption. Here a nucleus absorbs a neutron resulting in a different isotope of the same element usually in an excited state. De-excitation can occur via the emission of for example a gamma-ray~\cite{Leo}. The probability for neutron absorption is roughly inversely proportional to its velocity. This means that fast neutrons need to first be slowed down or \textit{moderated} to thermal energies if they are to undergo neutron absorption. 
+Thermal neutrons interact predominantly via absorption. Here a nucleus absorbs a neutron resulting in a different isotope of the same element, usually in an excited state. De-excitation can occur via the emission of for example a gamma-ray~\cite{Leo}. The probability for neutron absorption is roughly inversely proportional to its velocity. This means that fast neutrons need to first be slowed down or moderated to thermal energies if they are to undergo neutron absorption. 
 
 \subsection{Sources of Free Neutrons} \label{sec:freeNeutrons}
 Free neutrons can be produced for experimental use in different ways. Large-scale production involves accelerator facilities or nuclear reactors. Spallation neutron sources such as ESS will produce neutrons by directing a highly energetic beam of protons onto a neutron-rich target. The collision will cause the target nucleus to fragment in a process known as spallation releasing many neutrons. 
-For example, in the case of a \SI{1}{\GeV} proton hitting a lead nucleus, around 25 neutrons may be produced~\cite{Tavernier}. Spallation neutron sources produce higher instantaneous neutron rates than any other currently existing man-made neutron source.
+For example, in the case of a single \si{\GeV} proton hitting a lead nucleus, around 25 neutrons may be produced~\cite{Tavernier}. Spallation neutron sources produce higher instantaneous neutron rates than any other currently existing man-made neutron source.
 Nuclear reactors produce large fluxes of neutrons through fission, and a neutron beamline can be created by constructing a penetration in the shielding ~\cite{Krane}. The fundamental difference between an accelerator-based neutron beam and a reactor-based neutron beam is that the former is pulsed whereas the latter is continuous. In either case, with moderation and specialized instruments, neutron beams with specific energies can be produced.
 
-On a smaller scale, neutrons are freed by radioactive sources. An actinide-Beryllium neutron source is a combination of an alpha particle emitting actinide and a Beryllium base. For example the actinide $^{238}$Pu decays into $^{234}$U as follows:
+On a smaller scale, neutrons may be freed by radioactive sources. An actinide-Beryllium neutron source is a combination of an alpha particle emitting actinide and a Beryllium base. For example, the actinide $^{238}$Pu decays into $^{234}$U as follows:
 \begin{align}
 	\begin{split}	
 		^\textrm{238}\textrm{Pu}\;&\rightarrow\;^{\textrm{234}}\textrm{U}'\;+\;\alpha\left(Q_1-\textstyle\sum_i E_{\gamma_i}\right)\\
@@ -52,35 +51,34 @@ On a smaller scale, neutrons are freed by radioactive sources. An actinide-Beryl
 	\label{eq:actinide}
 	\end{split}
 \end{align}
-The reaction has the $Q$-value $Q_1$=\SI{5.59}{\MeV}, which is energy shared between the recoil nucleus and the alpha particle. Note that the $^\textrm{234}$U nucleus may be left in either an excited state or in its ground state. If it is left in its ground state then the alpha particle can at most receive a kinetic energy of $Q_1$. If instead the nucleus recoils in an excited state (labeled $^\textrm{234}$U$'$ above), then less energy will be available for the alpha particle.
-Depending upon the excited state, one or multiple gamma-rays may be be released as the recoiling $^\textrm{234}$U de-excites. This cascade of gamma-rays is useful, see Sec.~\ref{sec:tof}.
+The reaction has a $Q$-value $Q_1$=\SI{5.59}{\MeV}, which is energy shared between the recoil nucleus and the alpha particle. Note that the $^\textrm{234}$U nucleus may be left in either an excited state or in its ground state. If it is left in its ground state, then the alpha particle can at most receive a kinetic energy of $Q_1$. If instead the nucleus recoils in an excited state (labeled $^\textrm{234}$U$'$ above), then less energy will be available for the alpha particle.
+Depending upon the excited state, one or multiple gamma-rays may be released as the recoiling $^\textrm{234}$U de-excites. This cascade of gamma-rays is useful, see Sec.~\ref{sec:tof}.
 
-Subsequent to its production, the alpha particle may then hit a $^{\textrm{9}}$Be nucleus, producing $^{12}$C and a free neutron, as shown below:
+Subsequent to its production, the alpha particle may then strike a $^{\textrm{9}}$Be nucleus, producing $^{12}$C and a free neutron, as shown below:
 \begin{align}
 	\begin{split}
 		&\phantom{\qquad\qquad\qquad}\alpha(Q_1) \;+\; ^{9}\textrm{Be} \;\rightarrow\;\; ^{12}\textrm{C} \;\;\;+\; n(Q_1+Q_2)\qquad\qquad\qquad\;\;\; 35\%\\
 		&\phantom{\qquad\qquad\qquad\qquad\qquad\qquad\;}\rightarrow\;\;^{12}\textrm{C}^* \;\;+\; n(Q_1+Q_2- E_1)\qquad \qquad\; 55\%\\
-		&\phantom{\qquad\qquad\qquad\qquad\qquad\qquad\;}\rightarrow\;\;^{12}\textrm{C}^{**} \;+\; n(Q_1+Q_2- E_2).\qquad\qquad 15\%\\
+		&\phantom{\qquad\qquad\qquad\qquad\qquad\qquad\;}\rightarrow\;\;^{12}\textrm{C}^{**} \;+\; n(Q_1+Q_2- E_2)\;\qquad\qquad 15\%.\\
 	\label{eq:alphaBe}
 	\end{split}
 \end{align}
-
 This reaction has a $Q$-value of $Q_2$=\SI{5.70}{\MeV}, which is shared between the recoiling carbon nucleus and the neutron according to momentum conservation. 
-Roughly 35\% of the time, the $^{12}$C is produced in its ground state and the neutron can at most obtain energy $Q_1+Q_2$=\SI{11.29}{\MeV}. 
+Roughly 35\% of the time, $^{12}$C is produced in its ground state and the neutron can at most obtain energy $Q_1+Q_2$=\SI{11.29}{\MeV}. 
 Approximately 55\% of the time, $^{12}$C recoils in its first excited state and de-excites by emitting a \SI{4.44}{\MeV} gamma-ray. 
 Thus, in the case of a neutron freed together with the production of $^{12}$C in its first excited state, the kinetic energy of the neutron will be limited to $Q_1+Q_2-E_\gamma=\SI{6.85}{\MeV}$. The gamma-ray emitted by the de-exciting $^{12}$C is useful, see Sec.~\ref{sec:tof}.
-Around 15\% of the time $^{12}$C recoils in the second excited state~\cite{Scherzinger:2015}.
+Around 15\% of the time, $^{12}$C recoils in the second excited state~\cite{Scherzinger:2015}.
 	
 \subsection{Scintillation Detectors}
 Scintillators generate pulses of visible light when ionizing radiation interacts with them. They are particularly useful for detecting uncharged particles such as gamma-rays and neutrons. An important feature of scintillators is that they should not re-absorb the scintillation light they themselves produce. 
 This may be achieved by doping the scintillator, to facilitate de-excitations via different metastable states. 
-The light emitted from the metastable states is shifted in energy so that it can pass through the scintillator without re-absorption. The lifetime of different metastable states may be exploited to identify particle species, see Sec.~\ref{sec:psd}.
+The light emitted from the metastable states is shifted in energy so that it can pass through the scintillator without re-absorption. The lifetime of different metastable states may be exploited to identify the incident particle species, see Sec.~\ref{sec:psd}.
 
 \subsubsection{Detecting Gamma-rays}
 Photons of different energies generate scintillation light through different interactions with atomic electrons. These interactions are the photoelectric effect, Compton scattering and pair production~\cite{Krane}. 
 Photons of energies below \SI{0.1}{\MeV} generally interact with atomic electrons via the photo-electric effect. In this process, the photon is absorbed by a bound electron which is ejected from the atom with an energy equal to the difference between photon energy and the binding energy of the electron. This electron continues to interact in the detector.
 Compton scattering is the dominating effect between 0.1 and \SI{5}{\MeV}. Here, a gamma-ray is scattered by a bound electron, which in turn is excited or freed from the atom. The scattered photon, which has been degraded in energy, continues to interact in the scintillator as does the recoiling electron.
-Pair production dominates beyond \SI{5}{\MeV}. Here, a gamma-ray of energy $E_\gamma>2m_e$ spontaneously converts into an electron and a positron near a nucleus~\cite{Krane}. The electron and positron share any excess energy, which is then deposited in the scintillator via continued interactions. When the positron comes to rest it annihilates with another electron resulting in two \SI{0.511}{\MeV} gamma-rays. These gamma-rays may continue to interact with the scintillator. They may even escape the detector.
+Pair production dominates beyond \SI{5}{\MeV}. Here, a gamma-ray of energy $E_\gamma>2m_e$ spontaneously converts into an electron and a positron near a nucleus~\cite{Krane}. The electron and positron share any excess energy, which is then deposited in the scintillator via continued interactions. When the positron comes to rest, it annihilates with another electron resulting in two \SI{0.511}{\MeV} gamma-rays. These gamma-rays may continue to interact with the scintillator. They may even escape the detector.
 
 
 \subsubsection{Detecting Neutrons}
@@ -117,16 +115,16 @@ Furthermore, the probability of a metastable state being occupied depends on whe
 \begin{figure}[ht]
 	\centering
     	\includegraphics[width=0.8\linewidth]{DigitalSetup/pulse_types.pdf}
-        \caption[Pulse shape sensitivity.]{Pulse shape sensitivity. Typical shapes of neutron and gamma-ray pulses from a detector with PSD capabilities. The blue gamma-ray pulse is significantly shorter than the red neutron pulse. ``Short gate" and ``long gate" refer to integration times.}
+        \caption[PS sensitivity.]{PS sensitivity. Typical shapes of neutron and gamma-ray pulses from a detector with PSD capabilities. The blue gamma-ray pulse is significantly shorter than the red neutron pulse. ``Short gate" and ``long gate" refer to integration times.}
 	    \label{fig:pulse_types} 
 \end{figure}
 
 PS can be parameterized in many different ways. One common method is the charge comparison (CC) method. Pulses are integrated over two different timescales, typically referred to as ``long gate" (\textit{LG}) and ``short gate" (\textit{SG}). Typical neutron and gamma-ray pulse shapes are illustrated in Fig.~\ref{fig:pulse_types} along with corresponding \textit{LG} and \textit{SG} integration windows. PS may be parameterized as:
 \begin{equation}
-	PS \; = \; 1-\frac{Q_{SG} + a}{Q_{LG} + b},
+	\textrm{PS} \; = \; 1-\frac{Q_{SG} + a}{Q_{LG} + b},
 	\label{eq:ps}
 \end{equation}
-Where $Q_{SG}$ and $Q_{LG}$ are the total integrated charges in the $SG$ and $LG$ integration windows, respectively while $a$ and $b$ are constants added to the charge integrals $Q_{LG}$ and $Q_{SG}$ in order to facilitate fine tuning of the energy dependence of the PS parameter. 
+where $Q_{SG}$ and $Q_{LG}$ are the total integrated charges in the $SG$ and $LG$ integration windows, respectively while $a$ and $b$ are constants added to the charge integrals $Q_{LG}$ and $Q_{SG}$ in order to facilitate fine tuning of the energy dependence of the PS parameter. 
 With optimal choices of $a$ and $b$, the neutron and gamma-ray distributions can be linearized, such that they can be separated with a single cut on the PS parameter, see Fig.~\ref{fig:psd_sketch}.
 
 If a scintillator has PSD capabilities, then signals from recoiling protons will have significantly more slow scintillation components. This will result in more charge in the tail of the scintillation pulse and hence a larger PS value than for electrons/gamma-rays. A typical way of visualizing the PS as a function of deposited energy is shown in Fig.~\ref{fig:psd_sketch}. The upper distribution corresponds to neutrons and the lower corresponds to gamma-rays. It will generally be harder to discriminate between the two distributions at lower deposited energies.
@@ -140,52 +138,50 @@ A drawback with using analog electronics is that the $LG$ and $SG$ integration w
 \end{figure}
 
 
-\subsection{Neutron Time of Flight and Tagging}\label{sec:tof}
+\subsection{Neutron Time-of-Flight and Tagging}\label{sec:tof}
 Time-of-flight (ToF) measurements offer a conceptually elegant way to determine the energy of a particle based on a known distance and the corresponding flight time. The flight time is generally measured using a start pulse and a stop pulse together with a precision oscillator.
 
-Recall that an actinide/Beryllium source produces neutrons and gamma-rays. The gamma-rays come both from the de-excitation of the actinide (a cascade of low-energy gamma-rays), which follow the alpha particle emission and from the de-excitation of the $^\textrm{12}$C (a single \SI{4.44}{\MeV} gamma-ray). This single gamma-ray emitted in conjunction with the neutron may be used to ``tag" the neutron and either start or stop a ToF measurement. Further the low-energy gamma-ray cascade may be used to calibrate the ToF measurements.
+Recall that an actinide/Beryllium source produces neutrons and gamma-rays. The gamma-rays come both from the de-excitation of the actinide (a cascade of low-energy gamma-rays) which follow the alpha particle emission and from the de-excitation of the $^\textrm{12}$C (a single \SI{4.44}{\MeV} gamma-ray). This single gamma-ray emitted in conjunction with the neutron may be used to ``tag" the neutron and either start or stop a ToF measurement. Further, the low-energy gamma-ray cascade may be used to calibrate the ToF measurements.
 
 \begin{figure}[t]
     \centering
         \includegraphics[width=0.9\linewidth]{Theory/tof_setup.pdf}
-        \caption[Illustration of the neutron-tagging setup.]{Illustration of the neutron-tagging setup. The detector sensitive to both neutrons and gamma-rays (green) is placed a distance $L$ from the source (green). The gamma-ray detector (yellow) is placed closer to the source at distance $s$. }
+        \caption[Illustration of the neutron-tagging setup.]{Illustration of the neutron-tagging setup. The detector sensitive to both neutrons and gamma-rays (green) is placed a distance $L$ from the source (green). The gamma-ray detector (yellow) is placed closer to the source at a distance $s$. }
     \label{fig:tof_setup} 
 \end{figure}
 
-By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig.~\ref{fig:tof_setup}. Often signal delay will be applied to the gamma-ray detector to let the neutron/gamma-ray detector provide the start signal (even though it is located further away from the source than the gamma-ray detector).
-In Figure~\ref{fig:tof_setup}, the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector is $L$.  Due to the applied delay the measured flight time $T$ will be shorter for neutrons than for gamma rays. By instead using;
+By placing a gamma-ray detector close to the actinide/Beryllium source and a neutron /gamma-ray detector further away, the time difference between any two particles detected in the two detectors may be measured, see Fig.~\ref{fig:tof_setup}. Often signal delay will be applied to the gamma-ray detector to let the neutron/gamma-ray detector provide the start signal even though it is located further away from the source than the gamma-ray detector.
+In Fig.~\ref{fig:tof_setup}, the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector is $L$.  Due to the applied delay the measured flight time $T$ will be shorter for neutrons than for gamma-rays. By instead using
 \begin{equation}
 T'=-T,
 \end{equation}
-time ordering is restored, with neutrons having longer flight times than gamma-rays. Figure \ref{fig:tof_sketch} left panel shows a histogram of uncalibrated flight times $T'$. This spectrum may be calibrated by considering two coincidental low-energy cascade gamma-rays from the de-excitation of the actinide. One of these gamma-rays is detected by the neutron and gamma-ray sensitive detector, while the other is detected by the gamma-ray detector. 
-Since the speed of the gamma-rays is $c$ and the source-to-detector distances and delays are fixed, the time difference between the start and stop signals is also fixed. This constant time difference is known as the gamma flash, and serves as an absolute timing calibration point for the flight-time measurement.
-This calibration may be carried out by shifting the observed location of the gamma flash $T_\gamma^{obs}$ to the expected location $T_\gamma^{exp}$ defined as $L/c$. The calibrated time of flight, $ToF$ is given by:
+time ordering is restored, with neutrons having longer flight times than gamma-rays. Figure \ref{fig:tof_sketch} (left panel) shows a histogram of uncalibrated flight times $T'$. This spectrum may be calibrated by considering two coincidental low-energy cascade gamma-rays from the de-excitation of the actinide. One of these gamma-rays is detected by the neutron and gamma-ray sensitive detector, while the other is detected by the gamma-ray detector. 
+Since the speed of the gamma-rays is $c$ and the source-to-detector distances and delays are fixed, the time difference between the start and stop signals is also fixed. This constant time difference is known as the gamma-flash, and serves as an absolute timing calibration point for the flight-time measurement.
+This calibration may be carried out by shifting the observed location of the gamma-flash $T_\gamma^{obs}$ to the expected location $T_\gamma^{exp}$ defined as $L/c$. The calibrated time-of-flight, ToF is given by:
 \begin{equation}
-	ToF = T' -(T_\gamma^{obs} - T_\gamma^{exp}).
+	\textrm{ToF} = T' -(T_\gamma^{obs} - T_\gamma^{exp}).
 	\label{eq:tof_cal}
 \end{equation}
-This produces the calibrated time of flight spectrum shown in the right panel of Fig. \ref{fig:tof_sketch}.
-
-If instead a neutron is detected by the neutron and gamma-ray sensitive detector while a \SI{4.44}{\MeV} gamma-ray is detected by the gamma-ray detector, the flight time will always be longer than for a pair of gamma-rays because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $K_n$ may be determined classically according to:
+This produces the calibrated ToF spectrum shown in the right panel of Fig. \ref{fig:tof_sketch}.
+If instead a neutron is detected by the neutron and gamma-ray sensitive detector and a \SI{4.44}{\MeV} gamma-ray is detected by the gamma-ray detector, the flight time will always be longer than for a pair of gamma-rays because the speed of the neutron will always be less than $c$. From the resulting ToF for the neutron, the kinetic energy $K_n$ may be determined classically according to:
 \begin{equation}
-	K_n = \frac{1}{2} m_n v_n^2 = \frac{1}{2}m_n\left(\frac{L}{ToF}\right)^2
+	K_n = \frac{1}{2} m_n v_n^2 = \frac{1}{2}m_n\left(\frac{L}{\textrm{ToF}}\right)^2,
 	\label{eq:Kn}
 \end{equation}
-Where $m_n$ and $v_n$ are the mass and the speed of the neutron, respectively.
-
+where $m_n$ and $v_n$ are the mass and the speed of the neutron, respectively.
 Thus knowledge of the distance from the center of the actinide/Beryllium source to the center of the neutron/gamma-ray detector together with the location of $T_\gamma^{obs}$ in the uncalibrated flight-time spectrum is all that is needed to determine the energy of a tagged neutron on an event-by-event basis.
 
 \begin{figure}[t]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/tof_sketch_axes.pdf}
-        \caption[Sketch of a time of flight spectrum.]{Sketch of a time of flight spectrum. Left: Spectrum of uncalibrated flight times. The gamma flash is shaded blue, the neutron bump is shaded red, and the random coincidences are shaded orange. Right: The spectrum has been calibrated to a ToF spectrum by shifting $T_\gamma^{obs}$ to $T_\gamma^{exp}.$}
+        \caption[Sketch of a time-of-flight spectrum.]{Sketch of a time-of-flight spectrum. Left: Spectrum of uncalibrated flight times. The gamma-flash is shaded blue, the neutron bump is shaded red, and the random coincidences are shaded orange. Right: The spectrum has been calibrated to a ToF spectrum by shifting $T_\gamma^{obs}$ to $T_\gamma^{exp}.$}
     \label{fig:tof_sketch} 
 \end{figure}
-Figure~\ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) contrasted with the entire neutron energy spectrum (red) measured for a Pu/Be source~\cite{ScherzingerPhd}. In forming this spectrum the mapping from neutron time-of.flight to neutron kinetic energy presented in Eq~\ref{eq:Kn} has been applied. Although neutrons from a Pu/Be source can have up to $\sim$\SI{11}{\MeV}, the tagged-neutron spectrum ends at $\sim$\SI{6.5}{\MeV}. This is because only the neutrons accompanied by a \SI{4.44}{\MeV} gamma-ray are tagged. The full Pu/Be neutron energy spectrum contains four peaks, two of which are visible in the tagged neutron spectrum. The reason that the full spectrum doesn't go to as low energies as the tagged neutron spectrum may be that the tagged spectrum has employed a lower amplitude threshold.
+Figure~\ref{fig:scherzinger} shows an example of a tagged neutron energy spectrum (grey) contrasted with the entire neutron energy spectrum (red) measured for a Pu/Be source~\cite{ScherzingerPhd}. In forming this spectrum the mapping from neutron ToF to neutron kinetic energy presented in Eq~\ref{eq:Kn} has been applied. Although neutrons from a Pu/Be source can have up to $\sim$\SI{11}{\MeV}, the tagged-neutron spectrum ends at $\sim$\SI{6.5}{\MeV}. This is because only the neutrons accompanied by a \SI{4.44}{\MeV} gamma-ray are tagged. The full Pu/Be neutron energy spectrum contains four peaks, two of which are visible in the tagged neutron spectrum. The reason that the full spectrum does not extend to as low energies as the tagged neutron spectrum may be that the tagged spectrum has employed a lower amplitude threshold.
 \begin{figure}[h]
     \centering
         \includegraphics[width=0.8\linewidth]{Theory/scherzinger.pdf}
-        \caption[Reference neutron energy spectrum for a Pu/Be source.]{Reference neutron energy spectrum for a Pu/Be source. Grey: a tagged neutron energy spectrum. Red: Neutron energy spectrum. Figure from Scherzinger~\cite{ScherzingerPhd}.}
+        \caption[Reference neutron energy spectrum for a Pu/Be source.]{Reference neutron energy spectrum for a Pu/Be source. Grey: a tagged neutron energy spectrum. Red: Neutron energy spectrum. Figure from Scherzinger~et~al~\cite{ScherzingerPhd}.}
     \label{fig:scherzinger} 
 \end{figure}
 

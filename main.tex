@@ -39,6 +39,16 @@
 %List of abbreviations
 \usepackage{acronym}
 \usepackage{changepage}
+%for inserting blank pages
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+%extra hline in table
+\usepackage{hhline}
+
 
 
 \begin{document}
@@ -46,18 +56,21 @@
 \newpage
 \pagenumbering{roman}
 
+\blankpage
 \begin{abstract}
-The advantages of performing neutron-tagging measurements using a waveform digitizer are explored. An existing analog setup consisting of modular crate-electronics at the Source-Resting Facility at the Division of Nuclear Physics in Lund, Sweden has been digitally replicated. Neutrons are detected using an organic liquid-scintillator  detector while the corresponding \SI{4.44}{MeV} gamma-rays are detected using inorganic scintillation crystals. The performance of the digitizer-based setup is compared to that of the modular analog setup in terms of neutron and gamma-ray pulse-shape discrimination and time-of-flight. The results obtained using the digitizer-based approach are superior to those obtained using the modular analog approach in all aspects. The digitizer-based approach is then successfully employed to both distinguish between neutrons and gamma-rays via a convolutional neural network and to relate neutron deposition energy to neutron kinetic energy via time-of-flight.
-
+The advantages of performing neutron-tagging measurements using a waveform digitizer are explored. An existing analog setup consisting of modular crate electronics at the Source-Testing Facility at the Division of Nuclear Physics in Lund, Sweden has been digitally replicated. Neutrons are detected using an organic liquid-scintillator  detector while the corresponding \SI{4.44}{MeV} gamma-rays are detected using inorganic scintillation crystals. The performance of the digitizer-based setup is compared to that of the modular analog setup in terms of neutron and gamma-ray pulse-shape discrimination and time-of-flight. The results obtained using the digitizer-based approach are superior to those obtained using the modular analog approach in all aspects. The digitizer-based approach is then successfully employed both to distinguish between neutrons and gamma-rays via a convolutional neural network and to relate neutron deposition energy to neutron kinetic energy via time-of-flight.
 %-Set the stage. ESS and need for neutron detection + energy determination. charectarize detectors with known sources. ToF use in other contexts. 
 %-Results: we can do the same measurements, but switching detectors and using more channels is easier. Varying parameters is easier (Take one dataset and vary parameters in software).
 \end{abstract}
+\blankpage
+
 \newpage
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{2}
 \tableofcontents
 \listoffigures
 \listoftables
+
 \subfile{LOA.tex}%concepts
 
 
@@ -74,6 +87,8 @@ The advantages of performing neutron-tagging measurements using a waveform digit
 %CHAPTER3 RESULTS
 \subfile{Results.tex}%Implementation
 \clearpage
+~
+\newpage
 \subfile{summary.tex}%Equipment
 \clearpage
 \bibliography{references}
