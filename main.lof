@@ -1,44 +1,44 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Scintillation detector.}}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces PS sensitivity.}}{6}{figure.caption.10}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{LG}$.}}{7}{figure.caption.11}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of the neutron-tagging setup.}}{8}{figure.caption.12}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time-of-flight spectrum.}}{9}{figure.caption.13}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum for a Pu/Be source.}}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Scintillation detector.}}{6}{figure.caption.10}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces PS sensitivity.}}{6}{figure.caption.11}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces PS versus $Q_{LG}$.}}{7}{figure.caption.12}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Illustration of the neutron-tagging setup.}}{8}{figure.caption.13}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Sketch of a time-of-flight spectrum.}}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Reference neutron energy spectrum for a Pu/Be source.}}{10}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The Source-Testing Facility.}}{11}{figure.caption.15}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The Aquarium.}}{12}{figure.caption.16}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Photographs of the detectors.}}{13}{figure.caption.17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic of the experimental setup.}}{14}{figure.caption.18}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Data-acquisition systems.}}{15}{figure.caption.19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Time walk resulting from leading-edge triggering.}}{16}{figure.caption.21}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces CFD trigger principle.}}{16}{figure.caption.22}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces TDC calibration spectrum.}}{17}{figure.caption.25}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces QDC calibration of the analog setup.}}{19}{figure.caption.28}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{20}{figure.caption.31}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Relative timing for NE213 detector pulses of different amplitudes.}}{23}{figure.caption.33}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse-height spectrum from the NE213 detector.}}{23}{figure.caption.35}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events.}}{25}{figure.caption.37}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup.}}{27}{figure.caption.40}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data using ToF information.}}{28}{figure.caption.42}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel.}}{29}{figure.caption.43}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer CNN.}}{30}{figure.caption.44}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces The Max pooling principle.}}{31}{figure.caption.45}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN.}}{32}{figure.caption.47}
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Pulses classified by the CNN with more than 95\% confidence.\relax }}{33}{figure.caption.48}
-\contentsline {figure}{\numberline {2.21}{\ignorespaces CNN decision study.}}{34}{figure.caption.49}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Source-Testing Facility.}}{11}{figure.caption.16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The Aquarium.}}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Photographs of the detectors.}}{13}{figure.caption.18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic of the experimental setup.}}{14}{figure.caption.19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Data-acquisition systems.}}{15}{figure.caption.20}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Time walk resulting from leading-edge triggering.}}{16}{figure.caption.22}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces CFD trigger principle.}}{16}{figure.caption.23}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces TDC calibration spectrum.}}{17}{figure.caption.26}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces QDC calibration of the analog setup.}}{19}{figure.caption.29}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sampling rate.}}{20}{figure.caption.32}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Relative timing for NE213 detector pulses of different amplitudes.}}{23}{figure.caption.34}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Digitized pulse-height spectrum from the NE213 detector.}}{23}{figure.caption.36}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Examples of rejected digitized events.}}{25}{figure.caption.38}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Energy calibration of the digital setup.}}{27}{figure.caption.41}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Selection of training and validation data using ToF information.}}{28}{figure.caption.43}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Convolution of a vector and a kernel.}}{29}{figure.caption.44}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Two-layer CNN.}}{30}{figure.caption.45}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces The Max pooling principle.}}{31}{figure.caption.46}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Training and validation accuracy of the CNN.}}{32}{figure.caption.48}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Pulses classified by the CNN with more than 95\% confidence.\relax }}{33}{figure.caption.49}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces CNN decision study.}}{34}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Comparison of analog and digital spectra from the NE213 detector.}}{36}{figure.caption.52}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Analog and digital ToF spectra.}}{37}{figure.caption.54}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces ToF spectrum, analog setup.}}{38}{figure.caption.55}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Analog PS spectrum as a function of deposited energy.}}{40}{figure.caption.56}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces PS FoM for the analog setup.}}{40}{figure.caption.57}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PS vs. ToF for the analog setup.}}{41}{figure.caption.59}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces ToF spectrum, digital setup.}}{42}{figure.caption.60}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Digital PS discrimination as a function of deposited energy.}}{43}{figure.caption.61}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces PS FoM for the digital setup.}}{44}{figure.caption.63}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces PS vs. ToF for the digital setup.}}{45}{figure.caption.64}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Filtered ToF spectra for misclassification studies.}}{47}{figure.caption.65}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces ToF plotted against energy deposition for the digital setup.}}{49}{figure.caption.67}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Deposited energy and neutron kinetic energy.}}{49}{figure.caption.68}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Comparison of analog and digital spectra from the NE213 detector.}}{36}{figure.caption.53}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Analog and digital ToF spectra.}}{37}{figure.caption.55}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces ToF spectrum, analog setup.}}{38}{figure.caption.56}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Analog PS spectrum as a function of deposited energy.}}{40}{figure.caption.57}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces PS FoM for the analog setup.}}{40}{figure.caption.58}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces PS vs. ToF for the analog setup.}}{41}{figure.caption.60}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces ToF spectrum, digital setup.}}{42}{figure.caption.61}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Digital PS discrimination as a function of deposited energy.}}{43}{figure.caption.62}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces PS FoM for the digital setup.}}{44}{figure.caption.64}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces PS vs. ToF for the digital setup.}}{45}{figure.caption.65}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Filtered ToF spectra for misclassification studies.}}{47}{figure.caption.66}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces ToF plotted against energy deposition for the digital setup.}}{49}{figure.caption.68}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Deposited energy and neutron kinetic energy.}}{49}{figure.caption.69}
 \addvspace {10\p@ }

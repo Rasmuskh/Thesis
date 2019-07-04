@@ -1,14 +1,14 @@
-\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{The Basics}{chapter.1}% 5
 \BOOKMARK [2][-]{subsection.1.2.1}{Neutron/Matter Interactions}{section.1.2}% 6
 \BOOKMARK [2][-]{subsection.1.2.2}{Sources of Free Neutrons}{section.1.2}% 7
 \BOOKMARK [2][-]{subsection.1.2.3}{Scintillation Detectors}{section.1.2}% 8
-\BOOKMARK [3][-]{section*.6}{Detecting Gamma-rays}{subsection.1.2.3}% 9
-\BOOKMARK [3][-]{section*.7}{Detecting Neutrons}{subsection.1.2.3}% 10
-\BOOKMARK [3][-]{section*.8}{Photomultiplier Tubes}{subsection.1.2.3}% 11
+\BOOKMARK [3][-]{section*.7}{Detecting Gamma-rays}{subsection.1.2.3}% 9
+\BOOKMARK [3][-]{section*.8}{Detecting Neutrons}{subsection.1.2.3}% 10
+\BOOKMARK [3][-]{section*.9}{Photomultiplier Tubes}{subsection.1.2.3}% 11
 \BOOKMARK [2][-]{subsection.1.2.4}{Neutron/Gamma-Ray Discrimination}{section.1.2}% 12
 \BOOKMARK [2][-]{subsection.1.2.5}{Neutron Time-of-Flight and Tagging}{section.1.2}% 13
 \BOOKMARK [0][-]{chapter.2}{Method}{}% 14
@@ -19,17 +19,17 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{Fast-Neutron and Gamma-Ray Detectors}{section.2.1}% 19
 \BOOKMARK [1][-]{section.2.2}{Signal Processing}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.2.1}{Analog}{section.2.2}% 21
-\BOOKMARK [3][-]{section*.20}{Constant-Fraction Discriminators}{subsection.2.2.1}% 22
-\BOOKMARK [3][-]{section*.23}{Trigger Logic}{subsection.2.2.1}% 23
-\BOOKMARK [3][-]{section*.24}{Time-to-Digital Converters}{subsection.2.2.1}% 24
-\BOOKMARK [3][-]{section*.26}{Charge-to-Digital Converters}{subsection.2.2.1}% 25
-\BOOKMARK [3][-]{section*.29}{Charge-Comparison Pulse-Shape Discrimination}{subsection.2.2.1}% 26
+\BOOKMARK [3][-]{section*.21}{Constant-Fraction Discriminators}{subsection.2.2.1}% 22
+\BOOKMARK [3][-]{section*.24}{Trigger Logic}{subsection.2.2.1}% 23
+\BOOKMARK [3][-]{section*.25}{Time-to-Digital Converters}{subsection.2.2.1}% 24
+\BOOKMARK [3][-]{section*.27}{Charge-to-Digital Converters}{subsection.2.2.1}% 25
+\BOOKMARK [3][-]{section*.30}{Charge-Comparison Pulse-Shape Discrimination}{subsection.2.2.1}% 26
 \BOOKMARK [2][-]{subsection.2.2.2}{Digital}{section.2.2}% 27
-\BOOKMARK [3][-]{section*.30}{Digitizer Specifications and Configuration}{subsection.2.2.2}% 28
-\BOOKMARK [3][-]{section*.32}{Time Stamping}{subsection.2.2.2}% 29
-\BOOKMARK [3][-]{section*.34}{Data Selection}{subsection.2.2.2}% 30
-\BOOKMARK [3][-]{section*.38}{Energy Calibration}{subsection.2.2.2}% 31
-\BOOKMARK [3][-]{section*.41}{Charge-Comparison Pulse-Shape Discrimination}{subsection.2.2.2}% 32
+\BOOKMARK [3][-]{section*.31}{Digitizer Specifications and Configuration}{subsection.2.2.2}% 28
+\BOOKMARK [3][-]{section*.33}{Time Stamping}{subsection.2.2.2}% 29
+\BOOKMARK [3][-]{section*.35}{Data Selection}{subsection.2.2.2}% 30
+\BOOKMARK [3][-]{section*.39}{Energy Calibration}{subsection.2.2.2}% 31
+\BOOKMARK [3][-]{section*.42}{Charge-Comparison Pulse-Shape Discrimination}{subsection.2.2.2}% 32
 \BOOKMARK [1][-]{section.2.3}{Convolutional Neural Network}{chapter.2}% 33
 \BOOKMARK [2][-]{subsection.2.3.1}{Training Dataset}{section.2.3}% 34
 \BOOKMARK [2][-]{subsection.2.3.2}{How It Works}{section.2.3}% 35
@@ -39,8 +39,8 @@
 \BOOKMARK [1][-]{section.3.1}{Data Sets}{chapter.3}% 39
 \BOOKMARK [2][-]{subsection.3.1.1}{Overview and Comparison}{section.3.1}% 40
 \BOOKMARK [2][-]{subsection.3.1.2}{Livetime and Threshold Alignment}{section.3.1}% 41
-\BOOKMARK [3][-]{section*.51}{Deposited Energy}{subsection.3.1.2}% 42
-\BOOKMARK [3][-]{section*.53}{Time-of-Flight Spectra}{subsection.3.1.2}% 43
+\BOOKMARK [3][-]{section*.52}{Deposited Energy}{subsection.3.1.2}% 42
+\BOOKMARK [3][-]{section*.54}{Time-of-Flight Spectra}{subsection.3.1.2}% 43
 \BOOKMARK [1][-]{section.3.2}{Analog Setup}{chapter.3}% 44
 \BOOKMARK [2][-]{subsection.3.2.1}{Neutron Tagging}{section.3.2}% 45
 \BOOKMARK [2][-]{subsection.3.2.2}{Pulse-Shape Discrimination}{section.3.2}% 46
@@ -53,4 +53,4 @@
 \BOOKMARK [1][-]{section.4.1}{Summary}{chapter.4}% 53
 \BOOKMARK [1][-]{section.4.2}{Conclusions}{chapter.4}% 54
 \BOOKMARK [1][-]{section.4.3}{Outlook}{chapter.4}% 55
-\BOOKMARK [0][-]{chapter*.69}{Bibliography}{}% 56
+\BOOKMARK [0][-]{chapter*.70}{Bibliography}{}% 56
